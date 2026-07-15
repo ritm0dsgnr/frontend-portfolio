@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+
+		<title>teller</title>
+		<meta name="description" content="teller">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+		<meta name="theme-color" content="#000">
+		<meta name="msapplication-navbutton-color" content="#000">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+		<!-- libs -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text/javascript"></script>
+
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oranienbaum&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+  <body>
+  <div id="top" class="p_content header-dark m-t">
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<img class="header__wrapper-logo" src="img/logo.svg" alt="">
+					<div class="header__wrapper-w">
+						<a data-da=".nav, 1024, last" class="header__wrapper-nav" href="about.html">о компании</a>
+						<a data-da=".nav, 1024, last" class="header__wrapper-nav" href="blog.html">блог</a>
+						<a data-da=".nav, 1024, last" class="header__wrapper-nav" href="cases.html">решения</a>
+						<a data-da=".nav, 1024, last" class="header__wrapper-nav" href="vacancy.html">вакансии</a>
+						<svg class="header__wrapper-search" viewBox="0 0 23 23"><use xlink:href="img/sprite.svg#search"></use></svg>
+						<a data-da=".nav, 1024, last" class="header__wrapper-btn btn" href="contacts.html">связаться с нами</a>
+						<div class="header__wrapper-burger"><span></span></div>
+						<div class="nav">
+							<div class="container">
+								<img class="nav__close" src="img/close-02.svg" alt="">
+							</div>
+							<img class="nav__logo" src="img/fav.svg" alt="">
+							<div class="container">
+								<form class="nav__form" action="/search" class="search w-form">
+									<input class="nav__form-input" type="text" id="search" required="">
+									<svg class="nav__form-search" viewBox="0 0 23 23"><use xlink:href="img/sprite.svg#search"></use></svg>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="search">
+			<div class="container">
+				<form class="search__form" action="/search" class="search w-form">
+					<input class="search__form-input" placeholder="Поиск" type="text" id="search" required="">
+					<img class="search__form-close" src="img/close.svg" alt="">
+				</form>
+			</div>
+		</div>
+    <section class="pre">
+      <div class="container">
+        <h1 class="pre__title">Кто мы такие</h1>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container">
+        <h3 class="about__title">О нас</h3>
+        <p class="about__text">Teller — медиакомпания. <br>Мы выпускаем тематические медиа <nobr>и создаем</nobr> спецпроекты для любых аудиторий <nobr>и под</nobr> самые разные задачи.</p>
+        <div class="about__wrapper">
+          <div> 
+            <p class="about__wrapper-text">Мыслим как журналисты, медиаменеджеры и маркетологи.</p>
+            <picture>
+              <source media="(max-width: 450px)" srcset="img/arrow-mob.svg">
+              <img src="img/arrow.svg" alt="">
+            </picture>
+          </div>
+          <div>
+            <p class="about__wrapper-text">Глубоко и тщательно изучаем информацию по теме и создаем полезный контент. Помогаем пользователю сформировать собственное мнение по тому или иному вопросу и принять важное решение.</p>
+            <picture>
+              <source media="(max-width: 450px)" srcset="img/arrow-mob.svg">
+              <img src="img/arrow.svg" alt="">
+            </picture>
+          </div>
+          <p class="about__wrapper-text">Отвечаем за полный цикл жизни медиа от коммуникационной стратегии до сбора аналитики по текущим проектам.</p>
+        </div>
+      </div>
+    </section>
+    <section class="directions">
+      <div class="container">
+        <h2 class="about__title">Внутренняя экспертиза</h2>
+        <p class="about__text">В компании параллельно работает несколько редакций по четырем основным направлениям:</p>
+        <div class="directions__wrapper">
+          <div class="directions__wrapper-item">
+            <p class="directions__wrapper-item-name">Медицина</p>
+            <div class="directions__wrapper-item-img">
+              <img src="img/img-01.png" alt="">
+            </div>
+          </div>
+          <div class="directions__wrapper-item">
+            <p class="directions__wrapper-item-name">Туризм</p>
+            <div class="directions__wrapper-item-img">
+              <img src="img/img-02.png" alt="">
+            </div>
+          </div>
+          <div class="directions__wrapper-item">
+            <p class="directions__wrapper-item-name">Лайфстайл <nobr>и общество</nobr></p>
+            <div class="directions__wrapper-item-img">
+              <img src="img/img-03.png" alt="">
+            </div>
+          </div>
+          <div class="directions__wrapper-item">
+            <p class="directions__wrapper-item-name">Бизнес <nobr>и экономика</nobr></p>
+            <div class="directions__wrapper-item-img">
+              <img src="img/img-04.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="opportunities">
+      <div class="container">
+        <p class="opportunities__text">Редакции состоят из журналистов, медиаменеджеров и профильных диджитал-специалистов с многолетним опытом руководства контентными командами РБК, «Сноб», «Коммерсантъ», Rambler, National Geographic Россия, Discover Moscow и «Спортмастер Медиа».
+        </p>
+        <h3 class="opportunities__title">Какие возможности дает Teller</h3>
+        <div class="opportunities__wrapper">
+          <div class="opportunities__wrapper-col">
+            <p class="opportunities__wrapper-col-title">Объяснение сложного продукта <nobr>и выход</nobr> на рынок</p>
+            <p class="opportunities__wrapper-col-text">Если цикл принятия решения о покупке долгий, контент позволяет обеспечить аудиторию необходимой информацией на всех этапах знакомства с продуктом или услугой.</p>
+          </div>
+          <div class="opportunities__wrapper-col">
+            <p class="opportunities__wrapper-col-title">Инициирование продаж <nobr>и поддержание</nobr> спроса</p>
+            <p class="opportunities__wrapper-col-text">Контент может служить эффективным инструментом продаж на прогретую аудиторию.</p>
+          </div>
+          <div class="opportunities__wrapper-col">
+            <p class="opportunities__wrapper-col-title">Сбор собственной базы контактов</p>
+            <p class="opportunities__wrapper-col-text">Контент-маркетинг — наиболее органичный инструмент для выхода бренда на новую аудиторию.</p>
+          </div>
+          <div class="opportunities__wrapper-col">
+            <p class="opportunities__wrapper-col-title">Повышение лояльности <nobr>к бренду</nobr></p>
+            <p class="opportunities__wrapper-col-text">Контент — это мощный инструмент, который может заставить любить бренд или ненавидеть его. А еще помогает выбирать именно вас среди конкурентов.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="team">
+      <div class="container">
+        <h3 class="team__title">Команда проекта Teller</h3>
+        <div class="team__wrapper">
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-01.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Антон Ярош</p>
+            <p class="team__wrapper-item-post">Генеральный директор</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-02.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Алла Дьячкова</p>
+            <p class="team__wrapper-item-post">Операционный директор</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-03.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Максим Новиков</p>
+            <p class="team__wrapper-item-post">Коммерческий директор</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-04.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Анастасия Резчикова</p>
+            <p class="team__wrapper-item-post">Операционный менеджер</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-05.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Георгий Нидеккер</p>
+            <p class="team__wrapper-item-post">Руководитель отдела медиапланирования</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-06.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Наталья Осипова</p>
+            <p class="team__wrapper-item-post">Арт-директор</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-07.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Екатерина Сурина</p>
+            <p class="team__wrapper-item-post">Руководитель группы «Бизнес и общество»</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-08.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Илья Городной</p>
+            <p class="team__wrapper-item-post">Руководитель видеопродакшена</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-09.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Инна Копырнова</p>
+            <p class="team__wrapper-item-post">Старший стратег</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-10.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Илья Минский</p>
+            <p class="team__wrapper-item-post">Руководитель группы «Путешествия»</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-11.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Тимофей Зайденберг</p>
+            <p class="team__wrapper-item-post">HR-менеджер</p>
+          </div>
+          <div class="team__wrapper-item">
+            <div class="team__wrapper-item-img">
+              <img src="img/t-12.png" alt="">
+            </div>
+            <p class="team__wrapper-item-name">Марианна Мирзоян</p>
+            <p class="team__wrapper-item-post">Главный редактор группы «Медицина и здоровье»</p>
+          </div>
+        </div>
+        <p class="team__text">
+          + 52 специалиста в штате
+          <br>
+          и более 200 креаторов в нашей базе талантов.
+        </p>
+      </div>
+    </section>
+  </div>
+	
+	<div class="container prefooter">
+		<picture>
+			<source media="(max-width: 1024px)" srcset="img/prefooter-mob.svg">
+			<img src="img/prefooter.svg" alt="">
+		</picture>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__wrapper-col">
+					<h2 class="footer__wrapper-col-title">Ищем таланты для работы в нашей студии</h2>
+					<div class="footer__wrapper-col-wrapper">
+						<div class="footer__wrapper-col-wrapper-col">
+							<a href="/" class="footer__wrapper-col-wrapper-col-text">hello@teller.studio </a>
+							<a href="/" class="footer__wrapper-col-wrapper-col-text">+7 495 789-00-36</a>
+							<br>
+							<br>
+							<a href="/" class="footer__wrapper-col-wrapper-col-text">Связаться в Telegram</a>
+							<a href="/" class="footer__wrapper-col-wrapper-col-text">Связаться в WhatsApp</a>
+						</div>
+						<div class="footer__wrapper-col-wrapper-col">
+							<p class="footer__wrapper-col-wrapper-col-text">
+								Деловой квартал «Рассвет» <br>
+								Столярный переулок,<br>
+								3 к13 123022 Москва
+							</p>
+						</div>
+					</div>
+				</div>
+				<div data-da=".footer__wrapper-col, 1024, 1" class="footer__wrapper-col">
+					<p class="footer__wrapper-col-text">Не нашли подходящей вакансии? Пришлите ваше CV на адрес hello@teller.studio — добавим вас в базу потенциальных сотрудников. Ответим на ваше письмо в любом случае.</p>
+					<a href="/" class="footer__wrapper-col-btn btn">смотреть вакансии</a>
+				</div>
+			</div>
+			<p class="footer__text">© Любое использование либо копирование материалов 
+				или подборки материалов сайта, элементов дизайна 
+				и оформления допускается с разрешения правообладателя и только со ссылкой на источник:  https://teller.studio/</p>
+			<p data-scroll="#top" class="footer__link">наверх</p>
+			<div class="footer__bottom">
+				<p data-da=".footer .container, 1024, 3" class="footer__bottom-text">© 2024 Teller Studio. Since 2020 till forever.</p>
+				<p class="footer__bottom-text">Политика в отношении обработки персональных данных</p>
+				<a data-da=".footer__bottom-mob, 451, first" href="/" class="footer__bottom-social">
+					<img src="img/vk.svg" alt="">
+				</a>
+				<a data-da=".footer__bottom-mob, 451, first" href="/" class="footer__bottom-social">
+					<img src="img/tg.svg" alt="">
+				</a>
+				<img class="footer__bottom-fav" src="img/fav.svg" alt="">
+			</div>
+			<div class="footer__bottom-mob">
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- libs -->
+	<script type="module" src="js/dynamicAdapt.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>

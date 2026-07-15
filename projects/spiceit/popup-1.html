@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+
+	<title>SpiceIT</title>
+	<meta name="description" content="SpiceIT">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+	<meta name="theme-color" content="#FE4F00">
+	<meta name="msapplication-navbutton-color" content="#FE4F00">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#FE4F00">
+
+	<!-- libs -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+	
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <div class="p_content m">
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<img class="header__wrapper-logo" src="img/logo.svg" alt="">
+					<div>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Услуги</a>
+						<a href="#" class="header__wrapper-link active" data-da=".menu .container .menu__wrapper, 900, last">Кейсы</a>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Пригласить в тендер</a>
+					</div>
+					<div>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Об агентстве</a>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Контакты</a>
+					</div>
+					<a href="#" class="header__wrapper-btn btn-red" data-da=".menu .container .menu__wrapper, 900, last">Найти  IT-специалиста</a>
+					<span class="burger"><span></span></span>
+				</div>
+			</div>
+		</header>
+		<section class="menu">
+			<div class="container">
+				<div class="menu__wrapper"></div>
+			</div>
+		</section>
+    <section class="popup-c active">
+			<div class="container">
+				<div class="popup-c__wrapper">
+          <img src="img/close.svg" alt="" class="popup-c__wrapper-close">
+          <div class="popup-c__wrapper-img">
+            <img src="img/p-01.png" alt="">
+          </div>
+          <div class="popup-c__wrapper-info">
+            <p class="popup-c__wrapper-info-title">Поможем провести техническое интервью</p>
+            <p class="popup-c__wrapper-info-text">Подберём эксперта, который сможет оценить хард скилс финалистов</p>
+          </div>
+          <form action="/submit" method="POST" class="popup-c__wrapper-form">
+            <input placeholder="Ваше имя" type="text" id="name" name="name">
+            <input placeholder="Вам email" type="email" id="email" name="email">
+            <button class="btn-red">Оставить заявку</button>
+            <p class="popup-c__wrapper-form-text">Отправляя заявку, вы соглашаетесь на <a href="policy.html">обработку личных данных</a></p>
+          </form>
+        </div>
+			</div>
+		</section>
+    <section class="preview">
+      <div class="preview__wrapper">
+        <img class="preview__wrapper-img img-01" src="img/flower.svg" alt="">
+        <img class="preview__wrapper-img img-02" src="img/letter.png" alt="">
+        <div class="preview__wrapper-img img-03">
+          <img src="img/arrow-02.svg" alt="">
+          <p>Выберите<br>параметры подбора</p>
+        </div>
+        <img class="preview__wrapper-img img-04" src="img/finger.svg" alt="">
+        <div class="preview__sliders">
+          <div class="swiper-container preview__sliders-01">
+            <div class="preview__sliders-nav">
+              <svg class="prev" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+              <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-prev"></use></svg>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/h-01.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/h-02.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/h-03.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/h-04.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-container preview__sliders-02">
+            <div class="preview__sliders-nav">
+              <svg class="prev" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-prev"></use></svg>
+              <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/b-01.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/b-02.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/b-03.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/b-04.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-container preview__sliders-03">
+            <div class="preview__sliders-nav">
+              <svg class="prev" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+              <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-prev"></use></svg>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/l-01.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/l-02.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/l-03.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/l-04.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="preview__info">
+          <h1 class="preview__info-title">
+            Найдем
+          </h1>
+          <div class="swiper-container preview__sliders-04">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <p>1DevOps</p>
+              </div>
+              <div class="swiper-slide">
+                <p>2DevOps</p>
+              </div>
+              <div class="swiper-slide">
+                <p>3DevOps</p>
+              </div>
+              <div class="swiper-slide">
+                <p>4DevOps</p>
+              </div>
+            </div>
+          </div>
+          <p class="preview__info-text">Помогаем находить и удерживать <nobr>IT-специалистов,</nobr> которые создают крутые продукты</p>
+          <a href="/" class="btn-black">Оставить заявку</a>
+        </div>
+      </div>
+      <div class="marquee">
+        <div class="preview__line marquee__content">
+          <div class="preview__line-wrapper">
+            <span class="preview__line-wrapper-data">24.11 — 30.11</span>
+            <p class="preview__line-wrapper-title">Большая конференция по IT-рекрутменту</p>
+            <div class="preview__line-wrapper-imgs">
+              <div class="preview__line-wrapper-imgs-img"><img src="img/pl-01.jpg" alt=""></div>
+              <div class="preview__line-wrapper-imgs-img"><img src="img/pl-02.jpg" alt=""></div>
+              <div class="preview__line-wrapper-imgs-img"><img src="img/pl-03.jpg" alt=""></div>
+            </div>
+            <p class="preview__line-wrapper-text">Выступят главные<br>спикеры отрасли</p>
+          </div>
+          <img src="img/arrow-round-02.svg" alt="" class="preview__line-img">
+        </div>
+        <div class="preview__line">
+          <div class="preview__line-wrapper">
+            <span class="preview__line-wrapper-data">24.11 — 30.11</span>
+            <p class="preview__line-wrapper-title">Большая конференция по IT-рекрутменту</p>
+            <div class="preview__line-wrapper-imgs">
+              <div class="preview__line-wrapper-imgs-img"><img src="img/pl-01.jpg" alt=""></div>
+              <div class="preview__line-wrapper-imgs-img"><img src="img/pl-02.jpg" alt=""></div>
+              <div class="preview__line-wrapper-imgs-img"><img src="img/pl-03.jpg" alt=""></div>
+            </div>
+            <p class="preview__line-wrapper-text">Выступят главные<br>спикеры отрасли</p>
+          </div>
+          <img src="img/arrow-round-02.svg" alt="" class="preview__line-img">
+        </div>
+      </div>
+    </section>
+    </section>
+    <section class="advantages yellow">
+      <div class="container">
+        <div class="advantages__wrapper">
+          <div class="advantages__wrapper-item">
+            <p class="advantages__wrapper-item-num">15 лет</p>
+            <p class="advantages__wrapper-item-text">специализируемся на IT-рекрутменте</p>
+          </div>
+          <div class="advantages__wrapper-item">
+            <p class="advantages__wrapper-item-num">ТОП-3</p>
+            <p class="advantages__wrapper-item-text">агентств, на которые приходится основная доля IT-вакансий на hh.ru</p>
+          </div>
+          <div class="advantages__wrapper-item">
+            <p class="advantages__wrapper-item-num">39</p>
+            <p class="advantages__wrapper-item-text">тендеров выиграно, нам доверяют поиск IT-специалистов ведущие компании Рунета</p>
+          </div>
+          <div class="advantages__wrapper-item">
+            <p class="advantages__wrapper-item-num">60%</p>
+            <p class="advantages__wrapper-item-text">из списка Forbes — наши клиенты</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__wrapper-info">
+					<a href="mailto:hello@spice-agency.ru" class="footer__wrapper-info-link">hello@spice-agency.ru</a>
+					<a href="tel:+74959660889" class="footer__wrapper-info-link">+7 (495) 966-08-89</a>
+					<div class="footer__wrapper-info-social" data-da=".footer__wrapper-mob, 731, last">
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#fb-b"></use></svg></a>
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#tg-b"></use></svg></a>
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#li-b"></use></svg></a>
+					</div>
+					<a class="footer__wrapper-info-logo" href="/" data-da=".footer__wrapper, 731, last">
+						<img src="img/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="footer__wrapper-mob"></div>
+				<div class="footer__wrapper-links">
+					<h4 class="footer__wrapper-links-title">Контакты</h4>
+					<p class="footer__wrapper-links-text">Москва<br>127051 Трубная улица, 25<br>стр. 3, 3 этаж</p>
+					<p class="footer__wrapper-links-text">Кипр<br>3040, Limassol,<br>Nikiforou Foka str., 34</p>
+					<p class="footer__wrapper-links-text top" data-da=".footer__wrapper-mob, 731, 0">© 2024 Spice IT</p>
+				</div>
+				<div class="footer__wrapper-links">
+					<h4 class="footer__wrapper-links-title">Услуги</h4>
+					<a href="#" class="footer__wrapper-links-text">Классический подбор</a>
+					<a href="#" class="footer__wrapper-links-text">Аренда IT-рекрутера</a>
+					<a href="#" class="footer__wrapper-links-text">Исследование заработных плат IT-специалистов</a>
+					<a href="#" class="footer__wrapper-links-text">Проведение тех. интервью</a>
+					<a href="#" class="footer__wrapper-links-text">Разработка стратегии удержания IT-специалистов</a>
+					<a href="#" class="footer__wrapper-links-text">Аутстаффинг</a>
+					<a href="#" class="footer__wrapper-links-text">Аудит/Диагностика IT-рекрутингового процесса</a>
+				</div>
+				<div class="footer__wrapper-links">
+					<a href="#" class="footer__wrapper-links-title">Кейсы</a>
+					<a href="#" class="footer__wrapper-links-title">Тендеры</a>
+					<a href="#" class="footer__wrapper-links-title">Комьюнити</a>
+					<a href="#" class="footer__wrapper-links-title">О нас</a>
+					<a href="#" class="footer__wrapper-links-title">Контакты</a>
+					<a href="#" class="footer__wrapper-links-text" data-da=".footer__wrapper-mob, 731, 1">Пользовательское соглашение</a>
+					<a href="#" class="footer__wrapper-links-text" data-da=".footer__wrapper-mob, 731, 2">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- libs -->
+	<script type="module" src="js/dynamicAdapt.js"></script>
+	<script src="js/aat.min.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>

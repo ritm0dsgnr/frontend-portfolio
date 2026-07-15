@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+
+		<title>teller</title>
+		<meta name="description" content="teller">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+		<meta name="theme-color" content="#000">
+		<meta name="msapplication-navbutton-color" content="#000">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+		<!-- libs -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text/javascript"></script>
+
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oranienbaum&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+  <body>
+  <div id="top" class="p_content header-dark m-t">
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<img class="header__wrapper-logo" src="img/logo.svg" alt="">
+					<div class="header__wrapper-w">
+						<a data-da=".nav, 1024, last" class="header__wrapper-nav" href="about.html">о компании</a>
+						<a data-da=".nav, 1024, last" class="header__wrapper-nav" href="blog.html">блог</a>
+						<a data-da=".nav, 1024, last" class="header__wrapper-nav" href="cases.html">решения</a>
+						<a data-da=".nav, 1024, last" class="header__wrapper-nav" href="vacancy.html">вакансии</a>
+						<svg class="header__wrapper-search" viewBox="0 0 23 23"><use xlink:href="img/sprite.svg#search"></use></svg>
+						<a data-da=".nav, 1024, last" class="header__wrapper-btn btn" href="contacts.html">связаться с нами</a>
+						<div class="header__wrapper-burger"><span></span></div>
+						<div class="nav">
+							<div class="container">
+								<img class="nav__close" src="img/close-02.svg" alt="">
+							</div>
+							<img class="nav__logo" src="img/fav.svg" alt="">
+							<div class="container">
+								<form class="nav__form" action="/search" class="search w-form">
+									<input class="nav__form-input" type="text" id="search" required="">
+									<svg class="nav__form-search" viewBox="0 0 23 23"><use xlink:href="img/sprite.svg#search"></use></svg>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="search">
+			<div class="container">
+				<form class="search__form" action="/search" class="search w-form">
+					<input class="search__form-input" placeholder="Поиск" type="text" id="search" required="">
+					<img class="search__form-close" src="img/close.svg" alt="">
+				</form>
+			</div>
+		</div>
+    <div class="done_send">
+  <div class="container">
+    <img src="img/close.svg" alt="" class="done_send__close">
+    <p class="done_send__title">Форма успешно заполнена!</p>
+    <a href="/" class="done_send__btn btn">на главную</a>
+  </div>
+</div>
+    <section class="pre">
+      <div class="container">
+        <h1 class="pre__title">Решения</h1>
+      </div>
+    </section>
+    <section class="cases">
+      <div class="container">
+        <h1 class="cases__title">Какие решения предлагаем</h1>
+        <p class="cases__text">Создание и управление медиа</p>
+        <div class="cases__wrapper">
+          <a href="project.html" class="cases__wrapper-item">
+            <div class="cases__wrapper-item-img">
+              <img src="img/case-01.jpg" alt="">
+            </div>
+            <p class="cases__wrapper-item-title">Контент-стратегия <nobr>и редакционная</nobr> политика</p>
+            <p class="cases__wrapper-item-text">Изучаем аудиторию и бизнес и предлагаем эффективные решения по коммуникации бренда.</p>
+          </a>
+          <a href="project.html" class="cases__wrapper-item">
+            <div class="cases__wrapper-item-img">
+              <img src="img/case-02.jpg" alt="">
+            </div>
+            <p class="cases__wrapper-item-title">Бренд-медиа и блог</p>
+            <p class="cases__wrapper-item-text">Запускаем с нуля и развиваем новые каналы продвижения и привлечения лояльной аудитории.</p>
+          </a>
+          <a href="project.html" class="cases__wrapper-item">
+            <div class="cases__wrapper-item-img">
+              <img src="img/case-03.jpg" alt="">
+            </div>
+            <p class="cases__wrapper-item-title">SEO-оптимизация и продвижение контента</p>
+            <p class="cases__wrapper-item-text">Строим экосистему продвижения с привлечением платного и органического трафика через поисковую оптимизацию, перформанс-кампании, посевы в СМИ и соцсетях, email-рассылки и пиар-инфоповоды.</p>
+          </a>
+          <a href="project.html" class="cases__wrapper-item">
+            <div class="cases__wrapper-item-img">
+              <img src="img/case-04.jpg" alt="">
+            </div>
+            <p class="cases__wrapper-item-title">Видеоконтент</p>
+            <p class="cases__wrapper-item-text">Видеопродакшн полного цикла: создаем контент под ключ, делаем эксплейнеры и ток-шоу, придумываем передачи для видеосервисов.</p>
+          </a>
+          <a href="project.html" class="cases__wrapper-item">
+            <div class="cases__wrapper-item-img">
+              <img src="img/case-05.jpg" alt="">
+            </div>
+            <p class="cases__wrapper-item-title">Аудио и видео-подкасты</p>
+            <p class="cases__wrapper-item-text">Контролируем весь процесс производства подкастов 
+              от написания концепции до дистрибуции на стримингах.</p>
+          </a>
+          <a href="project.html" class="cases__wrapper-item">
+            <div class="cases__wrapper-item-img">
+              <img src="img/case-06.jpg" alt="">
+            </div>
+            <p class="cases__wrapper-item-title">Нативные спецпроекты</p>
+            <p class="cases__wrapper-item-text">Создаем диджитал-спецпроекты на собственных площадках компании и в медиа.</p>
+          </a>
+          <a href="project.html" class="cases__wrapper-item">
+            <div class="cases__wrapper-item-img">
+              <img src="img/case-07.jpg" alt="">
+            </div>
+            <p class="cases__wrapper-item-title">Социальные сети</p>
+            <p class="cases__wrapper-item-text">Полностью берем на себя ведение соцсетей 
+              и развиваем их как микромедиа со своей редполитикой, форматами и темами.</p>
+          </a>
+          <a href="project.html" class="cases__wrapper-item">
+            <div class="cases__wrapper-item-img">
+              <img src="img/case-08.jpg" alt="">
+            </div>
+            <p class="cases__wrapper-item-title">Телеграм-каналы и чат-боты</p>
+            <p class="cases__wrapper-item-text">Делаем медиа в форматах мессенджера, например, ведем телеграм-канал или создаем бот, чтобы пользователям было интересно и удобно.</p>
+          </a>
+          <a href="project.html" class="cases__wrapper-item">
+            <div class="cases__wrapper-item-img">
+              <img src="img/case-09.jpg" alt="">
+            </div>
+            <p class="cases__wrapper-item-title">Нестандартные контентные решения</p>
+            <p class="cases__wrapper-item-text">Ценим и практикуем нешаблонный подход. Умеем реализовывать даже самые экзотичные форматы от AR- или VR-проектов до офлайн-ивентов.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="projects cs">
+      <div class="container">
+        <h3 class="projects__title">Собственные проекты</h3>
+        <div class="projects__slider cus">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide projects__slider-slide">
+                <div class="projects__slider-slide-img">
+                  <img src="img/pr-01.jpg" alt="">
+                </div>
+                <p class="projects__slider-slide-name">Teller Blog</p>
+                <p class="projects__slider-slide-text">Площадка, на которой социологи, антропологи, философы и профильные исследователи изучают новую реальность современных медиа.</p>
+                <a href="/" class="btn">на сайт</a>
+              </div>
+              <div class="swiper-slide projects__slider-slide">
+                <div class="projects__slider-slide-img">
+                  <img src="img/pr-02.jpg" alt="">
+                </div>
+                <p class="projects__slider-slide-name">Teller Press</p>
+                <p class="projects__slider-slide-text">Издательское бюро от команды <a href="https://nosorog.media/" target="_blank">литературного журнала и издательства «Носорог».</a></p>
+                <a href="/" class="btn">на сайт</a>
+              </div>
+              <div class="swiper-slide projects__slider-slide">
+                <div class="projects__slider-slide-img">
+                  <img src="img/pr-03.jpg" alt="">
+                </div>
+                <p class="projects__slider-slide-name">«Клетка тела»</p>
+                <p class="projects__slider-slide-text">Подкаст о доказательной медицине, который поможет разобраться в нюансах здоровья и избежать серьезных ошибок.</p>
+                <a href="/" class="btn">на сайт</a>
+              </div>
+              <div class="swiper-slide projects__slider-slide">
+                <div class="projects__slider-slide-img">
+                  <img src="img/pr-03.jpg" alt="">
+                </div>
+                <p class="projects__slider-slide-name">RUSSPASS журнал</p>
+                <p class="projects__slider-slide-text">Тревел-медиа, созданное на базе одноименного сервиса для путешественников по России: вдохновляем на исследование страны.</p>
+                <a href="/" class="btn">на сайт</a>
+              </div>
+            </div>
+          </div>
+          <div class="projects__slider-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <section class="form">
+      <div class="container">
+        <h3 class="form__title">Сделаем проект любой сложности</h3>
+        <p class="form__text">Напишите нам, чтобы организовать встречу или сразу заполните бриф — это займет не больше 10 минут</p>
+        <form action="/submit" method="POST" id="order-form" class="form__container form__s">
+          <div class="form__container-item">
+            <label class="form__container-item-lable" for="topic">Тема</label>
+            <input class="form__container-item-input" type="topic" id="topic" name="topic">
+          </div>
+          <div class="form__container-items delivery">
+            <div>
+              <label class="form__container-item-lable" for="first-name">Имя</label>
+              <input class="form__container-item-input" type="text" id="first-name" name="first-name">
+            </div>
+            <div>
+              <label class="form__container-item-lable" for="last-name">Фамилия</label>
+              <input class="form__container-item-input" type="text" id="last-name" name="last-name">
+            </div>
+          </div>
+          <div class="form__container-item">
+            <label class="form__container-item-lable" for="email">Почта</label>
+            <input class="form__container-item-input" type="email" id="email" name="email">
+            <p class="form__container-item-text">Или напишите нам в Telegram или WhatsApp Business <span>(вставить ссылки)</span></p>
+          </div>
+          <div class="form__container-item">
+            <label class="form__container-item-lable" for="company">Название компании</label>
+            <input class="form__container-item-input" type="company" id="company" name="company">
+          </div>
+          <div class="form__container-item">
+            <label class="form__container-item-lable" for="text">Сообщение</label>
+            <textarea class="form__container-item-input" placeholder="Расскажите о вашей задаче" type="text" id="text" name="text"></textarea>
+          </div>
+          <input type="file" id="selectedFile" style="display: none;" />
+          <input class="btn form__container-file" type="button" value="прикрепить файл" onclick="document.getElementById('selectedFile').click();" />
+          <button type="submit" class="btn form__container-send">Отправить</button>
+          <label class="form__policy">
+            <span class="checkmark"></span>
+            <p>Нажимая на кнопку «Отправить», я даю согласие на обработку своих персональных данных в соответствии с политикой обработки персональных данных.</p>
+            <input type="checkbox" id="policy" name="policy" value="policy">
+          </label>
+        </form>
+      </div>
+    </section>
+    <section class="projects b">
+      <div class="container">
+        <h3 class="projects__title">Проекты студии</h3>
+        <div class="projects__slider cus">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <a href="#" class="swiper-slide projects__slider-slide">
+                <div class="projects__slider-slide-img">
+                  <img src="img/pr-01-big.jpg" alt="">
+                </div>
+                <p class="projects__slider-slide-name">RUSSPASS журнал</p>
+                <p class="projects__slider-slide-text">Тревел-медиа, созданное на базе одноименного сервиса для путешественников по России: вдохновляем на исследование страны.</p>
+              </a>
+              <a href="#" class="swiper-slide projects__slider-slide">
+                <div class="projects__slider-slide-img">
+                  <img src="img/pr-02-big.jpg" alt="">
+                </div>
+                <p class="projects__slider-slide-name">Сайт «За Руку»</p>
+                <p class="projects__slider-slide-text">Медиа для онкопациентов, их близких и всех, 
+                  кто находится в группе риска развития рака.</p>
+              </a>
+              <a href="#" class="swiper-slide projects__slider-slide">
+                <div class="projects__slider-slide-img">
+                  <img src="img/pr-03-big.jpg" alt="">
+                </div>
+                <p class="projects__slider-slide-name">PR-кампания «Силы есть»</p>
+                <p class="projects__slider-slide-text">Ко Всемирному дню борьбы с раком (4 февраля) провести PR-кампанию c поддержкой и продвижением нутритивного питания.
+                </p>
+              </a>
+              <a href="#" class="swiper-slide projects__slider-slide">
+                <div class="projects__slider-slide-img">
+                  <img src="img/pr-03-big.jpg" alt="">
+                </div>
+                <p class="projects__slider-slide-name">RUSSPASS журнал</p>
+                <p class="projects__slider-slide-text">Тревел-медиа, созданное на базе одноименного сервиса для путешественников по России: вдохновляем на исследование страны.</p>
+              </a>
+            </div>
+          </div>
+          <a href="/" class="projects__slider-btn btn">на страницу проектов</a>
+          <div class="projects__slider-pagination"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+	
+	<div class="container prefooter dark">
+		<picture>
+			<source media="(max-width: 1024px)" srcset="img/prefooter-mob.svg">
+			<img src="img/prefooter.svg" alt="">
+		</picture>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__wrapper-col">
+					<h2 class="footer__wrapper-col-title">Ищем таланты для работы в нашей студии</h2>
+					<div class="footer__wrapper-col-wrapper">
+						<div class="footer__wrapper-col-wrapper-col">
+							<a href="/" class="footer__wrapper-col-wrapper-col-text">hello@teller.studio </a>
+							<a href="/" class="footer__wrapper-col-wrapper-col-text">+7 495 789-00-36</a>
+							<br>
+							<br>
+							<a href="/" class="footer__wrapper-col-wrapper-col-text">Связаться в Telegram</a>
+							<a href="/" class="footer__wrapper-col-wrapper-col-text">Связаться в WhatsApp</a>
+						</div>
+						<div class="footer__wrapper-col-wrapper-col">
+							<p class="footer__wrapper-col-wrapper-col-text">
+								Деловой квартал «Рассвет» <br>
+								Столярный переулок,<br>
+								3 к13 123022 Москва
+							</p>
+						</div>
+					</div>
+				</div>
+				<div data-da=".footer__wrapper-col, 1024, 1" class="footer__wrapper-col">
+					<p class="footer__wrapper-col-text">Не нашли подходящей вакансии? Пришлите ваше CV на адрес hello@teller.studio — добавим вас в базу потенциальных сотрудников. Ответим на ваше письмо в любом случае.</p>
+					<a href="/" class="footer__wrapper-col-btn btn">смотреть вакансии</a>
+				</div>
+			</div>
+			<p class="footer__text">© Любое использование либо копирование материалов 
+				или подборки материалов сайта, элементов дизайна 
+				и оформления допускается с разрешения правообладателя и только со ссылкой на источник:  https://teller.studio/</p>
+			<p data-scroll="#top" class="footer__link">наверх</p>
+			<div class="footer__bottom">
+				<p data-da=".footer .container, 1024, 3" class="footer__bottom-text">© 2024 Teller Studio. Since 2020 till forever.</p>
+				<p class="footer__bottom-text">Политика в отношении обработки персональных данных</p>
+				<a data-da=".footer__bottom-mob, 451, first" href="/" class="footer__bottom-social">
+					<img src="img/vk.svg" alt="">
+				</a>
+				<a data-da=".footer__bottom-mob, 451, first" href="/" class="footer__bottom-social">
+					<img src="img/tg.svg" alt="">
+				</a>
+				<img class="footer__bottom-fav" src="img/fav.svg" alt="">
+			</div>
+			<div class="footer__bottom-mob">
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- libs -->
+	<script type="module" src="js/dynamicAdapt.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>

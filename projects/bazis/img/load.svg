@@ -1,0 +1,14 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="25" cy="25" r="22.5" stroke="#DCE1E4" stroke-width="5"/>
+  <path d="M25 2.5C27.9547 2.5 30.8806 3.08198 33.6104 4.21271C36.3402 5.34344 38.8206 7.00078 40.9099 9.0901C42.9992 11.1794 44.6566 13.6598 45.7873 16.3896C46.918 19.1194 47.5 22.0453 47.5 25" 
+        stroke="#144897" 
+        stroke-width="5">
+    <animateTransform 
+      attributeName="transform" 
+      type="rotate" 
+      from="0 25 25" 
+      to="360 25 25" 
+      dur="1s" 
+      repeatCount="indefinite" />
+  </path>
+</svg>

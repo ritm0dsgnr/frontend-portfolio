@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+
+	<title>SpiceIT</title>
+	<meta name="description" content="SpiceIT">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+	<meta name="theme-color" content="#FE4F00">
+	<meta name="msapplication-navbutton-color" content="#FE4F00">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#FE4F00">
+
+	<!-- libs -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+	
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <div class="p_content evn">
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<img class="header__wrapper-logo" src="img/logo.svg" alt="">
+					<div>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Услуги</a>
+						<a href="#" class="header__wrapper-link active" data-da=".menu .container .menu__wrapper, 900, last">Кейсы</a>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Пригласить в тендер</a>
+					</div>
+					<div>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Об агентстве</a>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Контакты</a>
+					</div>
+					<a href="#" class="header__wrapper-btn btn-red" data-da=".menu .container .menu__wrapper, 900, last">Найти  IT-специалиста</a>
+					<span class="burger"><span></span></span>
+				</div>
+			</div>
+		</header>
+		<section class="menu">
+			<div class="container">
+				<div class="menu__wrapper"></div>
+			</div>
+		</section>
+    <section class="case blue">
+      <div class="container">
+        <div class="case__wrapper">
+          <div class="case__wrapper-info">
+            <div class="case__wrapper-info-header">
+              <div class="case__wrapper-info-header-tags">
+                <a href="#">Подкаст</a>
+              </div>
+              <p class="case__wrapper-info-header-text" data-da=".evn-w, 731, last"><img src="img/date-icon.svg" alt="">14—15.08.2024</p>
+              <p class="case__wrapper-info-header-text" data-da=".evn-w, 731, last"><img src="img/time-icon.svg" alt="">10:00 (Мск)</p>
+              <p class="case__wrapper-info-header-text" data-da=".evn-w, 731, last"><img src="img/zoom-icon.svg" alt="">Zoom</p>
+            </div>
+            <h1 class="case__wrapper-info-title">Как работать с незакрываемыми <nobr>IT-вакансиями</nobr></h1>
+            <div class="evn-w"></div>
+            <a href="/" class="btn-black">Регистрация</a>
+          </div>
+          <div class="case__wrapper-img imgs">
+            <img class="r" src="img/arrow-round-04.svg" alt="">
+            <div class="rn">
+              <img src="img/a-1.jpg" alt="">
+            </div>
+            <img src="img/arrow-round-03.svg" alt="">
+            <div class="rn">
+              <img src="img/a-3.png" alt="">
+            </div>
+            <img class="o" src="img/arrow-round-03.svg" alt="">
+            <img src="img/arrow-round-04.svg" alt="">
+            <div class="rn">
+              <img src="img/a-3.png" alt="">
+            </div>
+            <img class="r" src="img/arrow-round-03.svg" alt="">
+          </div>
+        </div>
+        <div class="case-back">
+          <a href="#"><svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>все мероприятия</a>
+        </div>
+      </div>
+    </section>
+    <section class="prm">
+      <div class="container">
+        <div class="prm__wrapper">
+          <div class="prm__wrapper-item">
+            <p class="prm__wrapper-title">Это выступление будет на конференции <nobr>«HR-перезагрузка»</nobr></p>
+            <p class="prm__wrapper-text">По промокоду <span>SPICE</span> — скидка 10% на билеты</p>
+          </div>
+          <img src="img/hr.svg" alt="" class="prm__wrapper-img">
+        </div>
+      </div>
+    </section>
+    <section class="case-text">
+      <div class="container-min">
+        <h3>Что будем обсуждать</h3>
+        <ol>
+          <li>Проблемы IT-рекрутмента</li>
+          <li>Что происходит с рынком IT-специалистов</li>
+          <li>Как изменились отношения HR и бизнеса</li>
+          <li>Какие сейчас требования к рекрутменту</li>
+          <li>Как закрыть вакансию, которая висит больше 2-х месяцев</li>
+          <li>Кейсы из практики</li>
+        </ol>
+      </div>
+    </section>
+    <section class="case-person">
+      <div class="container-min">
+        <div class="case-person-wrapper">
+          <div class="case-person-wrapper-item">
+            <div class="case-person-wrapper-item-img">
+              <img src="img/pr-01.jpg" alt="">
+            </div>
+            <div class="case-person-wrapper-item-info">
+              <div class="case-person-wrapper-item-info-w">
+                <div class="case-person-wrapper-item-img">
+                  <img src="img/pr-01.jpg" alt="">
+                </div>
+                <p class="case-person-wrapper-item-info-name">
+                  Анастасия Авдонина
+                  <br>
+                  <span>Account Director SI</span>
+                </p>
+              </div>
+              <ul class="case-person-wrapper-item-info-list">
+                <li>15 лет опыта</li>
+                <li>Специализируется на аналитике данных и исследованиях рынка труда</li>
+                <li>Коуч ICF</li>
+              </ul>
+              <a href="/" class="link active">
+                подробнее
+                <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+              </a>
+            </div>
+          </div>
+          <div class="case-person-wrapper-item">
+            <div class="case-person-wrapper-item-img">
+              <img src="img/pr-02.jpg" alt="">
+            </div>
+            <div class="case-person-wrapper-item-info">
+              <div class="case-person-wrapper-item-info-w">
+                <div class="case-person-wrapper-item-img">
+                  <img src="img/pr-02.jpg" alt="">
+                </div>
+                <p class="case-person-wrapper-item-info-name">
+                  Юлия Клементьева
+                  <br>
+                  <span>Тимлид SpiceIT</span>
+                </p>
+              </div>
+              <p class="case-person-wrapper-item-info-text">Специализируется на аналитике данных и исследованиях рынка труда, Х лет опыта в HR аналитике. Специализируется на аналитике данных и исследованиях рынка труда, Х лет опыта в HR аналитике</p>
+              <a href="/" class="link active">
+                подробнее
+                <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+              </a>
+            </div>
+          </div>
+          <div class="case-person-wrapper-item">
+            <div class="case-person-wrapper-item-img">
+              <img src="img/pr-03.jpg" alt="">
+            </div>
+            <div class="case-person-wrapper-item-info">
+              <div class="case-person-wrapper-item-info-w">
+                <div class="case-person-wrapper-item-img">
+                  <img src="img/pr-03.jpg" alt="">
+                </div>
+                <p class="case-person-wrapper-item-info-name">
+                  Анна Рудая
+                  <br>
+                  <span>Сооснователь SpiceIT</span>
+                </p>
+              </div>
+              <p class="case-person-wrapper-item-info-text">Специализируется на аналитике данных и исследованиях рынка труда, Х лет опыта в HR аналитике. Специализируется на аналитике данных и исследованиях рынка труда, Х лет опыта в HR аналитике</p>
+              <a href="/" class="link active">
+                подробнее
+                <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="case-text">
+      <div class="container-min">
+        <h3>Что будем обсуждать</h3>
+        <div class="case-plan-wrapper g">
+          <div class="case-plan-wrapper-item">
+            <div class="case-plan-wrapper-item-l">
+              <span>0:00</span>
+            </div>
+            <div class="case-plan-wrapper-item-r">
+              <p class="case-plan-wrapper-item-r-title">Проблемы IT-рекрутмента</p>
+            </div>
+          </div>
+          <div class="case-plan-wrapper-item">
+            <div class="case-plan-wrapper-item-l">
+              <span>1:45</span>
+            </div>
+            <div class="case-plan-wrapper-item-r">
+              <p class="case-plan-wrapper-item-r-title">Что происходит с рынком IT-специалистов</p>
+            </div>
+          </div>
+          <div class="case-plan-wrapper-item">
+            <div class="case-plan-wrapper-item-l">
+              <span>11:05</span>
+            </div>
+            <div class="case-plan-wrapper-item-r">
+              <p class="case-plan-wrapper-item-r-title">Как изменились отношения HR и бизнеса</p>
+            </div>
+          </div>
+          <div class="case-plan-wrapper-item">
+            <div class="case-plan-wrapper-item-l">
+              <span>14:47</span>
+            </div>
+            <div class="case-plan-wrapper-item-r">
+              <p class="case-plan-wrapper-item-r-title">Какие сейчас требования к рекрутменту</p>
+            </div>
+          </div>
+          <div class="case-plan-wrapper-item">
+            <div class="case-plan-wrapper-item-l">
+              <span>21:32</span>
+            </div>
+            <div class="case-plan-wrapper-item-r">
+              <p class="case-plan-wrapper-item-r-title">Как закрыть вакансию, которая висит больше 2-х месяцев</p>
+            </div>
+          </div>
+          <div class="case-plan-wrapper-item">
+            <div class="case-plan-wrapper-item-l">
+              <span>35:10</span>
+            </div>
+            <div class="case-plan-wrapper-item-r">
+              <p class="case-plan-wrapper-item-r-title">Кейсы из практики</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="case-plan">
+      <div class="container-min">
+        <h3>План мероприятия</h3>
+        <div class="case-plan-wrapper">
+          <div class="case-plan-wrapper-item">
+            <div class="case-plan-wrapper-item-l">
+              <span>10:00</span>
+            </div>
+            <div class="case-plan-wrapper-item-r">
+              <p class="case-plan-wrapper-item-r-title">Проблемы IT-рекрутмента</p>
+            </div>
+          </div>
+          <div class="case-plan-wrapper-item p">
+            <div class="case-plan-wrapper-item-l">
+              <span>13:30</span>
+            </div>
+            <div class="case-plan-wrapper-item-r">
+              <p class="case-plan-wrapper-item-r-title">Что происходит  с рынком IT-специалистов</p>
+                <div class="case-plan-wrapper-item-r-person">
+                  <div class="case-plan-wrapper-item-r-person-img">
+                    <img src="img/pr-01.jpg" alt="">
+                  </div>
+                  <div class="case-plan-wrapper-item-r-person-info">
+                    <p class="case-plan-wrapper-item-r-person-info-name">Анастасия Авдонина</p>
+                    <p class="case-plan-wrapper-item-r-person-info-post">Account Director SI</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="case-plan-wrapper-item">
+            <div class="case-plan-wrapper-item-l">
+              <span>13:30</span>
+            </div>
+            <div class="case-plan-wrapper-item-r">
+              <p class="case-plan-wrapper-item-r-title">Кофе-брейк</p>
+            </div>
+          </div>
+          <div class="case-plan-wrapper-item">
+            <div class="case-plan-wrapper-item-l">
+              <span>14:00</span>
+            </div>
+            <div class="case-plan-wrapper-item-r">
+              <p class="case-plan-wrapper-item-r-title">Как изменились отношения 
+                HR и бизнеса</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sale">
+      <div class="container">
+        <div class="sale__wrapper">
+          <div class="sale__wrapper-l blue">
+            <p class="sale__wrapper-l-title">Успейте купить билет со скидкой</p>
+            <p class="sale__wrapper-l-text">По промокоду <span>SPICE</span> — скидка 10% на билеты</p>
+            <a href="/" class="btn-red">Подробнее про мероприятие</a>
+          </div>
+          <div class="sale__wrapper-r blue">
+            <img src="img/hr.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="form pink">
+      <div class="container">
+        <div class="form__wrapper">
+          <div class="form__wrapper-info">
+            <p class="form__wrapper-info-title m hide">Спасибо!<br>Вы записались<br><nobr>на встречу</nobr></p>
+            <p class="form__wrapper-info-title d">Стать <br>участником</p>
+            <p class="form__wrapper-info-text">Пришлём напоминание за час до встречи</p>
+            <p class="form__wrapper-info-subtitle hide">ваши данные</p>
+            <div class="form__wrapper-info-data"></div>
+            <div class="form__wrapper-info-bottom">
+              <p class="form__wrapper-info-bottom-link">Отправляя заявку, вы соглашаетесь на <a href="policy.html">обработку личных данных</a></p>
+              <img class="form__wrapper-info-bottom-img" src="img/c-01.png" alt="">
+            </div>
+            <span class="form__wrapper-info-btn btn-black hide">Оставить новую заявку</span>
+          </div>
+          <form action="/submit" method="POST" id="order-form" class="form__wrapper-form">
+            <img class="form__wrapper-form-back hide" src="img/back.svg" alt="">
+            <input class="input-field" placeholder="Имя и фамилия" type="text" id="name" name="name">
+            <input class="input-field hide" placeholder="Email" type="email" id="email" name="email">
+            <div class="form__wrapper-form-choose date">
+              <p class="form__wrapper-form-choose-title">Выберите дату</p>
+              <div class="form__wrapper-form-choose-month">
+                <span class="active">Ноябрь</span>
+                <span>Декабрь</span>
+              </div>
+              <div class="form__wrapper-form-choose-calendar">
+                <span class="d">пн</span>
+                <span class="d">вт</span>
+                <span class="d">ст</span>
+                <span class="d">чт</span>
+                <span class="d">пт</span>
+                <span class="d">сб</span>
+                <span class="d">вс</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span class="open">11</span>
+                <span class="open">12</span>
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+                <span>18</span>
+                <span class="open">19</span>
+                <span class="open">20</span>
+                <span>21</span>
+                <span>22</span>
+                <span class="open">23</span>
+                <span class="open">24</span>
+                <span class="open">25</span>
+                <span class="open">26</span>
+                <span class="open">27</span>
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+              </div>
+            </div>
+            <div class="form__wrapper-form-choose time">
+              <p class="form__wrapper-form-choose-title">Выберите время</p>
+              <div class="form__wrapper-form-choose-time">
+                <span>12:00</span>
+                <span>13:00</span>
+                <span>16:00</span>
+                <span>18:00</span>
+                <span>19:00</span>
+              </div>
+            </div>
+            <div class="form__wrapper-form-bottom">
+              <p class="form__wrapper-form-bottom-count">
+                1 / 3
+              </p>
+              <img class="form__wrapper-form-bottom-next" src="img/arrow-round-02.svg" alt="">
+            </div>
+            <div class="form__wrapper-form-progress">
+              <span></span>
+            </div>
+          </form>
+          <div class="form__wrapper-done">
+            <img src="img/form-done.png" alt="">
+          </div>
+          <p class="form__wrapper-info-bottom-link mob">Отправляя заявку, вы соглашаетесь на <a href="policy.html">обработку личных данных</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="events">
+      <div class="container">
+        <div class="events__header">
+          <h2 class="title">Следующие мероприятия</h2>
+          <a class="vacancy__header-link" href="/" data-da=".events .container, 731, last">
+            Смотреть закрытые вакансии
+            <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+          </a>
+        </div>
+        <div class="events__item green">
+          <div class="events__item-l">
+            <div class="events__item-l-header">
+              <div class="main__cards-card-wrapper-tags">
+                <div>Вебинар</div>
+                <div>23 августа</div>
+              </div>
+              <p class="recomended__wrapper-item-header-date">23 ноября</p>
+              <p class="recomended__wrapper-item-header-time l">
+                <img src="img/time-icon.svg" alt="">
+                10:00 (Мск)
+              </p>
+              <p class="recomended__wrapper-item-header-time">
+                <img src="img/location-icon.svg" alt="">
+                БЦ Инженер​
+              </p>
+            </div>
+            <div class="events__item-r">
+              <div class="events__item-r-item">
+                <div class="events__item-r-item-img">
+                  <img src="img/e-01.jpg" alt="">
+                </div>
+                <p class="events__item-r-item-text">Анна Рудая, <br>Head of Recruitment</p>
+              </div>
+              <div class="events__item-r-item">
+                <div class="events__item-r-item-img">
+                  <img src="img/e-02.jpg" alt="">
+                </div>
+                <p class="events__item-r-item-text">Александр Морозов, <br>Account Director SI</p>
+              </div>
+              <div class="events__item-r-item">
+                <div class="events__item-r-item-img">
+                  <img src="img/e-03.jpg" alt="">
+                </div>
+                <p class="events__item-r-item-text">Дмитрий Пономарёв, <br>Head of Recruitment</p>
+              </div>
+            </div>
+            <p class="events__item-l-title">Как закрыть IT-вакансию, которая висит больше  2-х месяцев</p>
+            <p class="events__item-l-text">Анна Рудая рассказала о кейсах из практики и поделилась советами, как оптимизировать процесс отбора IT-специалистов.</p>
+            <a href="/" class="btn-black">Подробнее</a>
+          </div>
+          <div class="events__item-r">
+            <div class="events__item-r-item">
+              <div class="events__item-r-item-img">
+                <img src="img/e-01.jpg" alt="">
+              </div>
+              <p class="events__item-r-item-text">Анна Рудая, <br>Head of Recruitment</p>
+            </div>
+            <div class="events__item-r-item">
+              <div class="events__item-r-item-img">
+                <img src="img/e-02.jpg" alt="">
+              </div>
+              <p class="events__item-r-item-text">Александр Морозов, <br>Account Director SI</p>
+            </div>
+            <div class="events__item-r-item">
+              <div class="events__item-r-item-img">
+                <img src="img/e-03.jpg" alt="">
+              </div>
+              <p class="events__item-r-item-text">Дмитрий Пономарёв, <br>Head of Recruitment</p>
+            </div>
+          </div>
+        </div>
+        <div class="events__item pink">
+          <div class="events__item-l">
+            <div class="events__item-l-header">
+              <div class="main__cards-card-wrapper-tags">
+                <div>Запись эфира</div>
+                <div>7 октября</div>
+              </div>
+              <p class="recomended__wrapper-item-header-date">23 ноября</p>
+              <p class="recomended__wrapper-item-header-time l">
+                <img src="img/time-icon.svg" alt="">
+                10:00 (Мск)
+              </p>
+              <p class="recomended__wrapper-item-header-time">
+                <img src="img/zoom-icon.svg" alt="">
+                Zoom
+              </p>
+            </div>
+            <div class="events__item-r">
+              <div class="events__item-r-item">
+                <div class="events__item-r-item-img">
+                  <img src="img/e-04.jpg" alt="">
+                </div>
+                <p class="events__item-r-item-text">Анастасия Авдонина <br>(Account Director SI)</p>
+              </div>
+              <div class="events__item-r-item">
+                <div class="events__item-r-item-img">
+                  <img src="img/e-05.jpg" alt="">
+                </div>
+                <p class="events__item-r-item-text">Екатерина Зубова <br>(Head of Recruitment)</p>
+              </div>
+            </div>
+            <p class="events__item-l-title">Зарплатные переговоры, сломанный найм и ошибки построения карьеры в IT</p>
+            <a href="/" class="btn-black">Подробнее</a>
+          </div>
+          <div class="events__item-r">
+            <div class="events__item-r-item">
+              <div class="events__item-r-item-img">
+                <img src="img/e-04.jpg" alt="">
+              </div>
+              <p class="events__item-r-item-text">Анастасия Авдонина <br>(Account Director SI)</p>
+            </div>
+            <div class="events__item-r-item">
+              <div class="events__item-r-item-img">
+                <img src="img/e-05.jpg" alt="">
+              </div>
+              <p class="events__item-r-item-text">Екатерина Зубова <br>(Head of Recruitment)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__wrapper-info">
+					<a href="mailto:hello@spice-agency.ru" class="footer__wrapper-info-link">hello@spice-agency.ru</a>
+					<a href="tel:+74959660889" class="footer__wrapper-info-link">+7 (495) 966-08-89</a>
+					<div class="footer__wrapper-info-social" data-da=".footer__wrapper-mob, 731, last">
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#fb-b"></use></svg></a>
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#tg-b"></use></svg></a>
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#li-b"></use></svg></a>
+					</div>
+					<a class="footer__wrapper-info-logo" href="/" data-da=".footer__wrapper, 731, last">
+						<img src="img/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="footer__wrapper-mob"></div>
+				<div class="footer__wrapper-links">
+					<h4 class="footer__wrapper-links-title">Контакты</h4>
+					<p class="footer__wrapper-links-text">Москва<br>127051 Трубная улица, 25<br>стр. 3, 3 этаж</p>
+					<p class="footer__wrapper-links-text">Кипр<br>3040, Limassol,<br>Nikiforou Foka str., 34</p>
+					<p class="footer__wrapper-links-text top" data-da=".footer__wrapper-mob, 731, 0">© 2024 Spice IT</p>
+				</div>
+				<div class="footer__wrapper-links">
+					<h4 class="footer__wrapper-links-title">Услуги</h4>
+					<a href="#" class="footer__wrapper-links-text">Классический подбор</a>
+					<a href="#" class="footer__wrapper-links-text">Аренда IT-рекрутера</a>
+					<a href="#" class="footer__wrapper-links-text">Исследование заработных плат IT-специалистов</a>
+					<a href="#" class="footer__wrapper-links-text">Проведение тех. интервью</a>
+					<a href="#" class="footer__wrapper-links-text">Разработка стратегии удержания IT-специалистов</a>
+					<a href="#" class="footer__wrapper-links-text">Аутстаффинг</a>
+					<a href="#" class="footer__wrapper-links-text">Аудит/Диагностика IT-рекрутингового процесса</a>
+				</div>
+				<div class="footer__wrapper-links">
+					<a href="#" class="footer__wrapper-links-title">Кейсы</a>
+					<a href="#" class="footer__wrapper-links-title">Тендеры</a>
+					<a href="#" class="footer__wrapper-links-title">Комьюнити</a>
+					<a href="#" class="footer__wrapper-links-title">О нас</a>
+					<a href="#" class="footer__wrapper-links-title">Контакты</a>
+					<a href="#" class="footer__wrapper-links-text" data-da=".footer__wrapper-mob, 731, 1">Пользовательское соглашение</a>
+					<a href="#" class="footer__wrapper-links-text" data-da=".footer__wrapper-mob, 731, 2">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- libs -->
+	<script type="module" src="js/dynamicAdapt.js"></script>
+	<script src="js/aat.min.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>

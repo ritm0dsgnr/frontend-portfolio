@@ -1,0 +1,72 @@
+<section class="form">
+  <div class="container">
+    <div class="form__wrapper">
+      <div class="form__wrapper-w">
+        <h2 class="form__wrapper-title">
+          Нет подходящей
+          <br>
+          вакансии?
+        </h2>
+        <p class="form__wrapper-text">
+          Отправьте резюме — 
+          <br>
+          мы ценим людей, а не формальности.
+        </p>
+      </div>
+      <form action="" class="form__wrapper-form">
+        <div class="form__fields">
+          <label class="form__field">
+            <input type="text" name="name" class="form__input" placeholder="Ваше имя*">
+          </label>
+          <label class="form__field">
+            <input type="email" name="email" class="form__input" placeholder="Рабочий email*">
+          </label>
+          <label class="form__field">
+            <input type="text" name="company" class="form__input" placeholder="Компания*">
+          </label>
+          <label class="form__field">
+            <input type="tel" name="phone" class="form__input" placeholder="+7 (999) 999-99-99">
+          </label>
+          <div class="form__field custom-select" data-name="position">
+            <input type="hidden" name="position" value="">
+            <div class="custom-select__toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="listbox">
+              <p>Должность</p>
+              <svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+            </div>
+            <ul class="custom-select__list" role="listbox">
+              <li class="custom-select__option" role="option" data-value="Руководитель маркетинга">Руководитель маркетинга</li>
+              <li class="custom-select__option" role="option" data-value="Маркетолог">Маркетолог</li>
+              <li class="custom-select__option" role="option" data-value="Агентство">Агентство</li>
+              <li class="custom-select__option" role="option" data-value="Другое">Другое</li>
+            </ul>
+          </div>
+          <label class="form__field form__field--full">
+            <input name="message" class="form__textarea" rows="4" placeholder="Опишите вашу задачу"></input>
+          </label>
+        </div>
+        <div class="form__consents">
+          <label class="form__checkbox">
+            <input type="checkbox" id="consent_personal" name="consent_personal" value="1">
+            <span class="checkmark">
+              <span></span>
+            </span>
+            <p>Нажимая кнопку "Отправить", я даю согласие на обработку персональных данных и ознакомлен (а) с <a href="#">Политикой конфиденциальности</a></p>
+          </label>
+          <label class="form__checkbox">
+            <input type="checkbox" id="consent_marketing" name="consent_marketing" value="1">
+            <span class="checkmark">
+              <span></span>
+            </span>
+            <p>Нажимая кнопку "Отправить", я даю согласие на получение рассылки рекламно-информационных материалов</p>
+          </label>
+        </div>
+        <button type="submit" class="btn form__submit">
+          <p>Отправить</p>
+          <span>
+            <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#arrow2"></use></svg>
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

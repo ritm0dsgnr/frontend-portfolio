@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Weborama</title>
+		<meta name="description" content="Weborama">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+		<meta name="theme-color" content="#EC3575">
+		<meta name="msapplication-navbutton-color" content="#EC3575">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#EC3575">
+
+		<!-- libs -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.1/jquery.marquee.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+		<script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="css/style.css">
+
+		<script>
+			document.addEventListener('DOMContentLoaded', async () => {
+				try {
+					const res = await fetch('img/sprite.svg', { cache: 'no-store' })
+					if (!res.ok) return
+					const svgText = await res.text()
+					const holder = document.createElement('div')
+					holder.style.position = 'absolute'
+					holder.style.width = '0'
+					holder.style.height = '0'
+					holder.style.overflow = 'hidden'
+					holder.setAttribute('aria-hidden', 'true')
+					holder.innerHTML = svgText
+					document.body.insertBefore(holder, document.body.firstChild)
+					document.querySelectorAll('use[href], use[xlink\\:href]').forEach(use => {
+						const href = use.getAttribute('href') || use.getAttribute('xlink:href')
+						if (!href) return
+						const i = href.indexOf('#')
+						if (i === -1) return
+						const id = href.slice(i)
+						use.setAttribute('href', id)
+						use.removeAttribute('xlink:href')
+					})
+				} catch {}
+			})
+		</script>
+
+	</head>
+  <body>
+	<header class="header">
+		<div class="container">
+			<div class="header__wrapper">
+				<a href="#" class="header__wrapper-logo">
+					<svg class="desk" viewBox="0 0 200 20"><use href="#logo"></use></svg>
+					<svg class="mob" viewBox="0 0 60 21"><use href="#logo2"></use></svg>
+				</a>
+				<div class="header__wrapper-wr">
+					<svg class="header__wrapper-search"  width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19 17.8821L14.0492 12.9313C15.3352 11.3584 15.9675 9.35144 15.8153 7.32547C15.6631 5.2995 14.738 3.40955 13.2314 2.04652C11.7248 0.683499 9.75189 -0.0483058 7.72084 0.00247667C5.6898 0.0532591 3.75597 0.882744 2.31936 2.31936C0.882744 3.75597 0.0532591 5.6898 0.00247667 7.72084C-0.0483058 9.75189 0.683499 11.7248 2.04652 13.2314C3.40955 14.738 5.2995 15.6631 7.32547 15.8153C9.35144 15.9675 11.3584 15.3352 12.9313 14.0492L17.8821 19L19 17.8821ZM7.93143 14.2563C6.68048 14.2563 5.45763 13.8854 4.4175 13.1904C3.37738 12.4954 2.5667 11.5076 2.08798 10.3519C1.60927 9.19614 1.48401 7.92441 1.72806 6.6975C1.97211 5.47059 2.5745 4.3436 3.45905 3.45905C4.3436 2.5745 5.47059 1.97211 6.6975 1.72806C7.92441 1.48401 9.19614 1.60927 10.3519 2.08798C11.5076 2.5667 12.4954 3.37738 13.1904 4.4175C13.8854 5.45763 14.2563 6.68048 14.2563 7.93143C14.2544 9.60832 13.5875 11.216 12.4017 12.4017C11.216 13.5875 9.60832 14.2544 7.93143 14.2563Z"/>
+					</svg>
+					<input type="text" class="header__wrapper-input" placeholder="Поиск...">
+					<ul class="header__wrapper-nav">
+						<li class="active"><a href="#">Главная</a></li>
+						<li class="dropdown">
+							<a href="#">
+								<p>Решения</p>
+								<svg viewBox="0 0 10 10"><use href="#arrow"></use></svg>
+							</a>
+							<ul class="header__wrapper-nav-dropdown">
+								<li><a href="#">Продукт 01</a></li>
+								<li><a href="#">Продукт 02</a></li>
+								<li><a href="#">Продукт 03</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Кейсы</a></li>
+						<li><a href="#">Блог</a></li>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="header__wrapper-menu">
+					<svg class="b active" viewBox="0 0 30 29"><use href="#menu"></use></svg>
+					<svg class="c" viewBox="0 0 30 29"><use href="#plus"></use></svg>
+				</div>
+			</div>
+			<div class="serch__wrapper">
+				<svg class="serch__wrapper-close" viewBox="0 0 16 16"><use href="#plus"></use></svg>
+				<div class="serch__wrapper-col1">
+					<p class="serch__wrapper-col1-title">Фильтровать <br>по разделам (2)</p>
+					<div class="serch__wrapper-col1-filters">
+						<span>Решения</span>
+						<span>Кейсы</span>
+						<span>Статьи</span>
+						<span>Вакансии</span>
+					</div>
+				</div>
+				<div class="serch__wrapper-col2">
+					<h2 class="serch__wrapper-col2-title">
+						Показано 5 из 25<br>результатов поиска
+					</h2>
+					<div class="serch__wrapper-col2-wrapper">
+						<div class="serch__wrapper-col2-wrapper-item">
+							<div class="serch__wrapper-col2-wrapper-item-info">
+								<p class="serch__wrapper-col2-wrapper-item-info-title">Результат 1</p>
+								<p class="serch__wrapper-col2-wrapper-item-info-text">Объединяем данные, аналитику и таргетинг</p>
+							</div>
+							<a href="#" class="serch__wrapper-col2-wrapper-btn btn">
+								<p>Перейти</p>
+								<span>
+									<svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+								</span>
+							</a>
+						</div>
+						<div class="serch__wrapper-col2-wrapper-item">
+							<div class="serch__wrapper-col2-wrapper-item-info">
+								<p class="serch__wrapper-col2-wrapper-item-info-title">Результат 2</p>
+								<p class="serch__wrapper-col2-wrapper-item-info-text">Объединяем данные, аналитику и таргетинг</p>
+							</div>
+							<a href="#" class="serch__wrapper-col2-wrapper-btn btn">
+								<p>Перейти</p>
+								<span>
+									<svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+								</span>
+							</a>
+						</div>
+						<div class="serch__wrapper-col2-wrapper-item">
+							<div class="serch__wrapper-col2-wrapper-item-info">
+								<p class="serch__wrapper-col2-wrapper-item-info-title">Результат 3</p>
+								<p class="serch__wrapper-col2-wrapper-item-info-text">Объединяем данные, аналитику и таргетинг</p>
+							</div>
+							<a href="#" class="serch__wrapper-col2-wrapper-btn btn">
+								<p>Перейти</p>
+								<span>
+									<svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+								</span>
+							</a>
+						</div>
+						<div class="serch__wrapper-col2-wrapper-item">
+							<div class="serch__wrapper-col2-wrapper-item-info">
+								<p class="serch__wrapper-col2-wrapper-item-info-title">Результат 4</p>
+								<p class="serch__wrapper-col2-wrapper-item-info-text">Объединяем данные, аналитику и таргетинг</p>
+							</div>
+							<a href="#" class="serch__wrapper-col2-wrapper-btn btn">
+								<p>Перейти</p>
+								<span>
+									<svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+								</span>
+							</a>
+						</div>
+					</div>
+					<a href="#" class="logos__wrapper-btn">
+            <p>Показать все (20)</p>
+					<span>
+						<svg viewBox="0 0 16 16"><use href="#plus"></use></svg>
+					</span>
+          </a>
+				</div>
+			</div>
+			<div class="header__mob">
+				<div class="header__mob-w-search-w">
+					<div class="header__mob-w-search">
+						<svg class="header__mob-w-search-icon"  width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M19 17.8821L14.0492 12.9313C15.3352 11.3584 15.9675 9.35144 15.8153 7.32547C15.6631 5.2995 14.738 3.40955 13.2314 2.04652C11.7248 0.683499 9.75189 -0.0483058 7.72084 0.00247667C5.6898 0.0532591 3.75597 0.882744 2.31936 2.31936C0.882744 3.75597 0.0532591 5.6898 0.00247667 7.72084C-0.0483058 9.75189 0.683499 11.7248 2.04652 13.2314C3.40955 14.738 5.2995 15.6631 7.32547 15.8153C9.35144 15.9675 11.3584 15.3352 12.9313 14.0492L17.8821 19L19 17.8821ZM7.93143 14.2563C6.68048 14.2563 5.45763 13.8854 4.4175 13.1904C3.37738 12.4954 2.5667 11.5076 2.08798 10.3519C1.60927 9.19614 1.48401 7.92441 1.72806 6.6975C1.97211 5.47059 2.5745 4.3436 3.45905 3.45905C4.3436 2.5745 5.47059 1.97211 6.6975 1.72806C7.92441 1.48401 9.19614 1.60927 10.3519 2.08798C11.5076 2.5667 12.4954 3.37738 13.1904 4.4175C13.8854 5.45763 14.2563 6.68048 14.2563 7.93143C14.2544 9.60832 13.5875 11.216 12.4017 12.4017C11.216 13.5875 9.60832 14.2544 7.93143 14.2563Z" fill="black" fill-opacity="0.45"/>
+						</svg>
+						<input class="header__mob-w-search-input" type="text" placeholder="Поиск...">
+					</div>
+				</div>
+				<div class="header__mob-w">
+					<ul class="header__mob-w-nav">
+						<li>
+							<div class="header__mob-w-nav-dropdown">
+								<div class="header__mob-w-nav-dropdown-header">
+								<p>Решения</p>
+								<svg viewBox="0 0 12 12"><use href="#arrow"></use></svg>
+								</div>
+								<ul class="header__mob-w-nav-dropdown-content">
+									<li><a href="#">Все решения</a></li>
+									<li><a href="#">Аудит рекламных кампаний</a></li>
+									<li><a href="#">Аналитика рекламных кампаний</a></li>
+									<li><a href="#">Платформы управления данными</a></li>
+									<li><a href="#">ИИ-cегментация и портретированиe</a></li>
+									<li><a href="#">Медийное размещение <nobr>в премиальной</nobr> сети</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">Кейсы</a></li>
+						<li><a href="#">Блог</a></li>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+					<a href="#" class="header__mob-w-btn btn">
+						<p>Обсудить вашу задачу</p>
+						<span>
+							<svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+						</span>
+					</a>
+					<p class="header__mob-w-text">
+						Weborama получила <a href="#">свидетельство</a> о государственной 
+						регистрации Интеллектуальной платформы 
+						по управлению данными
+					</p>
+				</div>
+				<div class="header__mob-search hide">
+					<div class="header__mob-search-header">
+						<h2 class="header__mob-search-header-title">
+							Показано 5 из 25
+							<br>
+							результатов поиска
+						</h2>
+						<p class="header__mob-search-header-text">Фильтровать<br>по разделам (2)</p>
+						<div class="header__mob-search-header-tags">
+							<span>Решения</span>
+							<span>Кейсы</span>
+							<span>Статьи</span>
+							<span>Вакансии</span>
+						</div>
+					</div>
+					<div class="header__mob-search-items">
+						<div class="header__mob-search-items-item">
+							<p class="header__mob-search-items-item-title">Результат 1</p>
+							<p class="header__mob-search-items-item-text">Объединяем данные, аналитику и таргетинг</p>
+						</div>
+						<div class="header__mob-search-items-item">
+							<p class="header__mob-search-items-item-title">Результат 2</p>
+							<p class="header__mob-search-items-item-text">Объединяем данные, аналитику и таргетинг</p>
+						</div>
+						<div class="header__mob-search-items-item">
+							<p class="header__mob-search-items-item-title">Результат 3</p>
+							<p class="header__mob-search-items-item-text">Объединяем данные, аналитику и таргетинг</p>
+						</div>
+						<div class="header__mob-search-items-item">
+							<p class="header__mob-search-items-item-title">Результат 4</p>
+							<p class="header__mob-search-items-item-text">Объединяем данные, аналитику и таргетинг</p>
+						</div>
+						<div class="header__mob-search-items-item">
+							<p class="header__mob-search-items-item-title">Результат 5</p>
+							<p class="header__mob-search-items-item-text">Объединяем данные, аналитику и таргетинг</p>
+						</div>
+					</div>
+					<a href="#" class="logos__wrapper-btn">
+						<p>Показать все (20)</p>
+					<span>
+						<svg viewBox="0 0 16 16"><use href="#plus"></use></svg>
+					</span>
+					</a>
+				</div>
+			</div>
+			<div class="header__mob-tab">
+				<div class="header__mob-tab-nav">
+					<ul class="header__mob-w-nav">
+						<li>
+							<div class="header__mob-w-nav-dropdown">
+								<div class="header__mob-w-nav-dropdown-header">
+								<p>Решения</p>
+								<svg viewBox="0 0 12 12"><use href="#arrow"></use></svg>
+								</div>
+								<ul class="header__mob-w-nav-dropdown-content">
+									<li><a href="#">Все решения</a></li>
+									<li><a href="#">Аудит рекламных кампаний</a></li>
+									<li><a href="#">Аналитика рекламных кампаний</a></li>
+									<li><a href="#">Платформы управления данными</a></li>
+									<li><a href="#">ИИ-cегментация и портретированиe</a></li>
+									<li><a href="#">Медийное размещение <nobr>в премиальной</nobr> сети</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">Кейсы</a></li>
+						<li><a href="#">Блог</a></li>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+					<a href="#" class="header__mob-w-btn btn">
+						<p>Обсудить вашу задачу</p>
+						<span>
+							<svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+						</span>
+					</a>
+				</div>
+				<div class="header__mob-tab-info">
+					<p class="header__mob-tab-title">
+						Объединяем данные, аналитику 
+						<nobr>и таргетинг,</nobr> чтобы вы точно знали, 
+						что сработало —  и могли 
+						повторить это снова.
+					</p>
+					<p class="header__mob-tab-text">
+						Weborama получила <a href="#">свидетельство</a> о государственной
+						<br>
+						регистрации Интеллектуальнойa платформы 
+						<br>
+						по управлению данными
+					</p>
+				</div>
+			</div>
+		</div>
+	</header>
+  <div class="p_content">
+    <section class="main cs">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="#">Главная</a>
+          <a href="#">Кейсы</a>
+        </div>
+      </div>
+      <div class="container cs__text">
+        <div class="main__wrapper">
+          <div class="main__wrapper-text">
+            <h1 class="main__wrapper-text-title">
+              Как бренды достигают
+              <br>
+              результата <nobr>с Weborama</nobr>
+            </h1>
+            <a href="#" class="main__wrapper-text-btn btn" id="formBtn">
+              <p>Обсудить вашу задачу</p>
+              <span>
+                <svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="cs__img swiper-container">
+        <div class="pagination-container">
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="cs__img-item swiper-slide">
+            <div class="cs__img-item-img">
+              <picture>
+                <source srcset="img/c-03-mob.jpg" media="(max-width: 930px)">
+                <img src="img/c-03.jpg" alt="">
+              </picture>
+            </div>
+            <div class="container cs__img-item-content-w">
+              <div class="cs__img-item-content">
+                <img src="img/pepsico.svg" alt="" class="cs__img-item-content-logo">
+                <div class="cs__img-item-content-tags">
+                  <span class="g">Благодаря точной сегментации</span>
+                </div>
+                <div class="cs__img-item-content-bottom">
+                  <h2 class="cs__img-item-content-bottom-text">+37% CTR </h2>
+                  <a href="#" class="cs__img-item-content-bottom-btn btn">
+                    <p>Смотреть кейс</p>
+                    <span>
+                      <svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cs__img-item swiper-slide">
+            <div class="cs__img-item-img">
+              <picture>
+                <source srcset="img/c-03-mob.jpg" media="(max-width: 930px)">
+                <img src="img/c-03.jpg" alt="">
+              </picture>
+            </div>
+            <div class="container cs__img-item-content-w">
+              <div class="cs__img-item-content">
+                <img src="img/loreal.svg" alt="" class="cs__img-item-content-logo">
+                <div class="cs__img-item-content-tags">
+                  <span class="p">Благодаря точной сегментации</span>
+                </div>
+                <div class="cs__img-item-content-bottom">
+                  <h2 class="cs__img-item-content-bottom-text">+37% CTR </h2>
+                  <a href="#" class="cs__img-item-content-bottom-btn btn">
+                    <p>Смотреть кейс</p>
+                    <span>
+                      <svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cs__img-item swiper-slide">
+            <div class="cs__img-item-img">
+              <picture>
+                <source srcset="img/c-03-mob.jpg" media="(max-width: 930px)">
+                <img src="img/c-03.jpg" alt="">
+              </picture>
+            </div>
+            <div class="container cs__img-item-content-w">
+              <div class="cs__img-item-content">
+                <img src="img/pepsico.svg" alt="" class="cs__img-item-content-logo">
+                <div class="cs__img-item-content-tags">
+                  <span class="g">Благодаря точной сегментации</span>
+                </div>
+                <div class="cs__img-item-content-bottom">
+                  <h2 class="cs__img-item-content-bottom-text">+37% CTR </h2>
+                  <a href="#" class="cs__img-item-content-bottom-btn btn">
+                    <p>Смотреть кейс</p>
+                    <span>
+                      <svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cases cs__all">
+      <div class="container">
+        <div class="cases__wrapper">
+          <div class="cases__wrapper-header">
+            <h2 class="cases__wrapper-header-title">Кейсы</h2>
+          </div>
+          <div class="cs__all-filters">
+            <div class="cs__all-filters-item">
+              <p class="cs__all-filters-item-title">Отрасль</p>
+              <div class="cs__all-filters-item-dropdown">
+                <div class="cs__all-filters-item-dropdown-header">
+                  <p>Выбрать</p>
+                  <svg viewBox="0 0 10 10"><use href="#arrow"></use></svg>
+                </div>
+                <ul class="cs__all-filters-item-dropdown-list">
+                  <li>123</li>
+                  <li>321</li>
+                  <li>213</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cs__all-filters-item">
+              <p class="cs__all-filters-item-title">Продукт</p>
+              <div class="cs__all-filters-item-dropdown">
+                <div class="cs__all-filters-item-dropdown-header">
+                  <p>Выбрать</p>
+                  <svg viewBox="0 0 10 10"><use href="#arrow"></use></svg>
+                </div>
+                <ul class="cs__all-filters-item-dropdown-list">
+                  <li>123</li>
+                  <li>321</li>
+                  <li>213</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="cs__all-cards">
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-01.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/loreal.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="p">С помощью Webomind</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">- 25% CPA</h3>
+            </a>
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-04.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/vtb.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="pn">Благодаря точной сегментации</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">-32% CTA</h3>
+            </a>
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-01.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/loreal.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="p">С помощью Webomind</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">- 25% CPA</h3>
+            </a>
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-02.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/pepsico.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="g">Благодаря точной сегментации</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">+37% CTR</h3>
+            </a>
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-01.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/loreal.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="p">С помощью Webomind</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">- 25% CPA</h3>
+            </a>
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-02.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/pepsico.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="g">Благодаря точной сегментации</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">+37% CTR</h3>
+            </a>
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-04.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/vtb.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="pn">Благодаря точной сегментации</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">-32% CTA</h3>
+            </a>
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-01.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/loreal.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="p">С помощью Webomind</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">- 25% CPA</h3>
+            </a>
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-04.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/vtb.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="pn">Благодаря точной сегментации</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">-32% CTA</h3>
+            </a>
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-02.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/pepsico.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="g">Благодаря точной сегментации</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">+37% CTR</h3>
+            </a>
+            <a href="#" class="cases__wrapper-items-item">
+              <img src="img/c-04.jpg" alt="" class="cases__wrapper-items-item-img">
+              <img src="img/vtb.svg" alt="" class="cases__wrapper-items-item-logo">
+              <div class="cases__wrapper-items-item-tags">
+                <span class="pn">Благодаря точной сегментации</span>
+              </div>
+              <h3 class="cases__wrapper-items-item-title">-32% CTA</h3>
+            </a>
+          </div>
+          <a href="#" class="logos__wrapper-btn cases__wrapper-btn">
+            <p>Показать больше</p>
+            <span>
+              <svg viewBox="0 0 16 16"><use href="#plus"></use></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="form" id="form">
+      <div class="container">
+        <div class="form__wrapper">
+          <div class="form__wrapper-w">
+            <h2 class="form__wrapper-title">
+              Обсудим
+              <br>
+              вашу задачу?
+            </h2>
+          </div>
+          <form action="" class="form__wrapper-form">
+            <div class="form__fields">
+              <label class="form__field">
+                <input type="text" name="name" class="form__input" placeholder="Ваше имя*">
+              </label>
+              <label class="form__field">
+                <input type="email" name="email" class="form__input" placeholder="Рабочий email*">
+              </label>
+              <label class="form__field">
+                <input type="text" name="company" class="form__input" placeholder="Компания*">
+              </label>
+              <label class="form__field">
+                <input type="tel" name="phone" class="form__input" placeholder="+7 (999) 999-99-99*">
+              </label>
+              <div class="form__field custom-select" data-name="position">
+                <input type="hidden" name="position" value="">
+                <div class="custom-select__toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="listbox">
+                  <p>Должность</p>
+                  <svg viewBox="0 0 24 24"><use href="#arrow"></use></svg>
+                </div>
+                <ul class="custom-select__list" role="listbox">
+                  <li class="custom-select__option" role="option" data-value="Руководитель маркетинга">Руководитель маркетинга</li>
+                  <li class="custom-select__option" role="option" data-value="Маркетолог">Маркетолог</li>
+                  <li class="custom-select__option" role="option" data-value="Агентство">Агентство</li>
+                  <li class="custom-select__option" role="option" data-value="Другое">Другое</li>
+                </ul>
+              </div>
+              <label class="form__field form__field--full">
+                <input name="message" class="form__textarea" rows="4" placeholder="Опишите вашу задачу"></input>
+              </label>
+            </div>
+            <div class="form__consents">
+              <label class="form__checkbox">
+                <input type="checkbox" id="consent_personal" name="consent_personal" value="1">
+                <span class="checkmark">
+                  <span></span>
+                </span>
+                <p>Нажимая кнопку "Отправить", я даю согласие на обработку персональных данных и ознакомлен (а) с <a href="#">Политикой конфиденциальности</a></p>
+              </label>
+              <label class="form__checkbox">
+                <input type="checkbox" id="consent_marketing" name="consent_marketing" value="1">
+                <span class="checkmark">
+                  <span></span>
+                </span>
+                <p>Нажимая кнопку "Отправить", я даю согласие на получение рассылки рекламно-информационных материалов</p>
+              </label>
+            </div>
+            <button type="submit" class="btn form__submit">
+              <p>Отправить</p>
+              <span>
+                <svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="popup" id="f01">
+      <div class="popup__wrapper">
+        <img src="img/done.svg" alt="" class="popup__wrapper-done">
+        <div class="popup__wrapper-info">
+          <h3 class="popup__wrapper-info-title">Спасибо!</h3>
+          <p class="popup__wrapper-info-text">Ваш запрос уже в работе</p>
+        </div>
+        <span class="popup__wrapper-btn">Закрыть</span>
+      </div>
+    </div>
+  </div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__wrapper-col">
+					<div class="footer__wrapper-col-w">
+						<a href="#" class="footer__wrapper-col-logo">
+							<svg viewBox="0 0 200 20"><use href="#logo"></use></svg>
+							</a>
+							<p class="footer__wrapper-col-text">
+								Weborama получила <a href="#">свидетельство</a> о государственной регистрации Интеллектуальной платформы <br><nobr>по управлению</nobr> данными
+							</p>
+					</div>
+					<form action="" class="form__wrapper-form footer__wrapper-col-form">
+						<h3 class="footer__wrapper-col-form-title">Подписаться на новости</h3>
+            <div class="form__fields f_form">
+							<span class="f_form-done">Спасибо! Обещаем не спамить</span>
+              <label class="form__field">
+                <input type="email" name="email" class="form__input" placeholder="Введите Email">
+              </label>
+							<button type="submit" class="form__submit">Подписаться</button>
+            </div>
+            <div class="form__c">
+							<!-- <p class="form__consents-text">Без согласия мы не сможем отправлять <br>вам письма. Таков закон.</p> -->
+              <label class="form__checkbox">
+                <input type="checkbox" id="consent_marketing" name="consent_marketing" value="1">
+                <span class="checkmark">
+                  <span></span>
+                </span>
+                <p>Нажимая «Подписаться», я даю согласие 
+									<nobr>на обработку</nobr> персональных данных и получение 
+									рекламно-информационных материалов <nobr>в соответствии</nobr>
+									с <a href="policy.html">Политикой конфиденциальности</a></p>
+              </label>
+            </div>
+          </form>
+					<div class="footer__wrapper-col-soc desk">
+						<p class="footer__wrapper-col-soc-title">Weborama в соцсетях и медиа</p>
+						<div class="footer__wrapper-col-soc-items">
+							<a href="#">
+								<img src="img/tg.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/vk.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/vc.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/s.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/i.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/ad.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="footer__wrapper-col-col mob">
+						<div class="footer__wrapper-col-col-item">
+							<p class="footer__wrapper-col-adress-title">Член АРИР</p>
+							<img src="img/f-01.svg" alt="" class="footer__wrapper-col-col-item-img">
+						</div>
+						<div class="footer__wrapper-col-col-item">
+							<p class="footer__wrapper-col-adress-title">Лидер рейтинга AdIndex</p>
+							<img src="img/f-02.svg" alt="" class="footer__wrapper-col-col-item-img">
+						</div>
+					</div>
+					<p class="footer__wrapper-col-subtext">WEBORAMA © 2025. Все права защищены.</p>
+				</div>
+				<div class="footer__wrapper-col">
+					<div class="footer__wrapper-col-soc mob">
+						<p class="footer__wrapper-col-soc-title">Weborama в соцсетях и медиа</p>
+						<div class="footer__wrapper-col-soc-items">
+							<a href="#">
+								<img src="img/tg.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/vc.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/s.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/i.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/ad.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="footer__wrapper-col-adress">
+						<p class="footer__wrapper-col-adress-title">Адрес</p>
+						<h3 class="footer__wrapper-col-adress-adress">Москва, Холодильный пер., 3</h3>
+						<a href="#" class="footer__wrapper-col-adress-link">Посмотреть на Яндекс.Картах</a>
+					</div>
+					<div class="footer__wrapper-col-adress mr">
+						<p class="footer__wrapper-col-adress-title">Телефон</p>
+						<a href="#" class="footer__wrapper-col-adress-adress">8 800 000 33 99</a>
+					</div>
+					<div class="footer__wrapper-col-col desk">
+						<div class="footer__wrapper-col-col-item">
+							<p class="footer__wrapper-col-adress-title">Член АРИР</p>
+							<img src="img/f-01.svg" alt="" class="footer__wrapper-col-col-item-img">
+						</div>
+						<div class="footer__wrapper-col-col-item">
+							<p class="footer__wrapper-col-adress-title">Лидер рейтинга AdIndex
+							</p>
+							<img src="img/f-02.svg" alt="" class="footer__wrapper-col-col-item-img">
+						</div>
+					</div>
+					<div class="top">
+						<svg viewBox="0 0 12 12"><use href="#arrow2"></use></svg>
+					</div>
+					<a href="#" class="footer__wrapper-col-link">Политика Конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- libs -->
+	<script src="js/gsap.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>

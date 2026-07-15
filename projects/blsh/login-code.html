@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+
+		<title>blsh</title>
+		<meta name="description" content="blsh">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+		<meta name="theme-color" content="#222">
+		<meta name="msapplication-navbutton-color" content="#222">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#222">
+
+		<!-- libs -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text/javascript"></script>
+		
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+  <body>
+    <div class="p_content">
+      <header class="header">
+      	<div class="container">
+      		<div class="header__wrapper">
+      			<div data-da=".header__wrapper, 450, last" class="header__wrapper-burger">
+      				<span class="burger"><span></span></span>
+      				<p>Каталог</p>
+      			</div>
+      			<img data-da=".header__wrapper, 450, first" src="img/logo.svg" alt="" class="header__wrapper-logo">
+      			<div class="header__wrapper-icons">
+      				<a href="/search.html"><svg class="search" viewBox="0 0 18 18"><use xlink:href="img/sprite.svg#search"></use></svg></a>
+      				<a class="d-none"href="/"><svg class="like" viewBox="0 0 19 17"><use xlink:href="img/sprite.svg#like"></use></svg></a>
+      				<a class="d-none"href="/"><svg class="person" viewBox="0 0 14 19"><use xlink:href="img/sprite.svg#person"></use></svg></a>
+      				<a href="/"><span>2</span><svg class="shop" viewBox="0 0 17 18"><use xlink:href="img/sprite.svg#shop"></use></svg></a>
+      			</div>
+      		</div>
+      	</div>
+      </header>
+      <div class="menu">
+      	<div class="menu__block">
+      		<div class="menu__block-close"></div>
+      		<a href="/">Новинки</a>
+      		<a href="/">Бестселлеры</a>
+      		<a href="/">Скоро в продаже</a>
+      		<a href="/">Распродажа</a>
+      		<a href="/">Верхняя одежда</a>
+      		<a href="/">Платья</a>
+      		<a href="/">Жакеты и жилеты</a>
+      		<a href="/">Блузки и рубашки</a>
+      		<a href="/">Футболки и топы</a>
+      		<a href="/">Боди и лонгсливы</a>
+      		<a href="/">Свитшоты и худи</a>
+      		<a href="/">Брюки</a>
+      		<a href="/">Юбки</a>
+      		<a href="/">Деним</a>
+      		<a href="/">Вязаные изделия</a>
+      		<a href="/">Аксессуары</a>
+      		<a class="bold" href="/">Посмотреть все</a>
+      	</div>
+      	<div class="menu__footer">
+      		<a href="/">Коллекции</a>
+      		<a href="/">О бренде</a>
+      		<a href="/">Доставка</a>
+      		<a href="/">Оплата долями</a>
+      		<a href="/">Возврат</a>
+      		<div class="footer__wrapper-col-social">
+      			<a href="/"><img src="img/tg.svg" alt=""></a>
+      			<a href="/"><img src="img/wa.svg" alt=""></a>
+      			<a href="/"><img src="img/inst.svg" alt=""></a>
+      		</div>
+      	</div>
+      </div>
+      <section class="subscribe popup">
+        <div class="subscribe__wrapper">
+          <div class="menu__block-close"></div>
+          <p class="subscribe__wrapper-title">Подписка на новостную рассылку</p>
+          <form action="/submit" method="POST" id="subscribe-form">
+            <div class="subscribe__wrapper-in">
+              <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </div>
+          </form>
+          <div class="subscribe__wrapper-col">
+            <button type="submit" form="subscribe-form" class="subscribe__wrapper-col-btn btn">Подписаться</button>
+            <a href="/">Подписываясь на рассылку, вы соглашаетесь с условиями <span>Политики конфиденциальности</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="login m-t">
+        <div class="login__wrapper">
+          <h1 class="login-title">Вход или регистрация</h1>
+          <p class="login-text">Введите код, который мы выслали <nobr>на номер</nobr> <nobr>+7 (982) 694-50-38</nobr></p>
+          <form action="/submit" method="POST">
+            <input placeholder="Код из СМС" type="tel" id="phone" name="phone" required="">
+          </form>
+          <a class="login-link" href="/">Отправить код повторно</a>
+        </div>
+      </section>
+    </div>
+
+		<!-- libs -->
+		<script type="module" src="js/dynamicAdapt.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>

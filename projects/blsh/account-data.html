@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+
+		<title>blsh</title>
+		<meta name="description" content="blsh">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+		<meta name="theme-color" content="#222">
+		<meta name="msapplication-navbutton-color" content="#222">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#222">
+
+		<!-- libs -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text/javascript"></script>
+		
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+  <body>
+    <div class="p_content">
+      <header class="header">
+      	<div class="container">
+      		<div class="header__wrapper">
+      			<div data-da=".header__wrapper, 450, last" class="header__wrapper-burger">
+      				<span class="burger"><span></span></span>
+      				<p>Каталог</p>
+      			</div>
+      			<img data-da=".header__wrapper, 450, first" src="img/logo.svg" alt="" class="header__wrapper-logo">
+      			<div class="header__wrapper-icons">
+      				<a href="/"><svg class="search" viewBox="0 0 18 18"><use xlink:href="img/sprite.svg#search"></use></svg></a>
+      				<a class="d-none"href="/"><svg class="like" viewBox="0 0 19 17"><use xlink:href="img/sprite.svg#like"></use></svg></a>
+      				<a class="d-none"href="/"><svg class="person" viewBox="0 0 14 19"><use xlink:href="img/sprite.svg#person"></use></svg></a>
+      				<a href="/"><span>2</span><svg class="shop" viewBox="0 0 17 18"><use xlink:href="img/sprite.svg#shop"></use></svg></a>
+      			</div>
+      		</div>
+      	</div>
+      </header>
+      <div class="menu">
+      	<div class="menu__block">
+      		<div class="menu__block-close"></div>
+      		<a href="/">Новинки</a>
+      		<a href="/">Бестселлеры</a>
+      		<a href="/">Скоро в продаже</a>
+      		<a href="/">Распродажа</a>
+      		<a href="/">Верхняя одежда</a>
+      		<a href="/">Платья</a>
+      		<a href="/">Жакеты и жилеты</a>
+      		<a href="/">Блузки и рубашки</a>
+      		<a href="/">Футболки и топы</a>
+      		<a href="/">Боди и лонгсливы</a>
+      		<a href="/">Свитшоты и худи</a>
+      		<a href="/">Брюки</a>
+      		<a href="/">Юбки</a>
+      		<a href="/">Деним</a>
+      		<a href="/">Вязаные изделия</a>
+      		<a href="/">Аксессуары</a>
+      		<a class="bold" href="/">Посмотреть все</a>
+      	</div>
+      	<div class="menu__footer">
+      		<a href="/">Коллекции</a>
+      		<a href="/">О бренде</a>
+      		<a href="/">Доставка</a>
+      		<a href="/">Оплата долями</a>
+      		<a href="/">Возврат</a>
+      		<div class="footer__wrapper-col-social">
+      			<a href="/"><img src="img/tg.svg" alt=""></a>
+      			<a href="/"><img src="img/wa.svg" alt=""></a>
+      			<a href="/"><img src="img/inst.svg" alt=""></a>
+      		</div>
+      	</div>
+      </div>
+      <section class="subscribe popup">
+        <div class="subscribe__wrapper">
+          <div class="menu__block-close"></div>
+          <p class="subscribe__wrapper-title">Подписка на новостную рассылку</p>
+          <form action="/submit" method="POST" id="subscribe-form">
+            <div class="subscribe__wrapper-in">
+              <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </div>
+          </form>
+          <div class="subscribe__wrapper-col">
+            <button type="submit" form="subscribe-form" class="subscribe__wrapper-col-btn btn">Подписаться</button>
+            <a href="/">Подписываясь на рассылку, вы соглашаетесь с условиями <span>Политики конфиденциальности</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="account m-t">
+        <div class="container">
+          <h1 class="account__title">Виш лист</h1>
+          <div class="account__wrapper wishlist">
+            <div class="account__wrapper-nav">
+              <ul>
+                <li>Заказы</li>
+                <li class="active">Виш лист</li>
+                <li>Личные данные</li>
+              </ul>
+              <a href="/">Выйти</a>
+            </div>
+            <div class="catalog__cards">
+              <a href="card.html" class="catalog__cards-item">
+                <div class="catalog__cards-item-img">
+                  <svg class="catalog__cards-item-img-like" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill" d="M13.28 1C11.93 1 10.7 1.62 9.89 2.69C9.75 2.88 9.52 2.99 9.26 2.99C9 2.99 8.77 2.88 8.63 2.69C7.82 1.61 6.58 1 5.23 1C2.9 1 1 2.9 1 5.23C1 11.29 6.89 14.65 8.96 15.35C9.1 15.4 9.43 15.4 9.57 15.35C11.63 14.65 17.53 11.28 17.53 5.23C17.53 2.9 15.63 1 13.29 1H13.28Z"/>
+                    <path class="border" d="M12.82 0C11.41 0 10.1 0.53 9.1 1.49C8.1 0.53 6.79 0 5.38 0C2.41 0 0 2.4 0 5.36C0 11.11 5.12 14.99 8.35 16.09C8.56 16.16 8.82 16.2 9.1 16.2C9.38 16.2 9.64 16.16 9.85 16.09C13.08 14.99 18.2 11.11 18.2 5.36C18.2 2.41 15.79 0 12.82 0ZM16.75 5.36C16.75 10.96 11.29 14.08 9.38 14.73C9.25 14.77 8.94 14.77 8.82 14.73C6.91 14.08 1.45 10.97 1.45 5.36C1.45 3.2 3.21 1.45 5.38 1.45C6.62 1.45 7.77 2.02 8.52 3.02C8.65 3.19 8.87 3.3 9.1 3.3C9.33 3.3 9.55 3.2 9.68 3.02C10.43 2.02 11.57 1.45 12.81 1.45C14.98 1.45 16.74 3.21 16.74 5.36H16.75Z"/>
+                  </svg>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/slider-01.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-03.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-04.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="catalog__cards-item-img-pagination"></div>
+                </div>
+                <p class="catalog__cards-item-name">Асимметричное платье макси</p>
+                <p class="catalog__cards-item-price">33 200 ₽</p>
+              </a>
+              <a href="card.html" class="catalog__cards-item">
+                <div class="catalog__cards-item-img">
+                  <svg class="catalog__cards-item-img-like" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill" d="M13.28 1C11.93 1 10.7 1.62 9.89 2.69C9.75 2.88 9.52 2.99 9.26 2.99C9 2.99 8.77 2.88 8.63 2.69C7.82 1.61 6.58 1 5.23 1C2.9 1 1 2.9 1 5.23C1 11.29 6.89 14.65 8.96 15.35C9.1 15.4 9.43 15.4 9.57 15.35C11.63 14.65 17.53 11.28 17.53 5.23C17.53 2.9 15.63 1 13.29 1H13.28Z"/>
+                    <path class="border" d="M12.82 0C11.41 0 10.1 0.53 9.1 1.49C8.1 0.53 6.79 0 5.38 0C2.41 0 0 2.4 0 5.36C0 11.11 5.12 14.99 8.35 16.09C8.56 16.16 8.82 16.2 9.1 16.2C9.38 16.2 9.64 16.16 9.85 16.09C13.08 14.99 18.2 11.11 18.2 5.36C18.2 2.41 15.79 0 12.82 0ZM16.75 5.36C16.75 10.96 11.29 14.08 9.38 14.73C9.25 14.77 8.94 14.77 8.82 14.73C6.91 14.08 1.45 10.97 1.45 5.36C1.45 3.2 3.21 1.45 5.38 1.45C6.62 1.45 7.77 2.02 8.52 3.02C8.65 3.19 8.87 3.3 9.1 3.3C9.33 3.3 9.55 3.2 9.68 3.02C10.43 2.02 11.57 1.45 12.81 1.45C14.98 1.45 16.74 3.21 16.74 5.36H16.75Z"/>
+                  </svg>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/slider-02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-04.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-03.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-02.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="catalog__cards-item-img-pagination"></div>
+                </div>
+                <p class="catalog__cards-item-name">Корсет мини</p>
+                <p class="catalog__cards-item-price">9 000 ₽</p>
+              </a>
+              <a href="card.html" class="catalog__cards-item">
+                <div class="catalog__cards-item-img">
+                  <svg class="catalog__cards-item-img-like" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill" d="M13.28 1C11.93 1 10.7 1.62 9.89 2.69C9.75 2.88 9.52 2.99 9.26 2.99C9 2.99 8.77 2.88 8.63 2.69C7.82 1.61 6.58 1 5.23 1C2.9 1 1 2.9 1 5.23C1 11.29 6.89 14.65 8.96 15.35C9.1 15.4 9.43 15.4 9.57 15.35C11.63 14.65 17.53 11.28 17.53 5.23C17.53 2.9 15.63 1 13.29 1H13.28Z"/>
+                    <path class="border" d="M12.82 0C11.41 0 10.1 0.53 9.1 1.49C8.1 0.53 6.79 0 5.38 0C2.41 0 0 2.4 0 5.36C0 11.11 5.12 14.99 8.35 16.09C8.56 16.16 8.82 16.2 9.1 16.2C9.38 16.2 9.64 16.16 9.85 16.09C13.08 14.99 18.2 11.11 18.2 5.36C18.2 2.41 15.79 0 12.82 0ZM16.75 5.36C16.75 10.96 11.29 14.08 9.38 14.73C9.25 14.77 8.94 14.77 8.82 14.73C6.91 14.08 1.45 10.97 1.45 5.36C1.45 3.2 3.21 1.45 5.38 1.45C6.62 1.45 7.77 2.02 8.52 3.02C8.65 3.19 8.87 3.3 9.1 3.3C9.33 3.3 9.55 3.2 9.68 3.02C10.43 2.02 11.57 1.45 12.81 1.45C14.98 1.45 16.74 3.21 16.74 5.36H16.75Z"/>
+                  </svg>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/slider-03.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-01.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-04.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-03.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="catalog__cards-item-img-pagination"></div>
+                </div>
+                <p class="catalog__cards-item-name">Асимметричное платье мини из атласа</p>
+                <p class="catalog__cards-item-price">26 500 ₽</p>
+              </a>
+              <a href="card.html" class="catalog__cards-item">
+                <div class="catalog__cards-item-img">
+                  <svg class="catalog__cards-item-img-like" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill" d="M13.28 1C11.93 1 10.7 1.62 9.89 2.69C9.75 2.88 9.52 2.99 9.26 2.99C9 2.99 8.77 2.88 8.63 2.69C7.82 1.61 6.58 1 5.23 1C2.9 1 1 2.9 1 5.23C1 11.29 6.89 14.65 8.96 15.35C9.1 15.4 9.43 15.4 9.57 15.35C11.63 14.65 17.53 11.28 17.53 5.23C17.53 2.9 15.63 1 13.29 1H13.28Z"/>
+                    <path class="border" d="M12.82 0C11.41 0 10.1 0.53 9.1 1.49C8.1 0.53 6.79 0 5.38 0C2.41 0 0 2.4 0 5.36C0 11.11 5.12 14.99 8.35 16.09C8.56 16.16 8.82 16.2 9.1 16.2C9.38 16.2 9.64 16.16 9.85 16.09C13.08 14.99 18.2 11.11 18.2 5.36C18.2 2.41 15.79 0 12.82 0ZM16.75 5.36C16.75 10.96 11.29 14.08 9.38 14.73C9.25 14.77 8.94 14.77 8.82 14.73C6.91 14.08 1.45 10.97 1.45 5.36C1.45 3.2 3.21 1.45 5.38 1.45C6.62 1.45 7.77 2.02 8.52 3.02C8.65 3.19 8.87 3.3 9.1 3.3C9.33 3.3 9.55 3.2 9.68 3.02C10.43 2.02 11.57 1.45 12.81 1.45C14.98 1.45 16.74 3.21 16.74 5.36H16.75Z"/>
+                  </svg>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/slider-04.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-03.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-01.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="catalog__cards-item-img-pagination"></div>
+                </div>
+                <p class="catalog__cards-item-name">Моносерьга “Кремовая роза”</p>
+                <p class="catalog__cards-item-price">15 000 ₽</p>
+              </a>
+              <a href="card.html" class="catalog__cards-item">
+                <div class="catalog__cards-item-img">
+                  <svg class="catalog__cards-item-img-like" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill" d="M13.28 1C11.93 1 10.7 1.62 9.89 2.69C9.75 2.88 9.52 2.99 9.26 2.99C9 2.99 8.77 2.88 8.63 2.69C7.82 1.61 6.58 1 5.23 1C2.9 1 1 2.9 1 5.23C1 11.29 6.89 14.65 8.96 15.35C9.1 15.4 9.43 15.4 9.57 15.35C11.63 14.65 17.53 11.28 17.53 5.23C17.53 2.9 15.63 1 13.29 1H13.28Z"/>
+                    <path class="border" d="M12.82 0C11.41 0 10.1 0.53 9.1 1.49C8.1 0.53 6.79 0 5.38 0C2.41 0 0 2.4 0 5.36C0 11.11 5.12 14.99 8.35 16.09C8.56 16.16 8.82 16.2 9.1 16.2C9.38 16.2 9.64 16.16 9.85 16.09C13.08 14.99 18.2 11.11 18.2 5.36C18.2 2.41 15.79 0 12.82 0ZM16.75 5.36C16.75 10.96 11.29 14.08 9.38 14.73C9.25 14.77 8.94 14.77 8.82 14.73C6.91 14.08 1.45 10.97 1.45 5.36C1.45 3.2 3.21 1.45 5.38 1.45C6.62 1.45 7.77 2.02 8.52 3.02C8.65 3.19 8.87 3.3 9.1 3.3C9.33 3.3 9.55 3.2 9.68 3.02C10.43 2.02 11.57 1.45 12.81 1.45C14.98 1.45 16.74 3.21 16.74 5.36H16.75Z"/>
+                  </svg>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/slider-01.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-03.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-04.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="catalog__cards-item-img-pagination"></div>
+                </div>
+                <p class="catalog__cards-item-name">Асимметричное платье макси</p>
+                <p class="catalog__cards-item-price">33 200 ₽</p>
+              </a>
+              <a href="card.html" class="catalog__cards-item">
+                <div class="catalog__cards-item-img">
+                  <svg class="catalog__cards-item-img-like" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill" d="M13.28 1C11.93 1 10.7 1.62 9.89 2.69C9.75 2.88 9.52 2.99 9.26 2.99C9 2.99 8.77 2.88 8.63 2.69C7.82 1.61 6.58 1 5.23 1C2.9 1 1 2.9 1 5.23C1 11.29 6.89 14.65 8.96 15.35C9.1 15.4 9.43 15.4 9.57 15.35C11.63 14.65 17.53 11.28 17.53 5.23C17.53 2.9 15.63 1 13.29 1H13.28Z"/>
+                    <path class="border" d="M12.82 0C11.41 0 10.1 0.53 9.1 1.49C8.1 0.53 6.79 0 5.38 0C2.41 0 0 2.4 0 5.36C0 11.11 5.12 14.99 8.35 16.09C8.56 16.16 8.82 16.2 9.1 16.2C9.38 16.2 9.64 16.16 9.85 16.09C13.08 14.99 18.2 11.11 18.2 5.36C18.2 2.41 15.79 0 12.82 0ZM16.75 5.36C16.75 10.96 11.29 14.08 9.38 14.73C9.25 14.77 8.94 14.77 8.82 14.73C6.91 14.08 1.45 10.97 1.45 5.36C1.45 3.2 3.21 1.45 5.38 1.45C6.62 1.45 7.77 2.02 8.52 3.02C8.65 3.19 8.87 3.3 9.1 3.3C9.33 3.3 9.55 3.2 9.68 3.02C10.43 2.02 11.57 1.45 12.81 1.45C14.98 1.45 16.74 3.21 16.74 5.36H16.75Z"/>
+                  </svg>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/slider-02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-04.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-03.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-02.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="catalog__cards-item-img-pagination"></div>
+                </div>
+                <p class="catalog__cards-item-name">Корсет мини</p>
+                <p class="catalog__cards-item-price">9 000 ₽</p>
+              </a>
+              <a href="card.html" class="catalog__cards-item">
+                <div class="catalog__cards-item-img">
+                  <svg class="catalog__cards-item-img-like" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill" d="M13.28 1C11.93 1 10.7 1.62 9.89 2.69C9.75 2.88 9.52 2.99 9.26 2.99C9 2.99 8.77 2.88 8.63 2.69C7.82 1.61 6.58 1 5.23 1C2.9 1 1 2.9 1 5.23C1 11.29 6.89 14.65 8.96 15.35C9.1 15.4 9.43 15.4 9.57 15.35C11.63 14.65 17.53 11.28 17.53 5.23C17.53 2.9 15.63 1 13.29 1H13.28Z"/>
+                    <path class="border" d="M12.82 0C11.41 0 10.1 0.53 9.1 1.49C8.1 0.53 6.79 0 5.38 0C2.41 0 0 2.4 0 5.36C0 11.11 5.12 14.99 8.35 16.09C8.56 16.16 8.82 16.2 9.1 16.2C9.38 16.2 9.64 16.16 9.85 16.09C13.08 14.99 18.2 11.11 18.2 5.36C18.2 2.41 15.79 0 12.82 0ZM16.75 5.36C16.75 10.96 11.29 14.08 9.38 14.73C9.25 14.77 8.94 14.77 8.82 14.73C6.91 14.08 1.45 10.97 1.45 5.36C1.45 3.2 3.21 1.45 5.38 1.45C6.62 1.45 7.77 2.02 8.52 3.02C8.65 3.19 8.87 3.3 9.1 3.3C9.33 3.3 9.55 3.2 9.68 3.02C10.43 2.02 11.57 1.45 12.81 1.45C14.98 1.45 16.74 3.21 16.74 5.36H16.75Z"/>
+                  </svg>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/slider-03.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-01.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-04.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-03.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="catalog__cards-item-img-pagination"></div>
+                </div>
+                <p class="catalog__cards-item-name">Асимметричное платье мини из атласа</p>
+                <p class="catalog__cards-item-price">26 500 ₽</p>
+              </a>
+              <a href="card.html" class="catalog__cards-item">
+                <div class="catalog__cards-item-img">
+                  <svg class="catalog__cards-item-img-like" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill" d="M13.28 1C11.93 1 10.7 1.62 9.89 2.69C9.75 2.88 9.52 2.99 9.26 2.99C9 2.99 8.77 2.88 8.63 2.69C7.82 1.61 6.58 1 5.23 1C2.9 1 1 2.9 1 5.23C1 11.29 6.89 14.65 8.96 15.35C9.1 15.4 9.43 15.4 9.57 15.35C11.63 14.65 17.53 11.28 17.53 5.23C17.53 2.9 15.63 1 13.29 1H13.28Z"/>
+                    <path class="border" d="M12.82 0C11.41 0 10.1 0.53 9.1 1.49C8.1 0.53 6.79 0 5.38 0C2.41 0 0 2.4 0 5.36C0 11.11 5.12 14.99 8.35 16.09C8.56 16.16 8.82 16.2 9.1 16.2C9.38 16.2 9.64 16.16 9.85 16.09C13.08 14.99 18.2 11.11 18.2 5.36C18.2 2.41 15.79 0 12.82 0ZM16.75 5.36C16.75 10.96 11.29 14.08 9.38 14.73C9.25 14.77 8.94 14.77 8.82 14.73C6.91 14.08 1.45 10.97 1.45 5.36C1.45 3.2 3.21 1.45 5.38 1.45C6.62 1.45 7.77 2.02 8.52 3.02C8.65 3.19 8.87 3.3 9.1 3.3C9.33 3.3 9.55 3.2 9.68 3.02C10.43 2.02 11.57 1.45 12.81 1.45C14.98 1.45 16.74 3.21 16.74 5.36H16.75Z"/>
+                  </svg>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/slider-04.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-03.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/slider-01.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="catalog__cards-item-img-pagination"></div>
+                </div>
+                <p class="catalog__cards-item-name">Моносерьга “Кремовая роза”</p>
+                <p class="catalog__cards-item-price">15 000 ₽</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrapper">
+					<div class="footer__wrapper-col prv">
+						<img class="footer__wrapper-col-logo" src="img/logo.svg" alt="">
+						<p data-da=".footer__wrapper, 1100, last" class="footer__wrapper-col-text">© Интернет-магазин одежды blsh</p>
+					</div>
+					<div class="footer__wrapper-col link o">
+						<a href="/">Каталог</a>
+						<a href="/">О бренде</a>
+						<a href="/">Контакты</a>
+						<a href="/">Политика конфиденциальности</a>
+						<a href="/">Публичная оферта</a>
+					</div>
+					<div class="footer__wrapper-col link t">
+						<a data-da=".footer__wrapper-col.link.o, 1100, 3" href="/">Доставка</a>
+						<a data-da=".footer__wrapper-col.link.o, 1100, 4" href="/">Оплата долями</a>
+						<a data-da=".footer__wrapper-col.link.o, 1100, 5" href="/">Возврат</a>
+					</div>
+					<div data-da=".footer__wrapper, 1100, 1"  class="footer__wrapper-col">
+						<div class="footer__wrapper-col-header">
+							<p>Наши подписчики в курсе всех новинок <nobr>и специальных</nobr> предложений</p>
+							<span class="btn">Подписаться</span>
+						</div>
+						<div data-da=".footer__wrapper-col.prv, 1100, last" class="footer__wrapper-col-social">
+							<a href="/"><img src="img/tg.svg" alt=""></a>
+							<a href="/"><img src="img/wa.svg" alt=""></a>
+							<a href="/"><img src="img/inst.svg" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- libs -->
+		<script type="module" src="js/dynamicAdapt.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>

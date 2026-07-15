@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+
+		<title>NM</title>
+		<meta name="description" content="NM">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+		<meta name="theme-color" content="#FEFAF1">
+		<meta name="msapplication-navbutton-color" content="#FEFAF1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#FEFAF1">
+
+		<!-- libs -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+		<script src="https://unpkg.com/imask@6.4.3/dist/imask.min.js"></script>
+		
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+  <body>
+  <div class="p_content mn">
+		<div class="mask"></div>
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<a href="/">
+						<svg class="header__wrapper-logo" viewBox="0 0 232 16"><use xlink:href="img/sprite.svg#logo"></use></svg>
+					</a>
+					<ul class="header__wrapper-nav">
+						<li class="nav"><a href="/">Shop</a></li>
+						<div class="header__wrapper-nav-dropdown">
+							<div class="header__wrapper-info-search">
+								<input type="search" placeholder="Search">
+								<svg class="header__wrapper-info-search-icon" viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#search"></use></svg>
+							</div>
+							<div class="header__wrapper-nav-dropdown-links">
+								<ul>
+									<li>
+										<a class="active" href="catalog.html">Shop <svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg></a>
+									</li>
+									<li><a href="/">Artists</a></li>
+									<li><a href="/">Works</a></li>
+									<li><a href="/">Design studio</a></li>
+									<li><a href="/">Events</a></li>
+									<li><a href="/">About</a></li>
+								</ul>
+								<ul>
+									<li><a href="/">Bag <span>2</span></a></li>
+									<li><a href="/">Log in</a></li>
+								</ul>
+							</div>
+							<div class="header__wrapper-nav-dropdown-w active">
+								<div class="header__wrapper-nav-dropdown-w-c">
+									<a href="/" class="header__wrapper-nav-dropdown-col-btn">Shop all</a>
+									<div class="header__wrapper-nav-dropdown-col">
+										<p class="header__wrapper-nav-dropdown-col-title">Category</p>
+										<a href="/" class="header__wrapper-nav-dropdown-col-link">Art Objects</a>
+										<a href="/" class="header__wrapper-nav-dropdown-col-link">Furniture</a>
+										<a href="/" class="header__wrapper-nav-dropdown-col-link">Lighting</a>
+										<a href="/" class="header__wrapper-nav-dropdown-col-link">Tableware</a>
+										<a href="/" class="header__wrapper-nav-dropdown-col-link">Wall objects</a>
+										<a href="/" class="header__wrapper-nav-dropdown-col-all">
+											See all
+											<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+										</a>
+									</div>
+								</div>
+								<div class="header__wrapper-nav-dropdown-col">
+									<p class="header__wrapper-nav-dropdown-col-title">Artists</p>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Adriana Meunié</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Alena Mukhina</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Drozhdini</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Ira Boyko</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Lavdansky Studio</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Lumi Uni</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Momoka Gomi</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Marina Baisel</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Sofia Karnukaeva</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-all">
+										See all
+										<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+									</a>
+								</div>
+								<div class="header__wrapper-nav-dropdown-col">
+									<p class="header__wrapper-nav-dropdown-col-title">Materials</p>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Ceramics</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Glass</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Metal</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Mixed media</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Paper</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Stone</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Textile</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Wood</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-all">
+										See all
+										<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+									</a>
+								</div>
+								<div class="header__wrapper-nav-dropdown-col">
+									<p class="header__wrapper-nav-dropdown-col-title">Editions</p>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Open editions</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Limited editions</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">One-of-a-kind</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-all">
+										See all
+										<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<li><a href="/">Artists</a></li>
+						<li><a href="/">Works</a></li>
+						<li><a href="/">Design studio</a></li>
+						<li><a href="/">Events</a></li>
+						<li class="nav"><a href="/">About</a></li>
+						<div class="header__wrapper-nav-dropdown">
+							<div class="header__wrapper-nav-dropdown-w active">
+								<div class="header__wrapper-nav-dropdown-w-c">
+									<a href="/" class="header__wrapper-nav-dropdown-col-btn">Shop all</a>
+									<div class="header__wrapper-nav-dropdown-col">
+										<p class="header__wrapper-nav-dropdown-col-title">123</p>
+										<a href="/" class="header__wrapper-nav-dropdown-col-link">Art 123</a>
+										<a href="/" class="header__wrapper-nav-dropdown-col-link">Furniture</a>
+										<a href="/" class="header__wrapper-nav-dropdown-col-link">123</a>
+										<a href="/" class="header__wrapper-nav-dropdown-col-link">123</a>
+										<a href="/" class="header__wrapper-nav-dropdown-col-link">Wall objects</a>
+										<a href="/" class="header__wrapper-nav-dropdown-col-all">
+											See all
+											<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+										</a>
+									</div>
+								</div>
+								<div class="header__wrapper-nav-dropdown-col">
+									<p class="header__wrapper-nav-dropdown-col-title">Artists</p>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Adriana Meunié</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Alena Mukhina</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Drozhdini</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Ira Boyko</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Lavdansky Studio</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Lumi Uni</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Momoka Gomi</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Marina Baisel</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Sofia Karnukaeva</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-all">
+										See all
+										<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+									</a>
+								</div>
+								<div class="header__wrapper-nav-dropdown-col">
+									<p class="header__wrapper-nav-dropdown-col-title">Materials</p>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Ceramics</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Glass</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Metal</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Mixed media</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Paper</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Stone</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Textile</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Wood</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-all">
+										See all
+										<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+									</a>
+								</div>
+								<div class="header__wrapper-nav-dropdown-col">
+									<p class="header__wrapper-nav-dropdown-col-title">Editions</p>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Open editions</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">Limited editions</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-link">One-of-a-kind</a>
+									<a href="/" class="header__wrapper-nav-dropdown-col-all">
+										See all
+										<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</ul>
+					<div class="header__wrapper-info">
+						<div class="header__wrapper-info-search">
+							<input type="search" placeholder="Search">
+							<svg class="header__wrapper-info-search-icon" viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#search"></use></svg>
+						</div>
+						<a href="/" class="header__wrapper-info-link">Bag <span>2</span></a>
+						<a href="/" class="header__wrapper-info-link">Log in</a>
+					</div>
+					<div class="header__wrapper-burger">
+						<svg class="burger" viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#burger"></use></svg>
+						<svg class="close" viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#plus"></use></svg>
+					</div>
+				</div>
+				<div class="search">
+					<div class="search__wrapper-w">
+						<div class="search__wrapper">
+							<a href="catalog.html" class="search__wrapper-item-header-btn">Show all</a>
+							<div class="search__wrapper-c">
+								<div class="search__wrapper-item">
+									<div class="search__wrapper-item-header">
+										<p class="search__wrapper-item-header-name">Items (12)</p>
+									</div>
+									<div class="search__wrapper-item-items">
+										<div class="search__wrapper-item-items-item">
+											<a href="/" class="search__wrapper-item-items-item-img">
+												<img src="img/14.jpg" alt="">
+											</a>
+											<div class="search__wrapper-item-items-item-info">
+												<div class="search__wrapper-item-items-item-info-col">
+													<a href="/" class="search__wrapper-item-items-item-info-col-title">Snowbank</a>
+													<a href="/" class="search__wrapper-item-items-item-info-col-name"><span>Marina</span> Baisel</a>
+												</div>
+												<div class="search__wrapper-item-items-item-info-col">
+													<p class="search__wrapper-item-items-item-info-col-price">€2 450 </p>
+												</div>
+											</div>
+										</div>
+										<div class="search__wrapper-item-items-item">
+											<a href="/" class="search__wrapper-item-items-item-img">
+												<img src="img/07.jpg" alt="">
+											</a>
+											<div class="search__wrapper-item-items-item-info">
+												<div class="search__wrapper-item-items-item-info-col">
+													<a href="/" class="search__wrapper-item-items-item-info-col-title">Terra Incognita</a>
+													<a href="/" class="search__wrapper-item-items-item-info-col-name">Evgenia Tut</a>
+												</div>
+												<div class="search__wrapper-item-items-item-info-col">
+													<p class="search__wrapper-item-items-item-info-col-price">€3 950 </p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="search__wrapper-item g">
+									<div class="search__wrapper-item-w">
+										<div class="search__wrapper-item-header">
+											<p class="search__wrapper-item-header-name">Events</p>
+										</div>
+										<div class="search__wrapper-item-items">
+											<div class="search__wrapper-item-items-event">
+												<div class="search__wrapper-item-items-event-img">
+													<img src="img/14.jpg" alt="">
+												</div>
+												<div class="search__wrapper-item-items-event-info">
+													<div class="search__wrapper-item-items-event-info-col">
+														<p class="search__wrapper-item-items-event-info-col-title">Where to See Design in London During Frieze Week</p>
+														<p class="search__wrapper-item-items-event-info-col-text">José Zanine Caldas's sculptural style and commitment to ecological awareness...</p>
+													</div>
+													<a href="/" class="search__wrapper-item-items-event-btn">
+														Read
+														<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="search__wrapper-item-w">
+										<div class="search__wrapper-item-header">
+											<p class="search__wrapper-item-header-name">Artists</p>
+										</div>
+										<div class="search__wrapper-item-items">
+											<div class="search__wrapper-item-items-artist">
+												<a href="/" class="search__wrapper-item-items-artist-img">
+													<img src="img/11.jpg" alt="">
+												</a>
+												<div class="search__wrapper-item-items-artist-info">
+													<a href="/" class="search__wrapper-item-items-artist-info-name"><span>Marina</span> Baisel</a>
+													<a href="/" class="search__wrapper-item-items-artist-info-btn">
+														See artist
+														<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="header__log">
+			<div class="header__log-wrapper">
+				<a class="header__log-wrapper-back" href="#">
+					<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+				</a>
+				<div class="header__log-wrapper-i">
+					<p class="header__log-wrapper-i-title">Hi, Joanne</p>
+					<div class="header__log-wrapper-i-col">
+						<div class="header__log-wrapper-i-col-item">
+							<p class="header__log-wrapper-i-col-item-title">
+								Orders
+								<span>(1)</span>
+							</p>
+							<div class="header__log-wrapper-i-col-items">
+								<div class="header__log-wrapper-i-col-item-item">
+									<p class="header__log-wrapper-i-col-item-item-title">N6783. 01.02.2023</p>
+									<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+								</div>
+							</div>
+						</div>
+						<div class="header__log-wrapper-i-col-item">
+							<p class="header__log-wrapper-i-col-item-title">
+								Projects
+								<span>(2)</span>
+							</p>
+							<div class="header__log-wrapper-i-col-items">
+								<div class="header__log-wrapper-i-col-item-item">
+									<p class="header__log-wrapper-i-col-item-item-title">London appartment</p>
+									<p class="header__log-wrapper-i-col-item-item-text">6 items</p>
+									<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+								</div>
+								<div class="header__log-wrapper-i-col-item-item">
+									<p class="header__log-wrapper-i-col-item-item-title">For Mari and Luise appartment</p>
+									<p class="header__log-wrapper-i-col-item-item-text">2 items</p>
+									<svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+								</div>
+							</div>
+
+							
+						</div>
+						<div class="header__log-wrapper-i-col-item">
+							<p class="header__log-wrapper-i-col-item-title">
+								Special offers
+							</p>
+						</div>
+						<div class="header__log-wrapper-i-col-item">
+							<p class="header__log-wrapper-i-col-item-title">
+								Settings
+							</p>
+						</div>
+					</div>
+					<a href="#" class="header__log-wrapper-i-btn">Logout</a>
+				</div>
+			</div>
+		</div>
+    <div class="srch">
+      <div class="container">
+        <div class="srch__wrapper">
+          <p class="srch__wrapper-text">Search result for <span>Marina</span></p>
+          <div class="srch__wrapper-w">
+            <div class="srch__wrapper-c">
+              <div class="search__wrapper-item-header">
+                <p class="search__wrapper-item-header-name">shop (12)</p>
+              </div>
+              <div class="search__wrapper-c">
+                <div class="search__wrapper-item">
+                  <div class="search__wrapper-item-items">
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/14.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Snowbank</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name"><span>Marina</span> Baisel</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€2&nbsp;450 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/07.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Terra Incognita</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name">Evgenia Tut</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€3&nbsp;950 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/14.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Snowbank</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name"><span>Marina</span> Baisel</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€2&nbsp;450 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/07.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Terra Incognita</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name">Evgenia Tut</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€3&nbsp;950 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/14.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Snowbank</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name"><span>Marina</span> Baisel</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€2&nbsp;450 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/07.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Terra Incognita</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name">Evgenia Tut</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€3&nbsp;950 </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="search__wrapper-item">
+                  <div class="search__wrapper-item-items">
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/14.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Snowbank</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name"><span>Marina</span> Baisel</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€2&nbsp;450 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/07.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Terra Incognita</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name">Evgenia Tut</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€3&nbsp;950 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/14.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Snowbank</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name"><span>Marina</span> Baisel</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€2&nbsp;450 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/07.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Terra Incognita</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name">Evgenia Tut</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€3&nbsp;950 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/14.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Snowbank</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name"><span>Marina</span> Baisel</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€2&nbsp;450 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__wrapper-item-items-item">
+                      <a href="/" class="search__wrapper-item-items-item-img">
+                        <img src="img/07.jpg" alt="">
+                      </a>
+                      <div class="search__wrapper-item-items-item-info">
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <a href="/" class="search__wrapper-item-items-item-info-col-title">Terra Incognita</a>
+                          <a href="/" class="search__wrapper-item-items-item-info-col-name">Evgenia Tut</a>
+                        </div>
+                        <div class="search__wrapper-item-items-item-info-col">
+                          <p class="search__wrapper-item-items-item-info-col-price">€3&nbsp;950 </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="srch__wrapper-c">
+              <div class="search__wrapper-item-header">
+                <p class="search__wrapper-item-header-name">Events</p>
+              </div>
+              <div class="search__wrapper-item-items">
+                <div class="search__wrapper-item-items-event">
+                  <div class="search__wrapper-item-items-event-img">
+                    <img src="img/14.jpg" alt="">
+                  </div>
+                  <div class="search__wrapper-item-items-event-info">
+                    <div class="search__wrapper-item-items-event-info-col">
+                      <p class="search__wrapper-item-items-event-info-col-title">Where to See Design in London During Frieze Week</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="srch__wrapper-c">
+              <div class="search__wrapper-item-header">
+                <p class="search__wrapper-item-header-name">Artists</p>
+              </div>
+              <div class="search__wrapper-item-items">
+                <div class="search__wrapper-item-items-artist">
+                  <a href="/" class="search__wrapper-item-items-artist-img">
+                    <img src="img/11.jpg" alt="">
+                  </a>
+                  <div class="search__wrapper-item-items-artist-info">
+                    <a href="/" class="search__wrapper-item-items-artist-info-name"><span>Marina</span> Baisel</a>
+                    <a href="/" class="search__wrapper-item-items-artist-info-btn">
+                      See artist
+                      <svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!-- libs -->
+	<script src="js/main.js" defer></script>
+
+</body>

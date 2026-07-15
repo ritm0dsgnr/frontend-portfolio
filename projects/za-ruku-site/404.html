@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Za Ruku</title>
+		<meta name="description" content="Za Ruku">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+		<meta name="theme-color" content="#887EF1">
+		<meta name="msapplication-navbutton-color" content="#887EF1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#887EF1">
+		
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
+
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+	</head>
+	<body>
+		<div class="page">
+			<section class="header-search">
+				<div class="container">
+					<div class="header-search__wrapper">
+						<span class="header-search__wrapper-prev"><svg viewBox="0 0 22 22"><use xlink:href="img/sprite.svg#arrow-02"></use></svg></span>
+						<div class="header-search__wrapper-dropdown">
+							<ul class="header-search__wrapper-dropdown-item">
+								<li class="header-search__wrapper-dropdown-item-link">
+									<p>Ищем везде <svg viewBox="0 0 18 19"><use xlink:href="img/sprite.svg#arrow"></use></svg></p>
+									<ul class="header-search__wrapper-dropdown-item-list">
+										<li><p>1</p></li>
+										<li><p>2</p></li>
+										<li><p>3</p></li>
+									</ul>
+								</li>
+							</ul>
+							<input type="text" class="header-search__wrapper-dropdown-input" placeholder="Начать поиск">
+							<span data-da=".header-search__wrapper, 600, last" class="header-bottom__btn"><svg viewBox="0 0 22 22"><use xlink:href="img/sprite.svg#search"></use></svg>Поиск</span>
+						</div>
+						<div data-da=".header-search__wrapper-dropdown, 600, last" class="header-search__close">
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="header">
+				<div class="container">
+					<div class="header-top">
+						<div>
+							<a href="#" data-da=".mobile__menu-wrapper, 600, 3" class="header-top__link mobile-link">О проекте</a>
+							<a href="#" data-da=".mobile__menu-wrapper, 600, 4" class="header-top__link mobile-link">Наши авторы</a>
+						</div>
+						<div>
+							<a href="#" data-da=".mobile__menu-wrapper, 600, 5" class="header-top__link"><img src="img/location-icon.svg" alt="">Карта онкоцентров</a>
+							<a href="#" data-da=".mobile__menu-wrapper, 600, 6" class="header-top__link"><img src="img/calendar-icon.svg" alt="">Календарь событий</a>
+							<a href="#" data-da=".mobile__menu-wrapper, 600, 7" class="header-top__link"><img src="img/glasses-icon.svg" alt="">Версия для слабовидящих</a>
+						</div>
+					</div>
+					<header class="header-bottom">
+						<a href="/" class="header-bottom__logo">
+							<img class="header-bottom__logo-favicon" src="img/favicon.svg" alt="" class="header-bottom__logo">
+							<span>
+								<img class="header-bottom__logo-name" src="img/za-ruku.svg" alt="">
+								<p class="header-bottom__logo-text">портал для онкопациентов, их близких и всех,<br>кто находится в группе риска развития рака</p>
+							</span>
+						</a>
+						<ul class="header-bottom__nav">
+							<li class="header-bottom__nav-link">
+								<a class="header-bottom__nav-link-main" href="#">Виды рака<svg viewBox="0 0 18 19"><use xlink:href="img/sprite.svg#arrow"></use></svg></a>
+								<div class="header-bottom__nav-link-main-dropdown">
+									<ul data-da=".mobile__menu-wrapper.class, 600, 0" class="header-bottom__nav-link-main-dropdown-list">
+										<li class="header-bottom__nav-link-main-dropdown-list-block">
+											<a class="header-bottom__nav-link-main-dropdown-list-block-name" href="#">
+													<span class="light-orange">
+														<img src="img/class-icon-01.svg" alt="">
+													</span>
+													Рак легкого
+												<svg viewBox="0 0 18 19"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+											</a>
+											<ul class="header-bottom__nav-link-main-dropdown-list-block-list">
+												<li>
+													<a href="#">
+															<span class="light-orange">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#01"></use></svg>
+															</span>
+															Диагностика
+															<p class="number">(4)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-orange">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#02"></use></svg>
+															</span>
+															Тактика лечения
+															<p class="number">(6)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-orange">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#03"></use></svg>
+															</span>
+															Реабилитация
+															<p class="number">(8)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-orange">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#04"></use></svg>
+															</span>
+															Наблюдение
+															<p class="number">(3)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-orange">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#05"></use></svg>
+															</span>
+															Питание
+															<p class="number">(3)</p>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="header-bottom__nav-link-main-dropdown-list-block">
+											<a class="header-bottom__nav-link-main-dropdown-list-block-name" href="#">
+													<span class="light-green-2">
+														<img src="img/class-icon-02.svg" alt="">
+													</span>
+													Рак печени
+												<svg viewBox="0 0 18 19"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+											</a>
+											<ul class="header-bottom__nav-link-main-dropdown-list-block-list">
+												<li>
+													<a href="#">
+															<span class="light-green-2">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#01"></use></svg>
+															</span>
+															Диагностика
+															<p class="number">(4)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-green-2">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#02"></use></svg>
+															</span>
+															Тактика лечения
+															<p class="number">(6)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-green-2">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#03"></use></svg>
+															</span>
+															Реабилитация
+															<p class="number">(8)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-green-2">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#04"></use></svg>
+															</span>
+															Наблюдение
+															<p class="number">(3)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-green-2">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#05"></use></svg>
+															</span>
+															Питание
+															<p class="number">(3)</p>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="header-bottom__nav-link-main-dropdown-list-block">
+											<a class="header-bottom__nav-link-main-dropdown-list-block-name" href="#">
+													<span class="shade-of-pink">
+														<img src="img/class-icon-03.svg" alt="">
+													</span>
+													Рак молочной железы
+												<svg viewBox="0 0 18 19"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+											</a>
+											<ul class="header-bottom__nav-link-main-dropdown-list-block-list">
+												<li>
+													<a href="#">
+															<span class="shade-of-pink">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#01"></use></svg>
+															</span>
+															Диагностика
+															<p class="number">(4)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="shade-of-pink">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#02"></use></svg>
+															</span>
+															Тактика лечения
+															<p class="number">(6)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="shade-of-pink">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#03"></use></svg>
+															</span>
+															Реабилитация
+															<p class="number">(8)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="shade-of-pink">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#04"></use></svg>
+															</span>
+															Наблюдение
+															<p class="number">(3)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="shade-of-pink">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#05"></use></svg>
+															</span>
+															Питание
+															<p class="number">(3)</p>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="header-bottom__nav-link-main-dropdown-list-block">
+											<a class="header-bottom__nav-link-main-dropdown-list-block-name" href="#">
+													<span class="light-yellow">
+														<img src="img/class-icon-04.svg" alt="">
+													</span>
+													Рак мочевого пузыря
+												<svg viewBox="0 0 18 19"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+											</a>
+											<ul class="header-bottom__nav-link-main-dropdown-list-block-list">
+												<li>
+													<a href="#">
+															<span class="light-yellow">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#01"></use></svg>
+															</span>
+															Диагностика
+															<p class="number">(4)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-yellow">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#02"></use></svg>
+															</span>
+															Тактика лечения
+															<p class="number">(6)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-yellow">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#03"></use></svg>
+															</span>
+															Реабилитация
+															<p class="number">(8)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-yellow">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#04"></use></svg>
+															</span>
+															Наблюдение
+															<p class="number">(3)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-yellow">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#05"></use></svg>
+															</span>
+															Питание
+															<p class="number">(3)</p>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="header-bottom__nav-link-main-dropdown-list-block">
+											<a class="header-bottom__nav-link-main-dropdown-list-block-name" href="#">
+													<span class="light-red">
+														<img src="img/class-icon-05.svg" alt="">
+													</span>
+													Лимфома
+												<svg viewBox="0 0 18 19"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+											</a>
+											<ul class="header-bottom__nav-link-main-dropdown-list-block-list">
+												<li>
+													<a href="#">
+															<span class="light-red">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#01"></use></svg>
+															</span>
+															Диагностика
+															<p class="number">(4)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-red">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#02"></use></svg>
+															</span>
+															Тактика лечения
+															<p class="number">(6)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-red">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#03"></use></svg>
+															</span>
+															Реабилитация
+															<p class="number">(8)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-red">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#04"></use></svg>
+															</span>
+															Наблюдение
+															<p class="number">(3)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="light-red">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#05"></use></svg>
+															</span>
+															Питание
+															<p class="number">(3)</p>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="header-bottom__nav-link-main-dropdown-list-block">
+											<a class="header-bottom__nav-link-main-dropdown-list-block-name" href="#">
+													<span class="shade">
+														<img src="img/class-icon-06.svg" alt="">
+													</span>
+													Меланома
+												<svg viewBox="0 0 18 19"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+											</a>
+											<ul class="header-bottom__nav-link-main-dropdown-list-block-list">
+												<li>
+													<a href="#">
+															<span class="shade">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#01"></use></svg>
+															</span>
+															Диагностика
+															<p class="number">(4)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="shade">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#02"></use></svg>
+															</span>
+															Тактика лечения
+															<p class="number">(6)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="shade">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#03"></use></svg>
+															</span>
+															Реабилитация
+															<p class="number">(8)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="shade">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#04"></use></svg>
+															</span>
+															Наблюдение
+															<p class="number">(3)</p>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+															<span class="shade">
+																<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#05"></use></svg>
+															</span>
+															Питание
+															<p class="number">(3)</p>
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<a href="#" class="header-bottom__nav-link-main-dropdown-banner">
+										<div class="header-bottom__nav-link-main-dropdown-banner-img">
+											<picture>
+												<source srcset="img/nav-banner-img.webp 1x, img/nav-banner-img@2x.webp 2x" type="image/webp">
+												<source srcset="img/nav-banner-img.avif 1x, img/nav-banner-img@2x.avif 2x" type="image/avif">
+												<img src="img/nav-banner-img.jpg" srcset="img/nav-banner-img@2x.jpg 2x" alt="">
+											</picture>
+										</div>
+										<div class="header-bottom__nav-link-main-dropdown-banner-header">
+											<p class="card-type">Полезно</p>
+											<div class="card-like"><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#like"></use></svg> <p>23</p></div>
+										</div>
+										<h4 class="header-bottom__nav-link-main-dropdown-banner-title">Будь внимательней к себе!</h4>
+									</a>
+								</div>
+							</li>
+							<li class="header-bottom__nav-link">
+								<a href="#">Памятки</a>
+							</li>
+							<li class="header-bottom__nav-link">
+								<a class="mobile-link" href="#" data-da=".mobile__menu-wrapper, 600, 0">Истории</a>
+							</li>
+							<li class="header-bottom__nav-link">
+								<a class="mobile-link" href="#" data-da=".mobile__menu-wrapper, 600, 1">Медиатека</a>
+							</li>
+							<li class="header-bottom__nav-link">
+								<a href="#">Помощь</a>
+							</li>
+						</ul>
+						<div class="header-bottom__icons">
+							<a href="#" class="header-bottom__btn"><svg viewBox="0 0 22 22"><use xlink:href="img/sprite.svg#search"></use></svg>Поиск</a>
+						</div>
+					</header>
+				</div>
+			</section>
+			<section class="mobile__nav">
+				<div class="container">
+					<ul class="mobile__nav-wrapper">
+						<li class="mobile__nav-wrapper-link class">
+							<span class="mobile__nav-wrapper-link-icon">
+								<svg viewBox="0 0 16 24"><use xlink:href="img/sprite.svg#class"></use></svg>
+							</span>
+							<p>Виды рака</p>
+						</li>
+						<li class="mobile__nav-wrapper-link">
+							<span class="mobile__nav-wrapper-link-icon">
+								<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#06"></use></svg>
+							</span>
+							<p>Памятки</p>
+						</li>
+						<li class="mobile__nav-wrapper-link">
+							<span class="mobile__nav-wrapper-link-icon">
+								<svg viewBox="0 0 26 24"><use xlink:href="img/sprite.svg#03"></use></svg>
+							</span>
+							<p>Помощь</p>
+						</li>
+						<li class="mobile__nav-wrapper-link menu">
+							<span class="mobile__nav-wrapper-link-icon">
+								<span class="burger">
+									<span></span>
+								</span>
+							</span>
+							<p>Меню</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="mobile__menu">
+				<div class="container">
+					<div class="mobile__menu-wrapper menu"></div>
+					<div class="mobile__menu-wrapper class"></div>
+				</div>
+			</section>
+    <section class="not-found m-t">
+      <div class="container">
+        <img class="not-found-img" src="img/not-found.png" alt="">
+        <p class="not-found-text">Упс, вы попали на несуществующую страницу или неправильно ввели адрес.</p>
+        <a class="not-found-btn" href="/">Вернуться на главную</a>
+      </div>
+    </section>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrapper">
+					<div class="footer__wrapper-col">
+						<a href="/" class="header-bottom__logo">
+							<img class="header-bottom__logo-favicon" src="img/favicon.svg" alt="" class="header-bottom__logo">
+							<span>
+								<img class="header-bottom__logo-name" src="img/za-ruku.svg" alt="">
+								<p>портал для онкопациентов, их близких и всех,<br>кто находится в группе риска развития рака</p>
+							</span>
+						</a>
+						<p class="footer__wrapper-col-text">НИЧТО В ДАННЫХ МАТЕРИАЛАХ НЕ ДОЛЖНО ВОСПРИНИМАТЬСЯ КАК ЗАМЕНА КОНСУЛЬТАЦИИ ВАШЕГО ЛЕЧАЩЕГО ВРАЧА</p>
+					</div>
+					<div class="footer__wrapper-links">
+						<div class="footer__wrapper-col-links">
+							<h6 class="footer__wrapper-col-links-title">Виды рака</h6>
+							<a href="#" class="footer__wrapper-col-links-link">Рак легкого</a>
+							<a href="#" class="footer__wrapper-col-links-link">Рак мочевого пузыря</a>
+							<a href="#" class="footer__wrapper-col-links-link">Рак молочной железы</a>
+							<a href="#" class="footer__wrapper-col-links-link">Рак печени</a>
+							<a href="#" class="footer__wrapper-col-links-link">Меланома</a>
+							<a href="#" class="footer__wrapper-col-links-link">Лимфома</a>
+						</div>
+						<div class="footer__wrapper-col-links">
+							<h6 class="footer__wrapper-col-links-title">О важном</h6>
+							<a href="#" class="footer__wrapper-col-links-link">Памятки</a>
+							<a href="#" class="footer__wrapper-col-links-link">Истории</a>
+							<a href="#" class="footer__wrapper-col-links-link">Наши авторы</a>
+							<a href="#" class="footer__wrapper-col-links-link">Медиатека</a>
+							<a href="#" class="footer__wrapper-col-links-link">Помощь</a>
+							<a href="#" class="footer__wrapper-col-links-link">О проекте</a>
+						</div>
+						<div class="footer__wrapper-col-links">
+							<h6 class="footer__wrapper-col-links-title">Документы</h6>
+							<a href="#" class="footer__wrapper-col-links-link">Конфиденциальность</a>
+							<a href="#" class="footer__wrapper-col-links-link">Нежелательные явления</a>
+							<a href="#" class="footer__wrapper-col-links-link">Официальное уведомление</a>
+							<a href="#" class="footer__wrapper-col-links-link">Защита данных</a>
+						</div>
+					</div>
+					<div class="footer__wrapper-col">
+						<div class="footer__wrapper-col-cos-links">
+							<a href="#" class="footer__wrapper-col-cos-links-link">Карта онкоцентров</a>
+							<a href="#" class="footer__wrapper-col-cos-links-link">Календарь событий</a>
+						</div>
+						<div class="footer__wrapper-col-social">
+							<a href="#" class="footer__wrapper-col-social-item">
+								<img src="img/vk-icon.svg" alt="">
+							</a>
+							<a href="#" class="footer__wrapper-col-social-item">
+								<img src="img/ok-icon.svg" alt="">
+							</a>
+							<a href="#" class="footer__wrapper-col-social-item">
+								<img src="img/dzen-icon.svg" alt="">
+							</a>
+						</div>
+						<a href="#" class="footer__wrapper-col-btn">Напишите нам</a>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p class="footer__bottom-text">© 2023 04.12.2023 АО «Рош-Москва», 107031, Россия, г. Москва, Трубная площадь, дом 2, помещение 1, этаж 1, комната 42, МФК «Галерея Неглинная». Тел.:<a href="tel:+74952292999">+7 (495) 229 29 99</a></p>
+					<p class="footer__bottom-text">Сайт предназначен только для посетителей старше 18 лет из Российской Федерации.</p>
+					<p class="footer__bottom-text">Все права защищены<br>M-RU-00015369 февраль 2024</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- libs -->
+		<script src="js/swiper.min.js"></script>
+		<script type="module" src="js/dynamicAdapt.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/map.js"></script>
+
+	</body>
+</html>

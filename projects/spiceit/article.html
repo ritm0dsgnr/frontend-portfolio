@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+
+	<title>SpiceIT</title>
+	<meta name="description" content="SpiceIT">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+	<meta name="theme-color" content="#FE4F00">
+	<meta name="msapplication-navbutton-color" content="#FE4F00">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#FE4F00">
+
+	<!-- libs -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+	
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <div class="p_content">
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<img class="header__wrapper-logo" src="img/logo.svg" alt="">
+					<div>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Услуги</a>
+						<a href="#" class="header__wrapper-link active" data-da=".menu .container .menu__wrapper, 900, last">Кейсы</a>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Пригласить в тендер</a>
+					</div>
+					<div>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Об агентстве</a>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Контакты</a>
+					</div>
+					<a href="#" class="header__wrapper-btn btn-red" data-da=".menu .container .menu__wrapper, 900, last">Найти  IT-специалиста</a>
+					<span class="burger"><span></span></span>
+				</div>
+			</div>
+		</header>
+		<section class="menu">
+			<div class="container">
+				<div class="menu__wrapper"></div>
+			</div>
+		</section>
+    <section class="case blg">
+      <div class="case__wrapper">
+        <div class="case__wrapper-info pink">
+          <div class="case__wrapper-info-header">
+            <div class="case__wrapper-info-header-tags">
+              <a href="#">Искусственный интеллект</a>
+            </div>
+            <p class="case__wrapper-info-header-text" data-da=".case__wrapper-info .case__wrapper-i, 376, last"><img src="img/date-icon.svg" alt="">10.08.2024</p>
+            <p class="case__wrapper-info-header-text" data-da=".case__wrapper-info .case__wrapper-i, 376, last"><img src="img/time-icon.svg" alt="">5 мин</p>
+          </div>
+          <h1 class="case__wrapper-info-title">Интеграция ИИ в маркетинговые стратегии: как AI меняет подход к рекламе и анализу данных</h1>
+          <div class="case__wrapper-i"></div>
+        </div>
+        <div class="case__wrapper-img" data-da=".case.pink, 550, first">
+          <img src="img/artcl-01.png" alt="">
+        </div>
+      </div>
+      <section class="case-authors" data-da=".p_content, 960, 3">
+        <div class="case-authors__wrapper">
+          <div class="case-authors__wrapper-item">
+            <div class="case-authors__wrapper-item-img">
+              <img src="img/avatar-01.png" alt="">
+            </div>
+            <div>
+              <p class="case-authors__wrapper-item-name">Юлия Клементьева</p>
+              <p class="case-authors__wrapper-item-post">эксперт</p>
+            </div>
+          </div>
+          <div class="case-authors__wrapper-item">
+            <div class="case-authors__wrapper-item-img">
+              <img src="img/avatar-02.png" alt="">
+            </div>
+            <div>
+              <p class="case-authors__wrapper-item-name">Юлия Кабанова</p>
+              <p class="case-authors__wrapper-item-post">эксперт</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="case-back">
+        <a href="#"><svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>все кейсы </a>
+      </div>
+      <div class="case__nav" data-da=".p_content, 960, 4">
+        <div class="case__nav-wrapper">
+          <div class="case__nav-wrapper-item">
+            <p class="case__nav-wrapper-item-title active">Какой кандидат требовался клиенту</p>
+            <p class="case__nav-wrapper-item-text">Какого кандидата клиент в итоге выбрал</p>
+            <p class="case__nav-wrapper-item-text">Подытожим: можно ли избежать увольнения кандидата и не прибегать к замене</p>
+          </div>
+          <div class="case__nav-wrapper-item">
+            <p class="case__nav-wrapper-item-title">С чем помогли еще</p>
+          </div>
+          <div class="case__nav-wrapper-item">
+            <p class="case__nav-wrapper-item-title">Закрыли замену — полет нормальный</p>
+            <p class="case__nav-wrapper-item-text">Подытожим: можно ли избежать увольнения кандидата и не прибегать к замене</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="case-text">
+      <div class="container-min">
+        <p>В Spice IT обратилась российская IT-компания по автоматизации <span class="i">документооборота.</span> Требовалось найти кандидата на позицию «Руководитель проектов». Мы быстро закрыли вакансию, но через два месяца специалист уволился. Повезло, что <span class="green">работали с клиентом в рамках услуги Рекрутмент. В ней как раз предусмотрена одноразовая замена.</span> Она действует, только если сотрудник уходит раньше, чем заканчивается испытательный срок. Замену делаем бесплатно без всяких доплат.</p>
+        <ul>
+          <p>Сегодня на примере кейса расскажем:</p>
+          <li>почему иногда замена — единственный вариант закрыть вакансию;</li>
+          <li>нужно ли бояться замены;</li>
+          <li>как все это происходит на практике.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="case-l">
+      <div class="container-min">
+        <div class="case-l__wrapper">
+          <div class="case-l__wrapper-tags">
+            <span>Полезное от Spice IT</span>
+          </div>
+          <div class="case-l__wrapper-col">
+            <div class="case-l__wrapper-col-w">
+              <p class="case-l__wrapper-col-title">Гайд: «Как оптимизировать техническое интервью: метод Spice IT»</p>
+              <p class="case-l__wrapper-col-title hide">Заявку приняли</p>
+              <p class="case-l__wrapper-col-text">Практические советы для HR-специалистов, рекрутеров, нанимающих менеджеров и всех, кто хочет избежать ошибок в процессе подбора, улучшить его и повысить процент принятия офферов.</p>
+              <p class="case-l__wrapper-col-text hide">Гайд отправится на указанную почту</p>
+              <button type="submit" class="btn-black hide">Заполнить заново</button>
+            </div>
+            <div class="case-l__wrapper-col-img">
+              <img src="img/a-02.png" alt="">
+            </div>
+          </div>
+          <form action="/submit" method="POST" class="case-l__wrapper-bottom">
+            <input placeholder="ФИО" type="name" name="name" id="name">
+            <input placeholder="Ваш email" type="text" name="email" id="email">
+            <button type="submit" class="btn-black">Забрать гайд</button>
+          </form>
+          <p class="case-l__wrapper-text">Отправляя заявку, вы соглашаетесь на <a href="/">обработку личных данных</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="case-table">
+      <div class="container-min">
+        <div class="case-table__wrapper blue">
+          <div class="case-table__wrapper-item">
+            <p><b>Клиент</b></p>
+            <p>Digital Epoche</p>
+          </div>
+          <div class="case-table__wrapper-item">
+            <p><b>Чем занимается</b></p>
+            <p>Внедрением корпоративных систем электронного документооборота</p>
+          </div>
+          <div class="case-table__wrapper-item">
+            <p><b>Размер компании</b></p>
+            <p>40 человек</p>
+          </div>
+          <div class="case-table__wrapper-item">
+            <p><b>Профиль кандидата</b></p>
+            <p>«Руководитель проектов»</p>
+          </div>
+          <div class="case-table__wrapper-item">
+            <p><b>Технологические стеки</b></p>
+            <p>PMBOK</p>
+          </div>
+          <div class="case-table__wrapper-item">
+            <p><b>Дедлайн поиска</b></p>
+            <p>2 месяца</p>
+          </div>
+          <div class="case-table__wrapper-item">
+            <p><b>Услуга</b></p>
+            <p>«Рекрутмент»</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="case-text" id="a">
+      <div class="container-min">
+        <h3>Какой кандидат требовался клиенту</h3>
+        <p>Мы не начинаем наем с разбега. Прежде погружаемся в бизнес, изучаем его цели и задачи. Это помогает разобраться, кого искать и какие профили будут для заказчика релевантными. </p>
+        <p>Вот что выяснили на этапе преворкинга.</p>
+        <p>В компании клиента работает команда разработчиков. Она отвечает за внедрение документооборота юрлицам. Ребята допиливают функционал, создают новые фичи, настраивают интеграции. Все по классике.  </p>
+        <p>А есть командир этого корабля — руководитель проектов. На его плечах три функции:</p>
+        <ol>
+          <li>почему иногда замена — единственный вариант закрыть вакансию;</li>
+          <li>нужно ли бояться замены;</li>
+          <li>как все это происходит на практике.</li>
+        </ol>
+        <div class="point_a yellow">
+          <img src="img/form.png" alt="">
+          <div class="point_a-wrapper">
+            <p class="point_a-title">Смотрите также</p>
+            <p class="point_a-text">Как расширили воронку найма, чтобы закрыть вакансию в срок и сохранить бюджет</p>
+            <a href="/" class="link active">
+              подробнее
+              <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="case-img">
+      <div class="container">
+        <img src="img/case-01.jpg" alt="">
+      </div>
+      <div class="container-min">
+        <p>Найти нужно было как раз руководителя. Требовался проактивный, энергичный и вдумчивый человек, который погрузится в продукт, разберется в технических характеристиках.</p>
+      </div>
+    </section>
+    <section class="case-text" id="b">
+      <div class="container-min">
+        <h3>Какого кандидата клиент в итоге выбрал</h3>
+        <p>Через месяц после начала поиска мы нашли кандидата, который сразу понравился клиенту. В ходе собеседования выяснили, почему человек ищет работу.</p>
+        <p>Оказывается, потому, что устал от бывшего работодателя. Начальник только и успевал накидывать задачи. Времени закрывать все катастрофически не хватало, а отказать боссу не получалось. Из-за  переработок нарушился сон, аппетит, здоровье. В итоге человек не выдержал работу на износ и решил сменить компанию.</p>
+      </div>
+    </section>
+    <section class="case-promo">
+      <div class="container-min">
+        <div class="case-promo__wrapper">
+          <div class="case-promo__wrapper-info">
+            <h4>Хотите оптимизировать процесс отбора, чтобы кандидаты доходили до офферов?</h4>
+            <p>Наши эксперты проанализируют воронку и предложат инструменты</p>
+            <a href="#" class="btn-red">Записаться на диагностику</a>
+          </div>
+          <img src="img/arrow-round.svg" alt="" class="case-promo__wrapper-img">
+        </div>
+      </div>
+    </section>
+    <section class="case-download">
+      <div class="container-min">
+        <div class="case-download-wrapper yellow">
+          <div class="case-download-wrapper-info">
+            <p class="case-download-wrapper-info-title">Онлайн-калькулятор для быстрой оценки эффективности и устранения «багов» в рекрутмент-процессе</p>
+            <a href="/" class="link active">
+              скачать
+              <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+            </a>
+          </div>
+          <div class="case-download-wrapper-img">
+            <img src="img/letter-02.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="case-img">
+      <div class="container-min">
+        <img src="img/case-02.png" alt="">
+      </div>
+      <div class="container-min">
+        <p>Найти нужно было как раз руководителя. Требовался проактивный, энергичный и вдумчивый человек, который погрузится в продукт, разберется в технических характеристиках.</p>
+      </div>
+    </section>
+    <section class="case-quote">
+      <div class="container-min">
+        <p><span class="point"></span>Слова кандидата сразу вызвали опасение. Объяснили клиенту, что перед нами явно выгоревший человек. И хотя он идеально подходит по техническим навыкам, внутренних ресурсов на новый проект может не хватить. Нанимать такого специалиста рискованно<span class="point"></span></p>
+      </div>
+    </section>
+    <section class="case-tab">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="case-tab-wrapper-col swiper-slide">
+            <div class="case-tab-wrapper-col-wrapper pink">
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Клиент 1</h5>
+                <p>Продуктовая технологическая IT-компания</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Чем занимается</h5>
+                <p>Разрабатывает сервисы в сфере недвижимости</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Размер компании</h5>
+                <p>1000+ человек</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Профили кандидатов</h5>
+                <p>Customer Journey Expert, product owner, product manager, frontend developer, DevOps, Tech Lead Senior/Middle python, android developer, продуктовый аналитик, Team Lead mobile</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Длительность аренды</h5>
+                <p>8 месяцев</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Технологические стеки</h5>
+                <p>Python 3.X; pytest, mypy, poetry, flake8, FastAPI, ElasticSearch; *PostgreS*QL, *RabbitMQ*, *Docker*, k8s, Angular 14+, RxJs, SCSS, ESLint, MVVM, RxJava 2, Dagger 2, Centrifuge, JUnit, Mockk, Kaspresso, VIPER, GCD, Swinject, Centrifuge, UlKit + вёрстка кодом, XCTest, ELK, Zabbix; Linux (CentOS), Bitbucket/Ansible,/Jenkins/Terraform; Bash; git, Clean Architectur</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Услуга</h5>
+                <p>«Аренда ІТ-рекрутера»</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-tab-wrapper-col swiper-slide">
+            <div class="case-tab-wrapper-col-wrapper green">
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Клиент 2</h5>
+                <p>Компания по разработке медицинских информационных систем</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Чем занимается</h5>
+                <p>Разрабатывает и внедряет программные продукты для медицинского оборудования</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Размер компании</h5>
+                <p>38 человек</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Профили кандидатов</h5>
+                <p>Системный аналитик, программист SQL, специалист по внедрению, руководитель проектов, инженер по подключению, системный администратор</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Длительность аренды</h5>
+                <p>11 месяцев</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Технологические стеки</h5>
+                <p>SQL, CrystallReport, FastReport, СУБД Firebird PSQL, XML, JSON, REST, SOAP, HL7, FHIR, JasperReport, Linux, Windows, PowerShell, bash, bat, TCP/P</p>
+              </div>
+              <div class="case-tab-wrapper-col-wrapper-item">
+                <h5>Услуга</h5>
+                <p>«Аренда ІТ-рекрутера»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="case-tab-pagination"></div>
+    </section>
+    <section class="case-quote">
+      <div class="container-min">
+        <div class="case-quote-wrapper">
+          <div class="case-quote-wrapper-img">
+            <img src="img/avatar.png" alt="">
+          </div>
+          <div>
+            <p><span class="point"></span>Слова кандидата сразу вызвали опасение. Объяснили клиенту, что перед нами явно выгоревший человек<span class="point"></span></p>
+            <p class="case-quote-wrapper-name"><span>Юлия Клементьева,</span> руководитель направления контент-маркетинга</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="case-text" id="c">
+      <div class="container-min">
+        <p>Мы настаивали на том, чтобы продолжить поиск, но клиент решил дать кандидату шанс. Тем более соискатель полностью подходил под профиль, вызывал доверие своим опытом. Да и сам рвался в бой: уверял, что справится с задачами, потому что их в разы меньше, чем на прошлой работе.</p>
+      </div>
+    </section>
+    <section class="case-img">
+      <div class="container">
+        <img src="img/case-03.png" alt="">
+      </div>
+      <div class="container-min">
+        <p>Через два месяца клиент сообщил, что нанятый специалист уходит.</p>
+      </div>
+    </section>
+    <section class="case-text" id="d">
+      <div class="container-min">
+        <h3>С чем помогли еще</h3>
+        <p>Представителем клиента был исполнительный директор. Помимо закрытия вакансии, у него была куча других дел. Чтобы не отрывать его от прямых обязанностей, взяли на себя всю операционку. Например, помогли сформировать офер — конечно, предварительно все согласовав. </p>
+        <p>Для офера собрали задачи, требования, прописали зарплатную вилку и бонусы. Клиенту понравилось. По его словам, сам бы он потратил на это неделю.</p>
+      </div>
+    </section>
+    <section class="case-slider">
+      <div class="container-min">
+        <div class="img-slide swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/slider-01.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slider-02.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="slider-nav">
+          <svg class="prev" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-prev"></use></svg>
+          <div class="text-slide swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <p>Темп работы в рамках гарантийной замены кандидата</p>
+              </div>
+              <div class="swiper-slide">
+                <p>Темп работы в рамках гарантийной замены кандидата Темп работы в рамках гарантийной замены кандидата</p>
+              </div>
+            </div>
+          </div>
+          <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+        </div>
+      </div>
+    </section>
+    <section class="case-text" id="e">
+      <div class="container-min">
+        <h3>Закрыли замену — полет нормальный</h3>
+        <p>Во время поиска кандидата в рамках замены нам удалось привести двух кандидатов, которые подошли клиенту. Одному из них сделали офер. Новый сотрудник уже вышел и помогает команде внедрять системы документооборота.</p>
+      </div>
+    </section>
+    <section class="case-img big">
+      <div class="container">
+        <img src="img/case-04.svg" alt="">
+      </div>
+      <div class="container-min">
+        <p>Темп работы в рамках гарантийной замены кандидата</p>
+      </div>
+    </section>
+    <section class="case-text" id="f">
+      <div class="container-min">
+        <h3>Подытожим: можно ли избежать увольнения кандидата и не прибегать к замене</h3>
+        <p>Такие ситуации легко разрулить. Например, устроить дополнительные встречи с руководителем, дать новичку куратора, разбить онбординг на более мелкие этапы. Сотрудник видит, что его переживания небезразличны работодателю, и остается. Это гораздо выгоднее, потому что не приходится начинать поиск заново и откладывать старт проекта.</p>
+      </div>
+    </section>
+    <section class="case-video">
+      <div class="container-min">
+        <div class="case-video__wrapper">
+          <div class="case-video__wrapper-play">
+            <img src="img/play.svg" alt="">
+          </div>
+          <video>
+            <source src="img/example.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p>Помогли составить офер, чтобы разгрузить клиента</p>
+      </div>
+    </section>
+    <section class="case-text">
+      <div class="container-min">
+        <p>Иногда избежать увольнения невозможно, как, например, в нашем кейсе. Кандидату требовалась более простая работа либо длительный отпуск. Клиент не мог предложить ни первого, ни второго, поэтому решился на замену. Замена чуть растянула поиск, зато компания получила специалиста, который ей был нужен изначально.</p>
+      </div>
+    </section>
+    <section class="case-share">
+      <div class="container-min">
+        <div class="case-share__wrapper">
+          <p>Поделиться</p>
+          <a href="#"><svg viewBox="0 0 43 43"><use xlink:href="img/sprite.svg#tg"></use></svg></a>
+          <a href="#"><svg viewBox="0 0 43 43"><use xlink:href="img/sprite.svg#vk"></use></svg></a>
+          <a href="#"><svg viewBox="0 0 43 43"><use xlink:href="img/sprite.svg#share"></use></svg></a>
+        </div>
+      </div>
+    </section>
+    <section id="case" class="category sl">
+      <div class="container">
+        <div class="category__header">
+          <h2 class="title">Рубрика 1</h2>
+          <a class="vacancy__header-link" href="/">
+            Все статьи рубрики
+            <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+          </a>
+        </div>
+      </div>
+      <div class="vacancy__slider">
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper blue">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как мы нашли клиенту двух специалистов вместо одного и почему нельзя было</h3>
+              <p class="category__text">Рассказываем о ключевых этапах планирования рекламных расходов  и даём советы по эффективному использованию бюджета</p>
+              <p class="category__name desk">Анастасия Авдонина, <br>Account Director SI</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-08.png" alt="">
+            </div>
+            <p class="category__name mob">Анастасия Авдонина, <br>Account Director SI</p>
+          </div>
+        </a>
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper pink">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как скорость ответа нанимающего менеджера влияет на закрытие  вакансии</h3>
+              <p class="category__text">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-04.png" alt="">
+            </div>
+          </div>
+        </a>
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper green">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как мы нашли клиенту двух специалистов вместо одного и почему нельзя было иначе</h3>
+              <p class="category__text">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+              <p class="category__name desk">Анастасия Авдонина, <br>Account Director SI</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-04.png" alt="">
+            </div>
+            <p class="category__name mob">Анастасия Авдонина, <br>Account Director SI</p>
+          </div>
+        </a>
+      </div>
+      <div class="custom-scrollbar">
+        <div class="custom-scrollbar-thumb"></div>
+      </div>
+      <div class="container">
+        <a href="/" class="btn-border">Все статьи рубрики</a>
+      </div>
+    </section>
+    <section class="mailing">
+      <div class="container">
+        <div class="mailing__wrapper">
+          <div class="mailing__wrapper-info yellow">
+            <p class="mailing__wrapper-info-title">Ежемесячная редакторская подборка статей на почту</p>
+            <p class="mailing__wrapper-info-text">
+              Одно письмо в месяц, зато какое! Наш редактор Юля рассказывает подписчикам про свежие кейсы, акции, знакомит с новыми услугами, раздает слонов, промокоды и всякие плюшки.
+              <br>
+              <br>
+              Если интересует — подписывайтесь
+            </p>
+            <form action="/submit" method="POST" class="mailing__wrapper-info-form">
+              <input placeholder="Ваш email" type="text" name="email" id="email">
+              <button type="submit" class="btn-black">Подписаться на дайджест</button>
+            </form>
+            <p class="mailing__wrapper-info-link">Отправляя заявку, вы соглашаетесь на <a href="policy.html">обработку личных данных</a></p>
+          </div>
+          <div class="mailing__wrapper-img">
+            <img src="img/m-01.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__wrapper-info">
+					<a href="mailto:hello@spice-agency.ru" class="footer__wrapper-info-link">hello@spice-agency.ru</a>
+					<a href="tel:+74959660889" class="footer__wrapper-info-link">+7 (495) 966-08-89</a>
+					<div class="footer__wrapper-info-social" data-da=".footer__wrapper-mob, 731, last">
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#fb-b"></use></svg></a>
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#tg-b"></use></svg></a>
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#li-b"></use></svg></a>
+					</div>
+					<a class="footer__wrapper-info-logo" href="/" data-da=".footer__wrapper, 731, last">
+						<img src="img/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="footer__wrapper-mob"></div>
+				<div class="footer__wrapper-links">
+					<h4 class="footer__wrapper-links-title">Контакты</h4>
+					<p class="footer__wrapper-links-text">Москва<br>127051 Трубная улица, 25<br>стр. 3, 3 этаж</p>
+					<p class="footer__wrapper-links-text">Кипр<br>3040, Limassol,<br>Nikiforou Foka str., 34</p>
+					<p class="footer__wrapper-links-text top" data-da=".footer__wrapper-mob, 731, 0">© 2024 Spice IT</p>
+				</div>
+				<div class="footer__wrapper-links">
+					<h4 class="footer__wrapper-links-title">Услуги</h4>
+					<a href="#" class="footer__wrapper-links-text">Классический подбор</a>
+					<a href="#" class="footer__wrapper-links-text">Аренда IT-рекрутера</a>
+					<a href="#" class="footer__wrapper-links-text">Исследование заработных плат IT-специалистов</a>
+					<a href="#" class="footer__wrapper-links-text">Проведение тех. интервью</a>
+					<a href="#" class="footer__wrapper-links-text">Разработка стратегии удержания IT-специалистов</a>
+					<a href="#" class="footer__wrapper-links-text">Аутстаффинг</a>
+					<a href="#" class="footer__wrapper-links-text">Аудит/Диагностика IT-рекрутингового процесса</a>
+				</div>
+				<div class="footer__wrapper-links">
+					<a href="#" class="footer__wrapper-links-title">Кейсы</a>
+					<a href="#" class="footer__wrapper-links-title">Тендеры</a>
+					<a href="#" class="footer__wrapper-links-title">Комьюнити</a>
+					<a href="#" class="footer__wrapper-links-title">О нас</a>
+					<a href="#" class="footer__wrapper-links-title">Контакты</a>
+					<a href="#" class="footer__wrapper-links-text" data-da=".footer__wrapper-mob, 731, 1">Пользовательское соглашение</a>
+					<a href="#" class="footer__wrapper-links-text" data-da=".footer__wrapper-mob, 731, 2">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- libs -->
+	<script type="module" src="js/dynamicAdapt.js"></script>
+	<script src="js/aat.min.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>

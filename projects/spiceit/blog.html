@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+
+	<title>SpiceIT</title>
+	<meta name="description" content="SpiceIT">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+	<meta name="theme-color" content="#FE4F00">
+	<meta name="msapplication-navbutton-color" content="#FE4F00">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#FE4F00">
+
+	<!-- libs -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+	
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <div class="p_content">
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<img class="header__wrapper-logo" src="img/logo.svg" alt="">
+					<div>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Услуги</a>
+						<a href="#" class="header__wrapper-link active" data-da=".menu .container .menu__wrapper, 900, last">Кейсы</a>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Пригласить в тендер</a>
+					</div>
+					<div>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Об агентстве</a>
+						<a href="#" class="header__wrapper-link" data-da=".menu .container .menu__wrapper, 900, last">Контакты</a>
+					</div>
+					<a href="#" class="header__wrapper-btn btn-red" data-da=".menu .container .menu__wrapper, 900, last">Найти  IT-специалиста</a>
+					<span class="burger"><span></span></span>
+				</div>
+			</div>
+		</header>
+		<section class="menu">
+			<div class="container">
+				<div class="menu__wrapper"></div>
+			</div>
+		</section>
+    <section class="main">
+      <div class="container">
+        <h1 class="main__title">Журнал <span>46</span></h1>
+      </div>
+    </section>
+    <section class="nav">
+      <span data-scroll="#rec" class="active">Рекомендуем</span>
+      <span data-scroll="#mtrl">Материалы</span>
+      <span data-scroll="#cat1">Рубрика 1</span>
+      <span data-scroll="#case">Кейсы</span>
+      <span data-scroll="#cat3">Рубрика 3</span>
+      <span data-scroll="#cat4">Рубрика 4</span>
+      <span data-scroll="#rcntl">Недавно вышло</span>
+      <span data-scroll="#djst">Дайджест</span>
+    </section>
+    <div class="nav-placeholder"></div>
+    <section id="rec" class="recomended">
+      <div class="container">
+        <h2 class="title">Редакция рекомендует</h2>
+        <div class="recomended__wrapper">
+          <a href="article.html" class="recomended__wrapper-item p yellow">
+            <div class="recomended__wrapper-item-wrapper">
+              <p class="recomended__wrapper-item-wrapper-r-name mob">Анастасия Авдонина,<br>Account Director SI</p>
+              <div class="recomended__wrapper-item-wrapper-l">
+                <img src="img/card-01.png" alt="">
+                <img src="img/arrow-round-03.svg" alt="">
+              </div>
+              <div class="recomended__wrapper-item-wrapper-r">
+                <div class="recomended__wrapper-item-header">
+                  <div class="main__cards-card-wrapper-tags">
+                    <div>Рубрика 3</div>
+                  </div>
+                  <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                  <p class="recomended__wrapper-item-header-time">
+                    <img src="img/time-icon.svg" alt="">
+                    5 мин
+                  </p>
+                </div>
+                <h3 class="main__cards-card-wrapper-title">Как помогаем организовывать техническое интервью клиентам без  IT-специализации</h3>
+                <p class="recomended__wrapper-item-wrapper-r-text">Рассказываем о ключевых этапах планирования рекламных расходов  и даём советы по эффективному использованию бюджета</p>
+                <p class="recomended__wrapper-item-wrapper-r-name desk">Анастасия Авдонина,<br>Account Director SI</p>
+              </div>
+            </div>
+          </a>
+          <a href="article.html" class="recomended__wrapper-item s pink">
+            <div class="recomended__wrapper-item-img">
+              <img src="img/card-04.png" alt="">
+            </div>
+            <div class="recomended__wrapper-item-wrapper-r p pink">
+              <div class="recomended__wrapper-item-header">
+                <div class="main__cards-card-wrapper-tags">
+                  <div>Рубрика 2</div>
+                </div>
+                <p class="recomended__wrapper-item-header-date">12 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как скорость ответа нанимающего менеджера влияет на закрытие вакансии</h3>
+            </div>
+          </a>
+          <a href="article.html" class="recomended__wrapper-item s blue">
+            <div class="recomended__wrapper-item-img i">
+              <img src="img/card-06.png" alt="">
+            </div>
+            <div class="recomended__wrapper-item-wrapper-r p">
+              <div class="recomended__wrapper-item-header">
+                <div class="main__cards-card-wrapper-tags">
+                  <div>Рубрика 2</div>
+                </div>
+                <p class="recomended__wrapper-item-header-date">1 декабря</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Почему иногда приходится делать замену кандидата и как это происходит</h3>
+              <p class="recomended__wrapper-item-wrapper-r-text">Партнер фонда «Месторождение» Андрей Торбичев — о том, в какие сферы готовы инвестировать фонды и бизнес-ангелы и на какие суммы можно рассчитывать</p>
+            </div>
+          </a>
+          <a href="article.html" class="recomended__wrapper-item s pink">
+            <div class="recomended__wrapper-item-img i">
+              <img src="img/card-05.png" alt="">
+            </div>
+            <div class="recomended__wrapper-item-wrapper-r p">
+              <div class="recomended__wrapper-item-header">
+                <div class="main__cards-card-wrapper-tags">
+                  <div>Рубрика 2</div>
+                </div>
+                <p class="recomended__wrapper-item-header-date">1 декабря</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как расширили воронку найма, чтобы закрыть вакансию в срок и сохранить бюджет проекта</h3>
+              <p class="recomended__wrapper-item-wrapper-r-text">Партнер фонда «Месторождение» Андрей Торбичев — о том, в какие сферы готовы инвестировать фонды и бизнес-ангелы и на какие суммы можно рассчитывать</p>
+            </div>
+          </a>
+          <a href="article.html" class="recomended__wrapper-item s green">
+            <p class="recomended__wrapper-item-wrapper-r-name mob">Анастасия Авдонина,<br>Account Director SI</p>
+            <div class="recomended__wrapper-item-img i">
+              <img src="img/card-07.png" alt="">
+            </div>
+            <div class="recomended__wrapper-item-wrapper-r p">
+              <div class="recomended__wrapper-item-header">
+                <div class="main__cards-card-wrapper-tags">
+                  <div>Рубрика 2</div>
+                </div>
+                <p class="recomended__wrapper-item-header-date">1 декабря</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как мы увеличили конверсию принятия офферов на проекте клиента с 15 до 50%</h3>
+              <p class="recomended__wrapper-item-wrapper-r-name desk">Анастасия Авдонина,<br>Account Director SI</p>
+            </div>
+          </a>
+          <a href="article.html" class="recomended__wrapper-item p yellow">
+            <div class="recomended__wrapper-item-wrapper">
+              <p class="recomended__wrapper-item-wrapper-r-name mob">Анастасия Авдонина,<br>Account Director SI</p>
+              <div class="recomended__wrapper-item-wrapper-l">
+                <img src="img/card-02.png" alt="">
+                <img src="img/arrow-round-03.svg" alt="">
+              </div>
+              <div class="recomended__wrapper-item-wrapper-r">
+                <div class="recomended__wrapper-item-header">
+                  <div class="main__cards-card-wrapper-tags">
+                    <div>Строительство</div>
+                  </div>
+                  <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                  <p class="recomended__wrapper-item-header-time">
+                    <img src="img/time-icon.svg" alt="">
+                    5 мин
+                  </p>
+                </div>
+                <h3 class="main__cards-card-wrapper-title">Чек-лист: «Как за пять шагов оптимизировать техническое интервью»</h3>
+                <p class="recomended__wrapper-item-wrapper-r-text">Рассказываем о ключевых этапах планирования рекламных расходов  и даём советы по эффективному использованию бюджета</p>
+                <p class="recomended__wrapper-item-wrapper-r-name desk">Анастасия Авдонина,<br>Account Director SI</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="mtrl" class="download">
+      <div class="container">
+        <h2 class="title">Можно скачать</h2>
+        <div class="download__wrapper">
+          <div class="download__wrapper-item">
+            <div class="download__wrapper-item-img">
+              <img src="img/d-01.svg" alt="">
+            </div>
+            <a href="/" class="download__wrapper-item-info">
+              <p class="points__wrapper-item-type">Гайд</p>
+              <div class="download__wrapper-item-info-w">
+                <p class="points__wrapper-item-title">Как выбрать IT-рекрутинговое агентство</p>
+                <p class="link">
+                  Скачать
+                  <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+                </p>
+              </div>
+            </a>
+          </div>
+          <a href="/" class="download__wrapper-item">
+            <div class="download__wrapper-item-img">
+              <img src="img/d-02.svg" alt="">
+            </div>
+            <div class="download__wrapper-item-info">
+              <p class="points__wrapper-item-type">Чеклист</p>
+              <div class="download__wrapper-item-info-w">
+                <p class="points__wrapper-item-title">Как организовать техническое интервью</p>
+                <p class="link">
+                  Скачать
+                  <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="/" class="download__wrapper-item">
+            <div class="download__wrapper-item-img">
+              <img src="img/d-03.svg" alt="">
+            </div>
+            <div class="download__wrapper-item-info">
+              <p class="points__wrapper-item-type">Книга</p>
+              <div class="download__wrapper-item-info-w">
+                <p class="points__wrapper-item-title">Как перестать жаловаться и начать жить</p>
+                <p class="link">
+                  Скачать
+                  <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="cat1" class="new">
+      <div class="container">
+        <h2 class="title">Вышло на этой неделе</h2>
+        <div class="recomended__wrapper">
+          <a href="article.html" class="recomended__wrapper-item s">
+            <div class="recomended__wrapper-item-img">
+              <img src="img/card-02.png" alt="">
+            </div>
+            <div class="recomended__wrapper-item-wrapper-r p yellow">
+              <div class="recomended__wrapper-item-header">
+                <div class="main__cards-card-wrapper-tags">
+                  <div>Рубрика 1</div>
+                </div>
+                <p class="recomended__wrapper-item-header-date">12 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как скорость ответа нанимающего менеджера влияет на закрытие вакансии</h3>
+            </div>
+          </a>
+          <a href="article.html" class="recomended__wrapper-item p blue">
+            <div class="recomended__wrapper-item-wrapper">
+              <p class="recomended__wrapper-item-wrapper-r-name mob">Анастасия Авдонина,<br>Account Director SI</p>
+              <div class="recomended__wrapper-item-wrapper-l">
+                <img src="img/card-01.png" alt="">
+                <img src="img/arrow-round-03.svg" alt="">
+              </div>
+              <div class="recomended__wrapper-item-wrapper-r">
+                <div class="recomended__wrapper-item-header">
+                  <div class="main__cards-card-wrapper-tags">
+                    <div>Рубрика 3</div>
+                  </div>
+                  <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                  <p class="recomended__wrapper-item-header-time">
+                    <img src="img/time-icon.svg" alt="">
+                    5 мин
+                  </p>
+                </div>
+                <h3 class="main__cards-card-wrapper-title">Как помогаем организовывать техническое интервью клиентам без  IT-специализации</h3>
+                <p class="recomended__wrapper-item-wrapper-r-text">Рассказываем о ключевых этапах планирования рекламных расходов  и даём советы по эффективному использованию бюджета</p>
+                <p class="recomended__wrapper-item-wrapper-r-name desk">Анастасия Авдонина,<br>Account Director SI</p>
+              </div>
+            </div>
+          </a>
+          <a href="article.html" class="recomended__wrapper-item s green">
+            <div class="recomended__wrapper-item-img i">
+              <img src="img/case-03.png" alt="">
+            </div>
+            <div class="recomended__wrapper-item-wrapper-r p">
+              <div class="recomended__wrapper-item-header">
+                <div class="main__cards-card-wrapper-tags">
+                  <div>Рубрика 2</div>
+                </div>
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Почему иногда приходится делать замену кандидата и как это происходит</h3>
+              <p class="recomended__wrapper-item-wrapper-r-text">Партнер фонда «Месторождение» Андрей Торбичев — о том, в какие сферы готовы инвестировать фонды и бизнес-ангелы и на какие суммы можно рассчитывать</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="case" class="category sl">
+      <div class="container">
+        <div class="category__header">
+          <h2 class="title">Рубрика 1</h2>
+          <a class="vacancy__header-link" href="/">
+            Все статьи рубрики
+            <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+          </a>
+        </div>
+      </div>
+      <div class="vacancy__slider">
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper blue">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как мы нашли клиенту двух специалистов вместо одного и почему нельзя было</h3>
+              <p class="category__text">Рассказываем о ключевых этапах планирования рекламных расходов  и даём советы по эффективному использованию бюджета</p>
+              <p class="category__name desk">Анастасия Авдонина, <br>Account Director SI</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-08.png" alt="">
+            </div>
+            <p class="category__name mob">Анастасия Авдонина, <br>Account Director SI</p>
+          </div>
+        </a>
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper pink">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как скорость ответа нанимающего менеджера влияет на закрытие  вакансии</h3>
+              <p class="category__text">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-04.png" alt="">
+            </div>
+          </div>
+        </a>
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper green">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как мы нашли клиенту двух специалистов вместо одного и почему нельзя было иначе</h3>
+              <p class="category__text">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+              <p class="category__name desk">Анастасия Авдонина, <br>Account Director SI</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-04.png" alt="">
+            </div>
+            <p class="category__name mob">Анастасия Авдонина, <br>Account Director SI</p>
+          </div>
+        </a>
+      </div>
+      <div class="custom-scrollbar">
+        <div class="custom-scrollbar-thumb"></div>
+      </div>
+      <div class="container">
+        <a href="/" class="btn-border">Все статьи рубрики</a>
+      </div>
+    </section>
+    <section id="cat3" class="category sl">
+      <div class="container">
+        <div class="category__header">
+          <h2 class="title">Кейсы</h2>
+          <a class="vacancy__header-link" href="/">
+            все кейсы
+            <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+          </a>
+        </div>
+      </div>
+      <div class="vacancy__slider">
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper pink">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <div class="main__cards-card-wrapper-tags">
+                  <div>Строительство</div>
+                </div>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как скорость ответа нанимающего менеджера влияет на закрытие вакансии: сравнили два проекта</h3>
+              <p class="main__cards-card-wrapper-bottom-text desk">Swagger, Postman, SOAP UI</p>
+              <p class="main__cards-card-wrapper-bottom-desc">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-02.png" alt="">
+            </div>
+            <p class="main__cards-card-wrapper-bottom-text mob">Swagger, Postman, SOAP UI</p>
+          </div>
+        </a>
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper green">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <div class="main__cards-card-wrapper-tags">
+                  <div>Строительство</div>
+                </div>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как скорость ответа нанимающего менеджера влияет на закрытие вакансии: сравнили два проекта</h3>
+              <p class="main__cards-card-wrapper-bottom-text desk">Swagger, Postman, SOAP UI</p>
+              <p class="main__cards-card-wrapper-bottom-desc">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/case-03.png" alt="">
+            </div>
+            <p class="main__cards-card-wrapper-bottom-text mob">Swagger, Postman, SOAP UI</p>
+          </div>
+        </a>
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper blue">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <div class="main__cards-card-wrapper-tags">
+                  <div>Строительство</div>
+                </div>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как мы нашли клиенту двух специалистов вместо одного и почему нельзя было иначе</h3>
+              <p class="main__cards-card-wrapper-bottom-text desk">Swagger, Postman, SOAP UI</p>
+              <p class="main__cards-card-wrapper-bottom-desc">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-08.png" alt="">
+            </div>
+            <p class="main__cards-card-wrapper-bottom-text mob">Swagger, Postman, SOAP UI</p>
+          </div>
+        </a>
+      </div>
+      <div class="custom-scrollbar">
+        <div class="custom-scrollbar-thumb"></div>
+      </div>
+      <div class="container">
+        <a href="/" class="btn-border">Смотреть все кейсы</a>
+      </div>
+    </section>
+    <div class="marquee b">
+      <a href="/" class="preview__line marquee__content">
+        <div class="preview__line-wrapper">
+          <p class="preview__line-wrapper-title">Подпишитесь на наш телеграм</p>
+          <p class="preview__line-wrapper-text">Тут опционально про выгоды <br>от нашего тг-канала для пользователя</p>
+        </div>
+        <div class="preview__line-icon">
+          <img src="img/tg-03.svg" alt="">
+        </div>
+      </a>
+      <a href="/" class="preview__line marquee__content">
+        <div class="preview__line-wrapper">
+          <p class="preview__line-wrapper-title">Подпишитесь на наш телеграм</p>
+          <p class="preview__line-wrapper-text">Тут опционально про выгоды <br>от нашего тг-канала для пользователя</p>
+        </div>
+        <div class="preview__line-icon">
+          <img src="img/tg-03.svg" alt="">
+        </div>
+      </a>
+    </div>
+    <div class="sub">
+      <div class="container">
+        <div class="sub__wrapper">
+          <div class="sub__wrapper-info">
+            <p class="sub__wrapper-info-title">Подпишитесь <nobr>на наш</nobr> телеграм</p>
+            <p class="sub__wrapper-info-text">Тут опционально про выгоды <br>от нашего тг-канала для пользователя</p>
+          </div>
+          <a href="/" target="_blank" class="sub__wrapper-link">
+            <img src="img/tg-03.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <section id="cat4" class="category sl">
+      <div class="container">
+        <div class="category__header">
+          <h2 class="title">Рубрика 3</h2>
+          <a class="vacancy__header-link" href="/">
+            все статьи рубрики
+            <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+          </a>
+        </div>
+      </div>
+      <div class="vacancy__slider">
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper green">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как мы нашли клиенту двух специалистов вместо одного</h3>
+              <p class="category__text">Рассказываем, как релокантам и иностранным гражданам дистанционно зарегистрировать свой бизнес и в каких случаях личное присутствие в стране будет необходимо.</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-01.png" alt="">
+            </div>
+          </div>
+        </a>
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper blue">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как мы нашли клиенту двух специалистов вместо одного и почему нельзя было иначе</h3>
+              <p class="category__text">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+              <p class="category__name desk">Анастасия Авдонина, <br>Account Director SI</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-08.png" alt="">
+            </div>
+            <p class="category__name mob">Анастасия Авдонина, <br>Account Director SI</p>
+          </div>
+        </a>
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper pink">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как скорость ответа нанимающего менеджера влияет на закрытие вакансии: сравнили два проекта</h3>
+              <p class="category__text">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+              <p class="category__name desk">Анастасия Авдонина, <br>Account Director SI</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-04.png" alt="">
+            </div>
+            <p class="category__name mob">Анастасия Авдонина, <br>Account Director SI</p>
+          </div>
+        </a>
+      </div>
+      <div class="custom-scrollbar">
+        <div class="custom-scrollbar-thumb"></div>
+      </div>
+      <div class="container">
+        <a href="/" class="btn-border">Все статьи рубрики</a>
+      </div>
+    </section>
+    <section id="rcntl" class="category sl">
+      <div class="container">
+        <div class="category__header">
+          <h2 class="title">Рубрика 4</h2>
+          <a class="vacancy__header-link" href="/">
+            все статьи рубрики
+            <svg class="next" viewBox="0 0 54 54"><use xlink:href="img/sprite.svg#arrow-next"></use></svg>
+          </a>
+        </div>
+      </div>
+      <div class="vacancy__slider">
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper yellow">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как мы нашли клиенту двух специалистов вместо одного</h3>
+              <p class="category__text">Рассказываем, как релокантам и иностранным гражданам дистанционно зарегистрировать свой бизнес и в каких случаях личное присутствие в стране будет необходимо.</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-06.png" alt="">
+            </div>
+          </div>
+        </a>
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper pink">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как скорость ответа нанимающего менеджера влияет на закрытие вакансии: сравнили два проектае</h3>
+              <p class="category__text">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+              <p class="category__name desk">Анастасия Авдонина, <br>Account Director SI</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-08.png" alt="">
+            </div>
+            <p class="category__name mob">Анастасия Авдонина, <br>Account Director SI</p>
+          </div>
+        </a>
+        <a href="case.html" class="main__cards-card swiper-slide">
+          <div class="main__cards-card-wrapper green">
+            <div class="category__card">
+              <div class="recomended__wrapper-item-header">
+                <p class="recomended__wrapper-item-header-date">23 ноября</p>
+                <p class="recomended__wrapper-item-header-time">
+                  <img src="img/time-icon.svg" alt="">
+                  5 мин
+                </p>
+              </div>
+              <h3 class="main__cards-card-wrapper-title">Как мы нашли клиенту двух специалистов вместо одного и почему нельзя было иначе</h3>
+              <p class="category__text">В Spice IT обратилась российская  IT-компания по автоматизации документооборота</p>
+              <p class="category__name desk">Анастасия Авдонина, <br>Account Director SI</p>
+            </div>
+            <div class="main__cards-card-wrapper-bottom-img">
+              <img src="img/card-04.png" alt="">
+            </div>
+            <p class="category__name mob">Анастасия Авдонина, <br>Account Director SI</p>
+          </div>
+        </a>
+      </div>
+      <div class="custom-scrollbar">
+        <div class="custom-scrollbar-thumb"></div>
+      </div>
+      <div class="container">
+        <a href="/" class="btn-border">Все статьи рубрики</a>
+      </div>
+    </section>
+    <section id="djst" class="mailing">
+      <div class="container">
+        <div class="mailing__wrapper">
+          <div class="mailing__wrapper-info yellow">
+            <p class="mailing__wrapper-info-title">Ежемесячная редакторская подборка статей на почту</p>
+            <p class="mailing__wrapper-info-text">
+              Одно письмо в месяц, зато какое! Наш редактор Юля рассказывает подписчикам про свежие кейсы, акции, знакомит с новыми услугами, раздает слонов, промокоды и всякие плюшки.
+              <br>
+              <br>
+              Если интересует — подписывайтесь
+            </p>
+            <form action="/submit" method="POST" class="mailing__wrapper-info-form">
+              <input placeholder="Ваш email" type="text" name="email" id="email">
+              <button type="submit" class="btn-black">Подписаться на дайджест</button>
+            </form>
+            <p class="mailing__wrapper-info-link">Отправляя заявку, вы соглашаетесь на <a href="policy.html">обработку личных данных</a></p>
+          </div>
+          <div class="mailing__wrapper-img">
+            <img src="img/m-01.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__wrapper-info">
+					<a href="mailto:hello@spice-agency.ru" class="footer__wrapper-info-link">hello@spice-agency.ru</a>
+					<a href="tel:+74959660889" class="footer__wrapper-info-link">+7 (495) 966-08-89</a>
+					<div class="footer__wrapper-info-social" data-da=".footer__wrapper-mob, 731, last">
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#fb-b"></use></svg></a>
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#tg-b"></use></svg></a>
+						<a href="#"><svg viewBox="0 0 48 48"><use xlink:href="img/sprite.svg#li-b"></use></svg></a>
+					</div>
+					<a class="footer__wrapper-info-logo" href="/" data-da=".footer__wrapper, 731, last">
+						<img src="img/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="footer__wrapper-mob"></div>
+				<div class="footer__wrapper-links">
+					<h4 class="footer__wrapper-links-title">Контакты</h4>
+					<p class="footer__wrapper-links-text">Москва<br>127051 Трубная улица, 25<br>стр. 3, 3 этаж</p>
+					<p class="footer__wrapper-links-text">Кипр<br>3040, Limassol,<br>Nikiforou Foka str., 34</p>
+					<p class="footer__wrapper-links-text top" data-da=".footer__wrapper-mob, 731, 0">© 2024 Spice IT</p>
+				</div>
+				<div class="footer__wrapper-links">
+					<h4 class="footer__wrapper-links-title">Услуги</h4>
+					<a href="#" class="footer__wrapper-links-text">Классический подбор</a>
+					<a href="#" class="footer__wrapper-links-text">Аренда IT-рекрутера</a>
+					<a href="#" class="footer__wrapper-links-text">Исследование заработных плат IT-специалистов</a>
+					<a href="#" class="footer__wrapper-links-text">Проведение тех. интервью</a>
+					<a href="#" class="footer__wrapper-links-text">Разработка стратегии удержания IT-специалистов</a>
+					<a href="#" class="footer__wrapper-links-text">Аутстаффинг</a>
+					<a href="#" class="footer__wrapper-links-text">Аудит/Диагностика IT-рекрутингового процесса</a>
+				</div>
+				<div class="footer__wrapper-links">
+					<a href="#" class="footer__wrapper-links-title">Кейсы</a>
+					<a href="#" class="footer__wrapper-links-title">Тендеры</a>
+					<a href="#" class="footer__wrapper-links-title">Комьюнити</a>
+					<a href="#" class="footer__wrapper-links-title">О нас</a>
+					<a href="#" class="footer__wrapper-links-title">Контакты</a>
+					<a href="#" class="footer__wrapper-links-text" data-da=".footer__wrapper-mob, 731, 1">Пользовательское соглашение</a>
+					<a href="#" class="footer__wrapper-links-text" data-da=".footer__wrapper-mob, 731, 2">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- libs -->
+	<script type="module" src="js/dynamicAdapt.js"></script>
+	<script src="js/aat.min.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>

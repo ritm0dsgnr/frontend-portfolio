@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Ceram Holding</title>
+		<meta name="description" content="Start">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+		<meta name="theme-color" content="#798494">
+		<meta name="msapplication-navbutton-color" content="#798494">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#798494">
+
+		<!-- libs -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text/javascript"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+  <body>
+  <div class="p_content">
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<a href="/" class="header__wrapper-logo">
+						<svg viewBox="0 0 166 53"><use xlink:href="img/sprite.svg#logo"></use></svg>
+					</a>
+					<div class="header__wrapper-nav">
+						<div class="header__wrapper-nav-icons">
+							<a href="cart.html" class="active">
+								<span class="num">3</span>
+								<svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#bag"></use></svg>
+								<svg class="hov" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#bagH"></use></svg>
+							</a>
+							<a href="favourites.html">
+								<svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+								<svg class="hov" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeH"></use></svg>
+							</a>
+							<a href="account-orders.html">
+								<span class="au">Н</span>
+								<svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#person"></use></svg>
+								<svg class="hov" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#personH"></use></svg>
+							</a>
+						</div>
+						<div class="header__wrapper-nav-nav">
+							<div class="header__wrapper-nav-nav-item search">
+								<svg class="def" viewBox="0 0 32 32"><use xlink:href="img/sprite.svg#search"></use></svg>
+								<svg class="hov" viewBox="0 0 32 32"><use xlink:href="img/sprite.svg#searchH"></use></svg>
+							</div>
+							<div class="header__wrapper-nav-nav-item burger">
+								<svg class="def" viewBox="0 0 32 32"><use xlink:href="img/sprite.svg#burger"></use></svg>
+								<svg class="hov" viewBox="0 0 32 32"><use xlink:href="img/sprite.svg#burgerH"></use></svg>
+							</div>
+						</div>
+					</div>
+					<div class="header__wrapper-search">
+						<input type="text" placeholder="Поиск...">
+						<a href="search.html" class="header__wrapper-search-btn">найти</a>
+						<div class="header__wrapper-search-close">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/sprite.svg#close"></use></svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="nav">
+			<div class="container">
+				<div class="nav__wrapper">
+					<div class="nav__wrapper-header">
+						<svg class="nav__wrapper-header-logo" viewBox="0 0 166 53"><use xlink:href="img/sprite.svg#logo"></use></svg>
+						<div class="header__wrapper-nav">
+							<div class="header__wrapper-nav-icons">
+								<a href="cart.html">
+									<span class="num">3</span>
+									<svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#bag"></use></svg>
+									<svg class="hov" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#bagH"></use></svg>
+								</a>
+								<a href="favourites.html">
+									<svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+									<svg class="hov" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeH"></use></svg>
+								</a>
+								<a href="account-orders.html">
+									<span class="au">Н</span>
+									<svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#person"></use></svg>
+									<svg class="hov" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#personH"></use></svg>
+								</a>
+							</div>
+							<div class="header__wrapper-nav-nav">
+								<div class="header__wrapper-nav-nav-item search">
+									<svg class="def" viewBox="0 0 32 32"><use xlink:href="img/sprite.svg#search"></use></svg>
+									<svg class="hov" viewBox="0 0 32 32"><use xlink:href="img/sprite.svg#searchH"></use></svg>
+								</div>
+								<div class="header__wrapper-nav-nav-item close">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/sprite.svg#close"></use></svg>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="nav__wrapper-links">
+						<a href="catalog.html">Каталог</a>
+						<a href="about.html">Компания</a>
+						<a href="contacts.html">Контакты</a>
+						<a href="partners.html">Партнерам</a>
+					</div>
+					<div class="nav__wrapper-footer">
+						<a href="#">+7 (495) 925 05 71</a>
+						<a href="#">Info@ceramholding.ru</a>
+					</div>
+				</div>
+			</div>
+		</div>
+    <div class="cookies" style="display: none">
+      <div class="container">
+        <div class="cookies__wrapper">
+          <p>
+            Мы собираем кукис. <a href="#">Подробнее</a>
+          </p>
+          <a href="#" class="cookies__wrapper-btn">окей</a>
+        </div>
+      </div>
+    </div>
+    <div class="srh">
+      <div class="container">
+        <div class="srh__wrapper">
+          <div class="srh__wrapper-item">
+            <p class="srh__wrapper-item-title">Популярное</p>
+            <div class="main__info-bottom-tags">
+              <a href="#" class="main__info-bottom-tags-tag">Переливной</a>
+              <a href="#" class="main__info-bottom-tags-tag">Скиммерный</a>
+              <a href="#" class="main__info-bottom-tags-tag">Инфинити</a>
+              <a href="#" class="main__info-bottom-tags-tag">Решетки</a>
+              <a href="#" class="main__info-bottom-tags-tag">75×75</a>
+              <a href="#" class="main__info-bottom-tags-tag">60×40</a>
+              <a href="#" class="main__info-bottom-tags-tag">75×120</a>
+              <a href="#" class="main__info-bottom-tags-tag">Плитка</a>
+              <a href="#" class="main__info-bottom-tags-tag">Ступень</a>
+              <a href="#" class="main__info-bottom-tags-tag">Италия</a>
+              <a href="#" class="main__info-bottom-tags-tag">Франция</a>
+              <a href="#" class="main__info-bottom-tags-tag">Матовое покрытие</a>
+              <a href="#" class="main__info-bottom-tags-tag">Глянцевое покрытие</a>
+            </div>
+          </div>
+          <div class="srh__wrapper-item">
+            <p class="srh__wrapper-item-title">Новинки</p>
+            <div class="srh__wrapper-item-cards">
+              <div class="block__w-cards-card">
+                <img src="img/10.jpg" alt="">
+                <div class="block__wrapper-slider-info">
+                  <div class="block__wrapper-slider-info-header">
+                    <div class="block__wrapper-slider-info-header-tags">
+                      <a href="#">Ceasar</a>
+                      <a href="#">Италия</a>
+                    </div>
+                    <h2 class="block__wrapper-slider-info-header-title">KROMO</h2>
+                  </div>
+                  <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                  <div class="block__w-cards-card-tags">
+                    <a href="#" class="new">New</a>
+                  </div>
+                </div>
+              </div>
+               <div class="block__w-cards-card">
+                <img src="img/24.jpg" alt="">
+                <div class="block__wrapper-slider-info">
+                  <div class="block__wrapper-slider-info-header">
+                    <div class="block__wrapper-slider-info-header-tags">
+                      <a href="#">Ceasar</a>
+                      <a href="#">Италия</a>
+                    </div>
+                    <h2 class="block__wrapper-slider-info-header-title">PORTRAITS</h2>
+                  </div>
+                  <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                  <div class="block__w-cards-card-tags">
+                    <a href="#" class="new">New</a>
+                  </div>
+                </div>
+              </div>
+              <div class="block__w-cards-card">
+                <img src="img/12.jpg" alt="">
+                <div class="block__wrapper-slider-info">
+                  <div class="block__wrapper-slider-info-header">
+                    <div class="block__wrapper-slider-info-header-tags">
+                      <a href="#">Ceasar</a>
+                      <a href="#">Италия</a>
+                    </div>
+                    <h2 class="block__wrapper-slider-info-header-title">KROMO</h2>
+                  </div>
+                  <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                  <div class="block__w-cards-card-tags">
+                    <a href="#" class="new">New</a>
+                  </div>
+                </div>
+              </div>
+              <div class="block__w-cards-card">
+                <img src="img/10.jpg" alt="">
+                <div class="block__wrapper-slider-info">
+                  <div class="block__wrapper-slider-info-header">
+                    <div class="block__wrapper-slider-info-header-tags">
+                      <a href="#">Ceasar</a>
+                      <a href="#">Италия</a>
+                    </div>
+                    <h2 class="block__wrapper-slider-info-header-title">KROMO</h2>
+                  </div>
+                  <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                  <div class="block__w-cards-card-tags">
+                    <a href="#" class="new">New</a>
+                  </div>
+                </div>
+              </div>
+               <div class="block__w-cards-card">
+                <img src="img/24.jpg" alt="">
+                <div class="block__wrapper-slider-info">
+                  <div class="block__wrapper-slider-info-header">
+                    <div class="block__wrapper-slider-info-header-tags">
+                      <a href="#">Ceasar</a>
+                      <a href="#">Италия</a>
+                    </div>
+                    <h2 class="block__wrapper-slider-info-header-title">PORTRAITS</h2>
+                  </div>
+                  <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                  <div class="block__w-cards-card-tags">
+                    <a href="#" class="new">New</a>
+                  </div>
+                </div>
+              </div>
+              <div class="block__w-cards-card">
+                <img src="img/12.jpg" alt="">
+                <div class="block__wrapper-slider-info">
+                  <div class="block__wrapper-slider-info-header">
+                    <div class="block__wrapper-slider-info-header-tags">
+                      <a href="#">Ceasar</a>
+                      <a href="#">Италия</a>
+                    </div>
+                    <h2 class="block__wrapper-slider-info-header-title">KROMO</h2>
+                  </div>
+                  <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                  <div class="block__w-cards-card-tags">
+                    <a href="#" class="new">New</a>
+                  </div>
+                </div>
+              </div>
+              <div class="block__w-cards-card">
+                <img src="img/10.jpg" alt="">
+                <div class="block__wrapper-slider-info">
+                  <div class="block__wrapper-slider-info-header">
+                    <div class="block__wrapper-slider-info-header-tags">
+                      <a href="#">Ceasar</a>
+                      <a href="#">Италия</a>
+                    </div>
+                    <h2 class="block__wrapper-slider-info-header-title">KROMO</h2>
+                  </div>
+                  <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                  <div class="block__w-cards-card-tags">
+                    <a href="#" class="new">New</a>
+                  </div>
+                </div>
+              </div>
+               <div class="block__w-cards-card">
+                <img src="img/24.jpg" alt="">
+                <div class="block__wrapper-slider-info">
+                  <div class="block__wrapper-slider-info-header">
+                    <div class="block__wrapper-slider-info-header-tags">
+                      <a href="#">Ceasar</a>
+                      <a href="#">Италия</a>
+                    </div>
+                    <h2 class="block__wrapper-slider-info-header-title">PORTRAITS</h2>
+                  </div>
+                  <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                  <div class="block__w-cards-card-tags">
+                    <a href="#" class="new">New</a>
+                  </div>
+                </div>
+              </div>
+              <div class="block__w-cards-card">
+                <img src="img/12.jpg" alt="">
+                <div class="block__wrapper-slider-info">
+                  <div class="block__wrapper-slider-info-header">
+                    <div class="block__wrapper-slider-info-header-tags">
+                      <a href="#">Ceasar</a>
+                      <a href="#">Италия</a>
+                    </div>
+                    <h2 class="block__wrapper-slider-info-header-title">KROMO</h2>
+                  </div>
+                  <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                  <div class="block__w-cards-card-tags">
+                    <a href="#" class="new">New</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="srh__rslt">
+      <div class="container">
+        <div class="srh__rslt__wrapper">
+          <div class="srh__rslt__wrapper-col">
+            <div class="srh__rslt__wrapper-col-item">
+              <p class="srh__rslt__wrapper-col-item-title">Товары</p>
+              <div class="srh__rslt__wrapper-col-item-cards">
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/25.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/26.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/27.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/28.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/29.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/30.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/31.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/32.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/06.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/07.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/33.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+                <div class="block__w-cards-c crd">
+                  <div class="block__w-cards-card">
+                    <div class="block__w-cards-card-in">
+                      <input type="text" placeholder="20">
+                      <span>М²</span>
+                      <a href="#" class="block__w-cards-card-in-btn">ок</a>
+                    </div>
+                    <img src="img/26.jpg" alt="">
+                    <div class="block__wrapper-slider-info">
+                      <div class="block__wrapper-slider-info-header">
+                        <div class="block__wrapper-slider-info-header-tags">
+                          <a href="#">Ceasar</a>
+                          <a href="#">Италия</a>
+                          <a href="#">Mystic Occitanie</a>
+                        </div>
+                        <div class="block__w-cards-card-like">
+                          <svg class="def" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#like"></use></svg>
+                          <svg class="act" viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#likeAct"></use></svg>
+                        </div>
+                      </div>
+                      <a href="#" class="block__wrapper-slider-info-btn">добавить в корзину</a>
+                      <div class="block__w-cards-card-tags">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__w-cards-c-info">
+                    <a href="#" class="block__w-cards-c-info-name">
+                      Керамогранит. Mystic Occitanie Vecchio,
+                      <br>
+                      Белый 
+                    </a>
+                    <div class="block__w-cards-c-info-tag">
+                      75×75  
+                    </div>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Поверхность</span>
+                      матовая
+                    </p>
+                    <p class="block__w-cards-c-info-text">
+                      <span>Артикул</span>
+                      5478369
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="srh__rslt__wrapper-col-item">
+              <p class="srh__rslt__wrapper-col-item-title">Коллекции</p>
+              <div class="srh__rslt__wrapper-col-item-col">
+                <div class="block__w-cards-card">
+                  <img src="img/34.jpg" alt="">
+                  <div class="block__wrapper-slider-info">
+                    <div class="block__wrapper-slider-info-header">
+                      <div class="block__wrapper-slider-info-header-tags">
+                        <a href="#">Ceasar</a>
+                        <a href="#">Италия</a>
+                      </div>
+                      <h2 class="block__wrapper-slider-info-header-title">GREYSTONE</h2>
+                    </div>
+                    <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                    <div class="block__w-cards-card-tags">
+                    </div>
+                  </div>
+                </div>
+                <div class="block__w-cards-card">
+                  <img src="img/35.jpg" alt="">
+                  <div class="block__wrapper-slider-info">
+                    <div class="block__wrapper-slider-info-header">
+                      <div class="block__wrapper-slider-info-header-tags">
+                        <a href="#">Ceasar</a>
+                        <a href="#">Италия</a>
+                      </div>
+                      <h2 class="block__wrapper-slider-info-header-title">KROMO</h2>
+                    </div>
+                    <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                    <div class="block__w-cards-card-tags">
+                    </div>
+                  </div>
+                </div>
+                <div class="block__w-cards-card">
+                  <img src="img/11.jpg" alt="">
+                  <div class="block__wrapper-slider-info">
+                    <div class="block__wrapper-slider-info-header">
+                      <div class="block__wrapper-slider-info-header-tags">
+                        <a href="#">Ceasar</a>
+                        <a href="#">Италия</a>
+                      </div>
+                      <h2 class="block__wrapper-slider-info-header-title">JOIN</h2>
+                    </div>
+                    <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                    <div class="block__w-cards-card-tags">
+                    </div>
+                  </div>
+                </div>
+                <div class="block__w-cards-card">
+                  <img src="img/36.jpg" alt="">
+                  <div class="block__wrapper-slider-info">
+                    <div class="block__wrapper-slider-info-header">
+                      <div class="block__wrapper-slider-info-header-tags">
+                        <a href="#">Ceasar</a>
+                        <a href="#">Италия</a>
+                      </div>
+                      <h2 class="block__wrapper-slider-info-header-title">DECO LINGOT</h2>
+                    </div>
+                    <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                    <div class="block__w-cards-card-tags">
+                    </div>
+                  </div>
+                </div>
+                <div class="block__w-cards-card">
+                  <img src="img/37.jpg" alt="">
+                  <div class="block__wrapper-slider-info">
+                    <div class="block__wrapper-slider-info-header">
+                      <div class="block__wrapper-slider-info-header-tags">
+                        <a href="#">Ceasar</a>
+                        <a href="#">Италия</a>
+                      </div>
+                      <h2 class="block__wrapper-slider-info-header-title">ECLETTICA</h2>
+                    </div>
+                    <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                    <div class="block__w-cards-card-tags">
+                    </div>
+                  </div>
+                </div>
+                <div class="block__w-cards-card">
+                  <img src="img/38.jpg" alt="">
+                  <div class="block__wrapper-slider-info">
+                    <div class="block__wrapper-slider-info-header">
+                      <div class="block__wrapper-slider-info-header-tags">
+                        <a href="#">Ceasar</a>
+                        <a href="#">Италия</a>
+                      </div>
+                      <h2 class="block__wrapper-slider-info-header-title">PORTRAITS</h2>
+                    </div>
+                    <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                    <div class="block__w-cards-card-tags">
+                    </div>
+                  </div>
+                </div>
+                <div class="block__w-cards-card">
+                  <img src="img/39.jpg" alt="">
+                  <div class="block__wrapper-slider-info">
+                    <div class="block__wrapper-slider-info-header">
+                      <div class="block__wrapper-slider-info-header-tags">
+                        <a href="#">Ceasar</a>
+                        <a href="#">Италия</a>
+                      </div>
+                      <h2 class="block__wrapper-slider-info-header-title">MEDICELA MARBLE</h2>
+                    </div>
+                    <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                    <div class="block__w-cards-card-tags">
+                    </div>
+                  </div>
+                </div>
+                <div class="block__w-cards-card">
+                  <img src="img/40.jpg" alt="">
+                  <div class="block__wrapper-slider-info">
+                    <div class="block__wrapper-slider-info-header">
+                      <div class="block__wrapper-slider-info-header-tags">
+                        <a href="#">Ceasar</a>
+                        <a href="#">Италия</a>
+                      </div>
+                      <h2 class="block__wrapper-slider-info-header-title">TOKIO</h2>
+                    </div>
+                    <a href="#" class="block__wrapper-slider-info-btn">Смотреть</a>
+                    <div class="block__w-cards-card-tags">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="m__contact">
+      <div class="container">
+        <div class="m__contact__wrapper">
+          <div class="m__contact__wrapper-info">
+            <a href="#" class="m__contact__wrapper-info-item">
+              <svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#tel"></use></svg>
+              <p>+7 (495) 925 05 71</p>
+            </a>
+            <a href="#" class="m__contact__wrapper-info-item">
+              <svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#mail"></use></svg>
+              <p>Info@ceramholding.ru</p>
+            </a>
+            <a href="#" class="m__contact__wrapper-info-item">
+              <svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#mes"></use></svg>
+              <p>Messenger</p>
+            </a>
+          </div>
+          <div class="m__contact__wrapper-btn">
+            <img src="img/mes2.svg" alt="">
+            <svg viewBox="0 0 32 32"><use xlink:href="img/sprite.svg#close"></use></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="plk">
+      <div class="container">
+        <div class="plk__wrapper">
+          <div class="plk__wrapper-nav">
+            <div class="plk__wrapper-nav-links">
+              <a class="is-active" href="plk.html">
+                <p>Партнерский кабинет</p>
+              </a>
+              <div class="plk__wrapper-nav-links-u">
+                <a href="plk-news.html">Новости</a>
+                <a href="plk-balance.html">Остатки и прайс</a>
+                <a href="plk-catalog.html">Мерчандайзинг</a>
+              </div>
+              <a class="" href="plk-orders.html">
+                <p>Мои заказы</p>
+                <span>[5]</span>
+              </a>
+              <a href="plk-wishlist.html">
+                <p>Избранное</p>
+              </a>
+              <a href="plk-settings.html">
+                <p>Настройки</p>
+              </a>
+            </div>
+            <div class="plk__wrapper-nav-d">
+              <p class="plk__wrapper-nav-d-title">Дилерский отдел: </p>
+              <a href="#">
+                <svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#tel2"></use></svg>
+                +7 (929) 655-12-96
+              </a>
+              <a href="#">
+                <svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#loc"></use></svg>
+                ул Сечкина, д. 1А, стр. 33 
+              </a>
+            </div>
+            <div></div>
+            <div class="plk__wrapper-nav-d">
+              <p class="plk__wrapper-nav-d-title">Склад: </p>
+              <a href="#">
+                <svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#loc"></use></svg>
+                ул Сечкина, д. 1А, стр. 33 
+              </a>
+              <a href="#">
+                <svg viewBox="0 0 17 17"><use xlink:href="img/sprite.svg#time"></use></svg>
+                пн–пт: 9:00–20:00
+              </a>
+            </div>
+            <a href="#" class="plk__wrapper-nav-log">Выйти</a>
+          </div>
+          <div class="plk__wrapper-wrapper">
+            <div class="plk__wrapper-wrapper-header">
+              <div class="plk__wrapper-wrapper-header-n">
+                <svg viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#personH"></use></svg>
+                <div class="plk__wrapper-wrapper-header-n-info">
+                  <h3>Настя Веденяпина</h3>
+                  <p>APE GRUPPO</p>
+                </div>
+              </div>
+              <a class="btn" href="#">Каталог с ценами и остатками</a>
+            </div>
+            <div class="plk__wrapper-wrapper-mob">
+              <div class="plk__wrapper-wrapper-mob-header">
+                Партнерскиий кабинет
+                <svg viewBox="0 0 41 16"><use xlink:href="img/sprite.svg#sliderArrow"></use></svg>
+              </div>
+              <div class="plk__wrapper-wrapper-mob-links">
+                <a href="plk-news.html">Новости </a>
+                <a href="plk-balance.html">Остатки и прайс </a>
+                <a href="plk-catalog.html">Мерчандайзинг</a>
+              </div>
+              <div class="plk__wrapper-wrapper-mob-dropdown">
+                <div class="plk__wrapper-nav-links">
+                  <a href="plk-orders.html">Мои заказы</a>
+                  <a href="plk-wishlist.html">Избранное</a>
+                  <a href="plk-settings.html">Настройки</a>
+                </div>
+                <div class="plk__wrapper-nav-d">
+                  <p class="plk__wrapper-nav-d-title">Дилерский отдел: </p>
+                  <a href="#">
+                    <svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#tel2"></use></svg>
+                    +7 (929) 655-12-96
+                  </a>
+                  <a href="#">
+                    <svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#loc"></use></svg>
+                    ул Сечкина, д. 1А, стр. 33 
+                  </a>
+                </div>
+                <div class="plk__wrapper-nav-d">
+                  <p class="plk__wrapper-nav-d-title">Склад: </p>
+                  <a href="#">
+                    <svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#loc"></use></svg>
+                    ул Сечкина, д. 1А, стр. 33 
+                  </a>
+                  <a href="#">
+                    <svg viewBox="0 0 17 17"><use xlink:href="img/sprite.svg#time"></use></svg>
+                    пн–пт: 9:00–20:00
+                  </a>
+                </div>
+                <a href="#" class="plk__wrapper-nav-log">Выйти</a>
+              </div>
+            </div>
+            <div class="plk__wrapper-wrapper-cols">
+              <p class="plk__wrapper-wrapper-cols-title">Добро пожаловать в Партнерский кабинет! </p>
+              <div class="plk__wrapper-wrapper-cols-item">
+                <div class="plk__wrapper-wrapper-cols-item-header">
+                  <p class="plk__wrapper-wrapper-cols-item-header-title">Новости</p>
+                  <a href="#" class="plk__wrapper-wrapper-cols-item-header-link">читать все</a>
+                </div>
+                <div class="plk__wrapper-wrapper-cols-item-sc">
+                  <a href="#" class="plk__wrapper-wrapper-cols-item-sc-item">
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-title">Мы участвуем в весенней ярмарке в Москве</p>
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-text">Привезем новинки </p>
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-date">12 мая</p>
+                  </a>
+                  <a href="#" class="plk__wrapper-wrapper-cols-item-sc-item">
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-title">Дизайн за пределами функциональности</p>
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-text">Исследование пересечения искусства  и дизайна, раздвигая границы и бросая вызов нормам.</p>
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-date">4 января</p>
+                  </a>
+                  <a href="#" class="plk__wrapper-wrapper-cols-item-sc-item">
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-title">Взгляд на прошлый год в дизайне</p>
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-text">Ветреный стул Йинки Шинобаре выглядит как кусок материала, колышущийся  в воздухе. Тем не менее, это прочный алюминиевый стул...</p>
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-date">15 апреля</p>
+                  </a>
+                  <a href="#" class="plk__wrapper-wrapper-cols-item-sc-item">
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-title">Мы участвуем в весенней ярмарке в Москве</p>
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-text">Привезем новинки </p>
+                    <p class="plk__wrapper-wrapper-cols-item-sc-item-date">12 мая</p>
+                  </a>
+                </div>
+              </div>
+              <div class="plk__wrapper-wrapper-cols-item">
+                <div class="plk__wrapper-wrapper-cols-item-header">
+                  <p class="plk__wrapper-wrapper-cols-item-header-title">Сервисы для вас</p>
+                </div>
+                <div class="plk__wrapper-wrapper-cols-item-dow">
+                  <a href="#" class="plk__wrapper-wrapper-cols-item-dow-item">
+                    <p>Прайс-лист  от 01.08.2024</p>
+                    <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                  </a>
+                  <a href="#" class="plk__wrapper-wrapper-cols-item-dow-item">
+                    <p>Каталог в формате  XML</p>
+                    <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                  </a>
+                  <a href="#" class="plk__wrapper-wrapper-cols-item-dow-item">
+                    <p>Скачать все изображения</p>
+                    <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="plk__wrapper-wrapper-cols-item">
+                <div class="plk__wrapper-wrapper-cols-item-header">
+                  <p class="plk__wrapper-wrapper-cols-item-header-title">Контакты</p>
+                </div>
+                <div class="plk__wrapper-wrapper-cols-item-cont">
+                  <div class="plk__wrapper-wrapper-cols-item-cont-item">
+                    <h3 class="plk__wrapper-wrapper-cols-item-cont-title">Центральный офис</h3>
+                    <p class="plk__wrapper-wrapper-cols-item-cont-text">
+                      <span>График работы</span>
+                      будни с 8:00 до 19:00,
+                      <br>
+                      суббота с 9:00 до 18:00 дежурный,
+                      <br>
+                      воскресенье с 10:00 до 18:00 дежурный.
+                    </p>
+                    <div class="plk__wrapper-wrapper-cols-item-cont-links">
+                      <a href="tel:+74959250571">+7 495 925 05 71</a>
+                      <a href="mailto:opt@ceramholding.ru">opt@ceramholding.ru</a>
+                    </div>
+                    <a class="btn" href="#">ПОСТРОИТЬ  МАРШРУТ</a>
+                  </div>
+                  <div class="plk__wrapper-wrapper-cols-item-cont-item">
+                    <h3 class="plk__wrapper-wrapper-cols-item-cont-title">Склад</h3>
+                    <p class="plk__wrapper-wrapper-cols-item-cont-text">
+                      <span>График работы</span>
+                      будни с 10:00 до 17:00,
+                      <br>
+                      суббота и воскресенье — выходные.
+                    </p>
+                    <div class="plk__wrapper-wrapper-cols-item-cont-links">
+                      <a href="tel:+74959280472">+7 495 928 04 72</a>
+                    </div>
+                    <a class="btn" href="#">ПОСТРОИТЬ  МАРШРУТ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="plk__wrapper-wrapper-cols-item">
+                <div class="plk__wrapper-wrapper-cols-item-header">
+                  <p class="plk__wrapper-wrapper-cols-item-header-title">Реквизиты</p>
+                </div>
+                <div class="requisites__wrapper-cards">
+                  <div class="requisites__wrapper-cards-card">
+                    <h3 class="requisites__wrapper-cards-card-title">КерамХолдинг</h3>
+                    <div class="requisites__wrapper-cards-card-w">
+                      <div class="requisites__wrapper-cards-card-w-text">
+                        <h3>
+                          Юридический адрес: 140180, Московская область, город Жуковский, улица Солнечная, дом 3, помещение 115
+                          <br>
+                          ОГРН 1155040002644
+                          <br>
+                          ИНН 5040087134
+                          <br>
+                          КПП 504001001
+                          <br>
+                          ОКВЭД 51.19
+                          <br>
+                          ОКПО 1311771
+                          <br>
+                          Банковские реквизиты
+                          <br>
+                          р/с 40702810602420001228
+                          <br>
+                          АО «АЛЬФА-БАНК» г. Москва
+                          <br>
+                          к/с 30101810200000000593
+                          <br>
+                          БИК 044525593
+                          С НДС, только безналичный расчёт, сотрудничает 
+                          <br>
+                          с юридическими лицами
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="requisites__wrapper-cards-card-bottom">
+                      <a href="#">скопировать </a>
+                      <a href="#">
+                        скачать pdf
+                        <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="requisites__wrapper-cards-card">
+                    <h3 class="requisites__wrapper-cards-card-title">ТД Плитка</h3>
+                    <div class="requisites__wrapper-cards-card-w">
+                      <div class="requisites__wrapper-cards-card-w-text">
+                        <h3>
+                          Юридический адрес: 140180, Московская область, город Жуковский, улица Солнечная, дом 3, помещение 115
+                          <br>
+                          ОГРН 1155040002644
+                          <br>
+                          ИНН 5040087134
+                          <br>
+                          КПП 504001001
+                          <br>
+                          ОКВЭД 51.19
+                          <br>
+                          ОКПО 1311771
+                          <br>
+                          Банковские реквизиты
+                          <br>
+                          р/с 40702810602420001228
+                          <br>
+                          АО «АЛЬФА-БАНК» г. Москва
+                          <br>
+                          к/с 30101810200000000593
+                          <br>
+                          БИК 044525593
+                          С НДС, только безналичный расчёт, сотрудничает 
+                          <br>
+                          с юридическими лицами
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="requisites__wrapper-cards-card-bottom">
+                      <a href="#">скопировать </a>
+                      <a href="#">
+                        скачать pdf
+                        <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="plk__wrapper-wrapper-cols-item">
+                <div class="plk__wrapper-wrapper-cols-item-header">
+                  <p class="plk__wrapper-wrapper-cols-item-header-title">Каталоги фабрик</p>
+                  <a href="#" class="plk__wrapper-wrapper-cols-item-header-link">Смотреть все</a>
+                </div>
+                <div class="cat__slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="cat__slider-card">
+                        <div class="cat__slider-card-img">
+                          <img src="img/51.jpg" alt="">
+                        </div>
+                        <p class="cat__slider-card-title">
+                          Gres de Aragon
+                          <span>48 МБ</span>
+                        </p>
+                        <a href="#" class="cat__slider-card-link">
+                          скачать
+                          <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cat__slider-card">
+                        <div class="cat__slider-card-img">
+                          <img src="img/52.jpg" alt="">
+                        </div>
+                        <p class="cat__slider-card-title">
+                          Gres de Aragon
+                          <span>48 МБ</span>
+                        </p>
+                        <a href="#" class="cat__slider-card-link">
+                          скачать
+                          <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cat__slider-card">
+                        <div class="cat__slider-card-img">
+                          <img src="img/53.jpg" alt="">
+                        </div>
+                        <p class="cat__slider-card-title">
+                          Gres de Aragon
+                          <span>48 МБ</span>
+                        </p>
+                        <a href="#" class="cat__slider-card-link">
+                          скачать
+                          <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cat__slider-card">
+                        <div class="cat__slider-card-img">
+                          <img src="img/54.jpg" alt="">
+                        </div>
+                        <p class="cat__slider-card-title">
+                          Gres de Aragon
+                          <span>48 МБ</span>
+                        </p>
+                        <a href="#" class="cat__slider-card-link">
+                          скачать
+                          <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cat__slider-card">
+                        <div class="cat__slider-card-img">
+                          <img src="img/51.jpg" alt="">
+                        </div>
+                        <p class="cat__slider-card-title">
+                          Gres de Aragon
+                          <span>48 МБ</span>
+                        </p>
+                        <a href="#" class="cat__slider-card-link">
+                          скачать
+                          <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cat__slider-card">
+                        <div class="cat__slider-card-img">
+                          <img src="img/52.jpg" alt="">
+                        </div>
+                        <p class="cat__slider-card-title">
+                          Gres de Aragon
+                          <span>48 МБ</span>
+                        </p>
+                        <a href="#" class="cat__slider-card-link">
+                          скачать
+                          <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cat__slider-card">
+                        <div class="cat__slider-card-img">
+                          <img src="img/53.jpg" alt="">
+                        </div>
+                        <p class="cat__slider-card-title">
+                          Gres de Aragon
+                          <span>48 МБ</span>
+                        </p>
+                        <a href="#" class="cat__slider-card-link">
+                          скачать
+                          <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cat__slider-card">
+                        <div class="cat__slider-card-img">
+                          <img src="img/54.jpg" alt="">
+                        </div>
+                        <p class="cat__slider-card-title">
+                          Gres de Aragon
+                          <span>48 МБ</span>
+                        </p>
+                        <a href="#" class="cat__slider-card-link">
+                          скачать
+                          <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#down"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cat__slider-arrow">
+                    <svg viewBox="0 0 41 16"><use xlink:href="img/sprite.svg#sliderArrow"></use></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__wrapper-pre">
+					<div class="footer__wrapper-pre-done">
+						<p class="footer__wrapper-pre-header-title">Вы подписаны на новости</p>
+						<p class="footer__wrapper-pre-header-text">Спасибо за подписку, теперь вы будете узнавать обо всем самыми первыми!</p>
+					</div>
+					<div class="footer__wrapper-pre-header">
+						<p class="footer__wrapper-pre-header-title">Подписаться на новости</p>
+						<p class="footer__wrapper-pre-header-text">Узнавайте обо всех специальных предложениях первыми</p>
+					</div>
+					<form class="footer__wrapper-pre-form" id="subscribe-form" novalidate>
+						<div class="footer__wrapper-pre-form-row">
+							<div class="footer__wrapper-pre-form-field">
+								<input type="text" name="first_name" placeholder="Имя *">
+								<span class="footer__wrapper-pre-form-field-error">Это поле обязательно для заполнения</span>
+							</div>
+							<div class="footer__wrapper-pre-form-field">
+								<input type="email" name="email" placeholder="Email *">
+								<span class="footer__wrapper-pre-form-field-error">Это поле обязательно для заполнения</span>
+							</div>
+						</div>
+						<div class="footer__wrapper-pre-form-checkboxes">
+							<label class="footer__wrapper-pre-form-checkbox">
+								<input type="checkbox" name="checkbox-1">
+								<span class="checkmark">
+                  <span></span>
+                </span>
+								<span>Подписаться на новости</span>
+							</label>
+							<label class="footer__wrapper-pre-form-checkbox">
+								<input type="checkbox" name="checkbox-2" class="is-required">
+								<span class="checkmark">
+                  <span></span>
+                </span>
+								<span>Я принимаю условия <a href="#">Политики конфиденциальности данных</a></span>
+							</label>
+						</div>
+						<button type="submit" class="footer__wrapper-pre-form-btn btn" data-submit>ОТПРАВИТЬ</button>
+					</form>
+				</div>
+				<div class="footer__wrapper-nav">
+					<a href="tel:+7 (495) 925 05 71" class="footer__wrapper-nav-tel desk">+7 (495) 925 05 71</a>
+					<div class="footer__wrapper-nav-col">
+						<div class="footer__wrapper-nav-col-links">
+							<a href="factories.html">Фабрики</a>
+							<a href="collection.html">Коллекции</a>
+							<a href="contacts.html">Контакты</a>
+							<a href="factories1.html">Разделы</a>
+						</div>
+						<div class="footer__wrapper-nav-col-l">
+							<a href="tel:+7 (495) 925 05 71" class="footer__wrapper-nav-tel mob">+7 (495) 925 05 71</a>
+							<a href="article.html">Доставка и оплата</a>
+							<a href="article.html">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- libs -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>

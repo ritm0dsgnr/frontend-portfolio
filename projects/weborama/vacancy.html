@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Weborama</title>
+		<meta name="description" content="Weborama">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="icon" href="../../logo-avatar.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="72x72" href="../../logo-avatar.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../../logo-avatar.png">
+
+		<meta name="theme-color" content="#EC3575">
+		<meta name="msapplication-navbutton-color" content="#EC3575">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#EC3575">
+
+		<!-- libs -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.1/jquery.marquee.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+		<script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+  <body>
+  <header class="header w">
+    <div class="container">
+      <div class="header__wrapper">
+        <a href="#" class="header__wrapper-logo">
+          <svg class="desk" viewBox="0 0 200 20"><use xlink:href="img/sprite.svg#logo"></use></svg>
+          <svg class="mob" viewBox="0 0 60 21"><use xlink:href="img/sprite.svg#logo2"></use></svg>
+        </a>
+        <ul class="header__wrapper-nav">
+          <li class="active"><a href="#">Главная</a></li>
+          <li class="dropdown">
+            <a href="#">
+              <p>Продукты</p>
+              <svg viewBox="0 0 10 10"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+            </a>
+          </li>
+          <div class="header__wrapper-nav-dropdown"></div>
+          <li><a href="#">Кейсы</a></li>
+          <li><a href="#">Инсайты</a></li>
+          <li><a href="#">Вакансии</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <svg class="header__wrapper-menu" viewBox="0 0 30 29"><use xlink:href="img/sprite.svg#menu"></use></svg>
+      </div>
+    </div>
+  </header>
+  <div class="p_content">
+    <section class="case">
+      <div class="case__bg">
+        <img src="img/v-01.jpg" alt="">
+      </div>
+      <div class="container">
+        <div class="case__wrapper">
+          <div class="breadcrumbs">
+            <a href="#">Главная</a>
+            <a href="#">Кейсы</a>
+            <a href="#">Pepsico</a>
+          </div>
+          <div class="case__wrapper-info">
+            <h2 class="case__wrapper-info-title">
+              Присоединяйтесь
+              <br>
+              к команде Weborama
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section> 
+    <section class="vacancy">
+      <div class="container">
+        <div class="vacancy__wrapper">
+          <h2 class="vacancy__wrapper-title">
+            Вакансии
+          </h2>
+          <div class="vacancy__wrapper-cards">
+            <a href="#" class="vacancy__wrapper-cards-item swiper-slide">
+              <div class="vacancy__wrapper-cards-item-img">
+                <div class="vacancy__wrapper-cards-item-img-tags">
+                  <span class="p">Account</span>
+                </div>
+                <h3 class="vacancy__wrapper-cards-item-img-title">Аккаунт-менеджер</h3>
+                <img src="img/u-02.svg" alt="">
+              </div>
+              <p class="vacancy__wrapper-cards-item-text">Ищем опытного аккаунт-менеджера. Ты — тот самый специалист, которому комфортно общаться с людьми. Ищем опытного аккаунт-менеджера. Ты — тот самый специалист, которому комфортно общаться с людьми.</p>
+            </a>
+            <a href="#" class="vacancy__wrapper-cards-item swiper-slide">
+              <div class="vacancy__wrapper-cards-item-img">
+                <div class="vacancy__wrapper-cards-item-img-tags">
+                  <span class="g">Account</span>
+                </div>
+                <h3 class="vacancy__wrapper-cards-item-img-title">Аккаунт-менеджер</h3>
+                <img src="img/u-03.svg" alt="">
+              </div>
+              <p class="vacancy__wrapper-cards-item-text">Ищем опытного аккаунт-менеджера. Ты — тот самый специалист, которому комфортно общаться с людьми. Ищем опытного аккаунт-менеджера. Ты — тот самый специалист, которому комфортно общаться с людьми.</p>
+            </a>
+            <a href="#" class="vacancy__wrapper-cards-item swiper-slide">
+              <div class="vacancy__wrapper-cards-item-img">
+                <div class="vacancy__wrapper-cards-item-img-tags">
+                  <span class="pnk">Account</span>
+                </div>
+                <h3 class="vacancy__wrapper-cards-item-img-title">Аккаунт-менеджер</h3>
+                <img src="img/u-01.svg" alt="">
+              </div>
+              <p class="vacancy__wrapper-cards-item-text">Ищем опытного аккаунт-менеджера. Ты — тот самый специалист, которому комфортно общаться с людьми. Ищем опытного аккаунт-менеджера. Ты — тот самый специалист, которому комфортно общаться с людьми.</p>
+            </a>
+          </div>
+          <a href="#" class="logos__wrapper-btn">
+            <p>Все вакансии</p>
+            <span>
+              <svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#plus"></use></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="prem">
+      <div class="container">
+        <div class="prem__wrapper">
+          <div class="prem__wrapper-header">
+            <h2 class="prem__wrapper-header-title">Работа у нас</h2>
+            <ul class="prem__wrapper-header-list">
+              <li>ДМС со стоматологией и полис ВЗР</li>
+              <li>Оплачиваемые ланчи</li>
+              <li>Компенсация проезда</li>
+              <li>Профессиональное развитие</li>
+            </ul>
+          </div>
+          <div class="prem__wrapper-bottom">
+            <h2 class="prem__wrapper-bottom-title">Почему Weborama</h2>
+            <p class="prem__wrapper-bottom-text">Лидер на рекламном рынке более 12 лет. Мы на пике data-driven маркетинга 
+              и постоянно получаем признание за свои достижения. В 2024 году в рейтинге 
+              Technology Index от Adindex мы заняли топовые места  в категориях 
+              Optimization Tools, Управление данными (DMP), Верификация и поставщики 
+              больших данных. Наши клиенты —  это ведущие рекламодатели, крупнейшие 
+              коммуникационные группы / рекламные агентства и площадки, которые 
+              доверяют нашему опыту и решениям.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="form">
+      <div class="container">
+        <div class="form__wrapper">
+          <div class="form__wrapper-w">
+            <h2 class="form__wrapper-title">
+              Нет подходящей
+              <br>
+              вакансии?
+            </h2>
+            <p class="form__wrapper-text">
+              Отправьте резюме — 
+              <br>
+              мы ценим людей, а не формальности.
+            </p>
+          </div>
+          <form action="" class="form__wrapper-form">
+            <div class="form__fields">
+              <label class="form__field">
+                <input type="text" name="name" class="form__input" placeholder="Ваше имя*">
+              </label>
+              <label class="form__field">
+                <input type="email" name="email" class="form__input" placeholder="Рабочий email*">
+              </label>
+              <label class="form__field">
+                <input type="text" name="company" class="form__input" placeholder="Компания*">
+              </label>
+              <label class="form__field">
+                <input type="tel" name="phone" class="form__input" placeholder="+7 (999) 999-99-99">
+              </label>
+              <div class="form__field custom-select" data-name="position">
+                <input type="hidden" name="position" value="">
+                <div class="custom-select__toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="listbox">
+                  <p>Должность</p>
+                  <svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
+                </div>
+                <ul class="custom-select__list" role="listbox">
+                  <li class="custom-select__option" role="option" data-value="Руководитель маркетинга">Руководитель маркетинга</li>
+                  <li class="custom-select__option" role="option" data-value="Маркетолог">Маркетолог</li>
+                  <li class="custom-select__option" role="option" data-value="Агентство">Агентство</li>
+                  <li class="custom-select__option" role="option" data-value="Другое">Другое</li>
+                </ul>
+              </div>
+              <label class="form__field form__field--full">
+                <input name="message" class="form__textarea" rows="4" placeholder="Опишите вашу задачу"></input>
+              </label>
+            </div>
+            <div class="form__consents">
+              <label class="form__checkbox">
+                <input type="checkbox" id="consent_personal" name="consent_personal" value="1">
+                <span class="checkmark">
+                  <span></span>
+                </span>
+                <p>Нажимая кнопку "Отправить", я даю согласие на обработку персональных данных и ознакомлен (а) с <a href="#">Политикой конфиденциальности</a></p>
+              </label>
+              <label class="form__checkbox">
+                <input type="checkbox" id="consent_marketing" name="consent_marketing" value="1">
+                <span class="checkmark">
+                  <span></span>
+                </span>
+                <p>Нажимая кнопку "Отправить", я даю согласие на получение рассылки рекламно-информационных материалов</p>
+              </label>
+            </div>
+            <button type="submit" class="btn form__submit">
+              <p>Отправить</p>
+              <span>
+                <svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#arrow2"></use></svg>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__wrapper-col">
+					<a href="#" class="footer__wrapper-col-logo">
+						<svg viewBox="0 0 200 20"><use xlink:href="img/sprite.svg#logo"></use></svg>
+					</a>
+					<p class="footer__wrapper-col-text">
+						Weborama получила <a href="#">свидетельство</a> о государственной регистрации Интеллектуальной платформы по управлению данными
+					</p>
+					<form action="" class="form__wrapper-form footer__wrapper-col-form">
+						<h3 class="footer__wrapper-col-form-title">Подписаться на новости</h3>
+            <div class="form__fields">
+              <label class="form__field">
+                <input type="email" name="email" class="form__input" placeholder="Введите Email">
+              </label>
+							<button type="submit" class="form__submit">Подписаться</button>
+            </div>
+						<p class="footer__wrapper-col-form-text">
+							Нажимая кнопку “Подписаться”, Я даю <a href="#">согласие</a> <nobr>на обработку</nobr> Персональных Данных
+						</p>
+            <div class="form__consents">
+              <label class="form__checkbox">
+                <input type="checkbox" id="consent_personal" name="consent_personal" value="1">
+                <span class="checkmark">
+                  <span></span>
+                </span>
+                <p>Нажимая кнопку "Отправить", я даю согласие на обработку персональных данных и ознакомлен (а) с <a href="#">Политикой конфиденциальности</a></p>
+              </label>
+              <label class="form__checkbox">
+                <input type="checkbox" id="consent_marketing" name="consent_marketing" value="1">
+                <span class="checkmark">
+                  <span></span>
+                </span>
+                <p>Нажимая кнопку "Отправить", я даю согласие на получение рассылки рекламно-информационных материалов</p>
+              </label>
+            </div>
+          </form>
+					<div class="footer__wrapper-col-soc desk">
+						<p class="footer__wrapper-col-soc-title">Наши социальные сети</p>
+						<div class="footer__wrapper-col-soc-items">
+							<a href="#">
+								<img src="img/tg.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/vc.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/s.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/i.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/ad.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="footer__wrapper-col-col mob">
+						<div class="footer__wrapper-col-col-item">
+							<p class="footer__wrapper-col-adress-title">Членство</p>
+							<img src="img/f-01.svg" alt="" class="footer__wrapper-col-col-item-img">
+						</div>
+						<div class="footer__wrapper-col-col-item">
+							<p class="footer__wrapper-col-adress-title">Независимый рейтинг</p>
+							<img src="img/f-02.svg" alt="" class="footer__wrapper-col-col-item-img">
+						</div>
+					</div>
+					<p class="footer__wrapper-col-subtext">WEBORAMA © 2025. Все права защищены.</p>
+				</div>
+				<div class="footer__wrapper-col">
+					<div class="footer__wrapper-col-soc mob">
+						<p class="footer__wrapper-col-soc-title">Наши социальные сети</p>
+						<div class="footer__wrapper-col-soc-items">
+							<a href="#">
+								<img src="img/tg.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/vc.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/s.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/i.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/ad.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="footer__wrapper-col-adress">
+						<p class="footer__wrapper-col-adress-title">Адрес</p>
+						<h3 class="footer__wrapper-col-adress-adress">Москва, Холодильный пер., 3</h3>
+						<a href="#" class="footer__wrapper-col-adress-link">Москва, Холодильный пер., 3</a>
+					</div>
+					<div class="footer__wrapper-col-adress">
+						<p class="footer__wrapper-col-adress-title">Телефон</p>
+						<a href="#" class="footer__wrapper-col-adress-adress">8 800 000 33 99</a>
+					</div>
+					<div class="footer__wrapper-col-col desk">
+						<div class="footer__wrapper-col-col-item">
+							<p class="footer__wrapper-col-adress-title">Членство</p>
+							<img src="img/f-01.svg" alt="" class="footer__wrapper-col-col-item-img">
+						</div>
+						<div class="footer__wrapper-col-col-item">
+							<p class="footer__wrapper-col-adress-title">Независимый рейтинг</p>
+							<img src="img/f-02.svg" alt="" class="footer__wrapper-col-col-item-img">
+						</div>
+					</div>
+					<div class="top">
+						<svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#arrow2"></use></svg>
+					</div>
+					<a href="#" class="footer__wrapper-col-link">Политика Конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- libs -->
+	<script src="js/gsap.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
