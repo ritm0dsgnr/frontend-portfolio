@@ -1,24 +1,33 @@
 # Дарья Перминова - Frontend Portfolio
 
-Публичная подборка коммерческих frontend-работ: интернет-магазины, каталоги, личные кабинеты, корпоративные и контентные сайты.
+Коммерческий frontend: сайты в проде, анимации, JS-интерактив, каталоги и кабинеты.
 
-- [Открыть frontend-портфолио](https://ritm0dsgnr.github.io/frontend-portfolio/)
-- [Кейсы по автоматизации и AI](https://ritm0dsgnr.github.io/automation-portfolio/)
-- [Репозиторий](https://github.com/ritm0dsgnr/frontend-portfolio)
+- [Открыть frontend-портфолио](https://ritm0dsgnr.ru/)
+- [Кейсы по автоматизации](https://ritm0dsgnr.github.io/automation-portfolio/)
+- [Репозиторий](https://github.com/ritm0dsgnr/ritm0dsgnr)
+
+## В проде
+
+- https://zaruku.ru/
+- https://raise.agency/
+- https://spiceit.ru/
+- https://wbrm.ru/
+- https://basis-furnitura.ru/
+- https://artefactumgallery.com/
 
 ## Моя роль
 
-Frontend-разработка и адаптивная верстка по готовым дизайн-макетам:
+Frontend-разработка и адаптивная верстка по макетам:
 
 - многостраничная HTML-структура;
-- адаптация под desktop, tablet и mobile;
-- реализация UI-сценариев на JavaScript;
-- каталоги, фильтры, корзины, checkout и личные кабинеты;
-- формы, модальные окна, табы, слайдеры и мобильная навигация;
-- подключение анимаций, шрифтов, SVG и графических материалов;
-- подготовка проектов к статическому запуску.
+- desktop / tablet / mobile;
+- UI-сценарии на JavaScript;
+- каталоги, фильтры, корзины, checkout и ЛК;
+- формы, модалки, табы, слайдеры, мобильная навигация;
+- GSAP / ScrollTrigger / Lottie;
+- сборка и статический запуск.
 
-Дизайн представленных проектов не заявлен как авторский, если это отдельно не указано в описании проекта.
+Дизайн не заявлен как авторский, если это отдельно не указано.
 
 ## Стек
 
@@ -34,6 +43,7 @@ Frontend-разработка и адаптивная верстка по гот
 - SVG sprites, WebP / AVIF, WOFF / WOFF2
 - Figma
 - Git
+- Next.js / React / TypeScript (кейс Грин Маркет)
 
 ## Проекты
 
