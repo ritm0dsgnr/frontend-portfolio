@@ -85,7 +85,7 @@
         position: relative;
         min-height: 100svh;
         display: grid;
-        align-content: end;
+        grid-template-rows: 1fr auto;
         overflow: hidden;
         background:
           radial-gradient(ellipse at 50% 40%, #24150f 0%, var(--void) 62%);
@@ -128,9 +128,10 @@
       .hero-stage {
         position: relative;
         z-index: 2;
-        padding: 0 0 48px;
+        align-self: end;
+        padding: 88px 0 28px;
         transform-style: preserve-3d;
-        transform-origin: 50% 80%;
+        transform-origin: 50% 70%;
       }
 
       .role {
@@ -151,10 +152,10 @@
       .orbit {
         position: absolute;
         left: 50%;
-        top: 42%;
+        top: 6%;
         width: 0;
         height: 0;
-        --r: min(46vw, 520px);
+        --r: min(38vw, 420px);
         transform-style: preserve-3d;
         animation: spinY 36s linear infinite;
         pointer-events: none;
@@ -180,12 +181,13 @@
         padding: 0 8px;
         font-family: var(--display);
         font-weight: 800;
-        font-size: clamp(72px, 17vw, 268px);
-        line-height: 0.78;
+        font-size: clamp(92px, 24vw, 340px);
+        line-height: 0.86;
         letter-spacing: -0.07em;
         text-transform: uppercase;
         white-space: nowrap;
         width: 100vw;
+        margin-bottom: 0.18em;
         transform-style: preserve-3d;
       }
 
@@ -201,22 +203,24 @@
       }
 
       .alias {
-        margin: 18px 0 0;
+        position: relative;
+        z-index: 3;
+        margin: 8px 0 0;
         padding: 0 28px;
         font-family: var(--display);
         font-size: 13px;
         font-weight: 700;
-        letter-spacing: 0.42em;
-        text-transform: lowercase;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
         color: var(--dust);
       }
 
       .marquee {
         position: relative;
-        z-index: 2;
+        z-index: 3;
         overflow: hidden;
         border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
+        background: rgba(12, 11, 10, 0.42);
         font-family: var(--display);
         font-size: 13px;
         font-weight: 700;
@@ -232,7 +236,7 @@
         animation: ticker 32s linear infinite;
       }
 
-      .marquee a { opacity: 0.7; transition: opacity 400ms var(--ease), font-style 400ms var(--ease); }
+      .marquee a { opacity: 0.7; }
       .marquee a:hover { opacity: 1; font-style: italic; }
 
       .reel { display: grid; gap: 0; padding: 12px 0 8px; }
@@ -249,7 +253,8 @@
       .case:nth-child(even) { grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr); }
       .case:nth-child(even) .case-copy { order: 2; }
 
-      .case-copy .morph {
+      .case-name {
+        display: inline-block;
         font-family: var(--display);
         font-size: clamp(40px, 6vw, 84px);
         font-weight: 800;
@@ -257,6 +262,9 @@
         letter-spacing: -0.05em;
         text-transform: uppercase;
       }
+
+      .case-name:hover,
+      .case-name:focus-visible { font-style: italic; }
 
       .case p {
         margin: 14px 0 0;
@@ -279,97 +287,30 @@
       .shot {
         display: block;
         position: relative;
-        max-width: 480px;
+        max-width: 560px;
         margin-left: auto;
-        border-radius: 10px;
-        overflow: hidden;
-        transform: rotateY(-14deg) rotateX(5deg);
+        transform: rotateY(-10deg) rotateX(4deg);
         transform-origin: 70% 80%;
-        box-shadow:
-          0 30px 60px rgba(0, 0, 0, 0.48),
-          0 0 0 1px rgba(239, 232, 220, 0.08);
-        transition: transform 700ms var(--ease), box-shadow 700ms var(--ease);
+        filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.55));
+        transition: transform 700ms var(--ease);
       }
 
       .case:nth-child(even) .shot {
         margin-left: 0;
         margin-right: auto;
-        transform: rotateY(14deg) rotateX(5deg);
+        transform: rotateY(10deg) rotateX(4deg);
         transform-origin: 30% 80%;
-      }
-
-      .shot::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(125deg, rgba(255, 255, 255, 0.14), transparent 46%);
-        pointer-events: none;
       }
 
       .shot img {
         aspect-ratio: 16 / 9;
         height: auto;
-        object-position: top center;
-        transform: scale(1.06);
-        transform-origin: top center;
-        filter: saturate(0.82) contrast(1.04);
-        transition: filter 700ms var(--ease), transform 700ms var(--ease);
+        object-fit: contain;
+        background: transparent;
       }
 
-      .shot:hover {
-        transform: rotateY(-4deg) rotateX(1deg) translateY(-10px);
-        box-shadow:
-          0 40px 70px rgba(0, 0, 0, 0.55),
-          0 0 0 1px rgba(239, 232, 220, 0.16);
-      }
-
-      .case:nth-child(even) .shot:hover {
-        transform: rotateY(4deg) rotateX(1deg) translateY(-10px);
-      }
-
-      .shot:hover img { filter: none; transform: scale(1.09); }
-
-      .morph {
-        position: relative;
-        display: inline-block;
-        background: linear-gradient(var(--chalk), var(--chalk)) 0 100% / 0 1.5px no-repeat;
-        padding-bottom: 0.04em;
-        transition: background-size 520ms var(--ease);
-      }
-
-      .morph .a,
-      .morph .b {
-        display: block;
-        transition: opacity 520ms var(--ease), transform 520ms var(--ease);
-      }
-
-      .morph .b {
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-style: italic;
-        opacity: 0;
-        transform: translate3d(10px, 0, 0) skewX(-12deg);
-        pointer-events: none;
-      }
-
-      a.morph:hover .a,
-      a.morph:focus-visible .a {
-        opacity: 0;
-        transform: translate3d(-8px, 0, 0) skewX(-10deg);
-      }
-
-      a.morph:hover .b,
-      a.morph:focus-visible .b {
-        opacity: 1;
-        transform: none;
-      }
-
-      a.morph:hover,
-      a.morph:focus-visible,
-      .row:hover .morph {
-        background-size: 100% 1.5px;
-      }
+      .shot:hover { transform: rotateY(-3deg) rotateX(1deg) translateY(-12px); }
+      .case:nth-child(even) .shot:hover { transform: rotateY(3deg) rotateX(1deg) translateY(-12px); }
 
       .index { padding: 72px 28px 24px; }
 
@@ -407,40 +348,43 @@
 
       .row span { color: var(--dust); font-size: 15px; font-weight: 500; }
       .row b { font-weight: 700; font-size: 13px; letter-spacing: 0.12em; }
-
-      .row:hover .morph .a {
-        opacity: 0;
-        transform: translate3d(-8px, 0, 0) skewX(-10deg);
-      }
-
-      .row:hover .morph .b {
-        opacity: 1;
-        transform: none;
-      }
+      .row:hover h3,
+      .row:focus-visible h3 { font-style: italic; }
 
       .float-shot {
         position: fixed;
         z-index: 30;
-        width: min(32vw, 340px);
-        padding: 7px 7px 5px;
-        border-radius: 10px;
-        background: #1c1a17;
-        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+        width: min(36vw, 400px);
         pointer-events: none;
         opacity: 0;
-        transform: translate(-18%, -56%) scale(0.96);
-        transition: opacity 340ms var(--ease), transform 340ms var(--ease);
+        transform: translate(-14%, -58%) scale(0.96);
+        transition: opacity 280ms var(--ease), transform 280ms var(--ease);
       }
 
       .float-shot.is-on {
         opacity: 1;
-        transform: translate(-18%, -62%) scale(1);
+        transform: translate(-14%, -64%) scale(1);
       }
 
-      .float-shot img {
+      .float-lid {
+        padding: 9px 9px 7px;
+        border-radius: 10px 10px 3px 3px;
+        background: linear-gradient(180deg, #2c2925, #141210);
+        box-shadow: 0 22px 40px rgba(0, 0, 0, 0.45);
+      }
+
+      .float-lid img {
         height: auto;
         aspect-ratio: 16 / 10;
-        border-radius: 3px;
+        border-radius: 2px;
+        object-position: top center;
+      }
+
+      .float-base {
+        height: 9px;
+        margin: 0 7%;
+        clip-path: polygon(1.5% 0, 98.5% 0, 93% 100%, 7% 100%);
+        background: linear-gradient(180deg, #3a3631, #161412);
       }
 
       .close {
@@ -459,6 +403,7 @@
       }
 
       .close a.big {
+        display: inline-block;
         font-family: var(--display);
         font-size: clamp(56px, 12vw, 160px);
         font-weight: 800;
@@ -466,6 +411,9 @@
         letter-spacing: -0.06em;
         text-transform: uppercase;
       }
+
+      .close a.big:hover,
+      .close a.big:focus-visible { font-style: italic; }
 
       .foot {
         display: flex;
@@ -489,8 +437,8 @@
       }
 
       @keyframes spinY {
-        from { transform: rotateX(22deg) rotateY(0deg); }
-        to { transform: rotateX(22deg) rotateY(360deg); }
+        from { transform: rotateX(32deg) rotateY(0deg); }
+        to { transform: rotateX(32deg) rotateY(360deg); }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -508,7 +456,7 @@
         .nav-links { gap: 18px; }
         .hero-stage, .index, .close, .foot { padding-left: 18px; padding-right: 18px; }
         .role, .alias { padding-left: 0; }
-        .hero-name { font-size: 18vw; padding: 0; }
+        .hero-name { font-size: 28vw; padding: 0; }
         .orbit, .hero-light { display: none; }
         .case,
         .case:nth-child(even) {
@@ -532,7 +480,10 @@
     </style>
   </head>
   <body>
-    <div class="float-shot" aria-hidden="true"><img alt=""></div>
+    <div class="float-shot" aria-hidden="true">
+      <div class="float-lid"><img alt=""></div>
+      <div class="float-base"></div>
+    </div>
 
     <header class="nav">
       <a href="index.html">Дарья Перминова</a>
@@ -550,79 +501,70 @@
         <p class="role">Frontend-разработчик</p>
         <div class="hero-cluster">
           <div class="orbit" aria-hidden="true"></div>
-          <h1 class="hero-name"><span>П</span><span>е</span><span>р</span><span>м</span><span>и</span><span>н</span><span>о</span><span>в</span><span>а</span></h1>
+          <h1 class="hero-name"><span>Д</span><span>а</span><span>р</span><span>ь</span><span>я</span></h1>
         </div>
-        <p class="alias">ritm0dsgnr</p>
+        <p class="alias">Перминова · ritm0dsgnr</p>
+      </div>
+      <div class="marquee" aria-label="Сайты в проде">
+        <div class="marquee-track">
+          <a href="https://zaruku.ru/" target="_blank" rel="noopener">zaruku.ru</a>
+          <a href="https://raise.agency/" target="_blank" rel="noopener">raise.agency</a>
+          <a href="https://spiceit.ru/" target="_blank" rel="noopener">spiceit.ru</a>
+          <a href="https://wbrm.ru/" target="_blank" rel="noopener">wbrm.ru</a>
+          <a href="https://basis-furnitura.ru/" target="_blank" rel="noopener">basis-furnitura.ru</a>
+          <a href="https://artefactumgallery.com/" target="_blank" rel="noopener">artefactumgallery.com</a>
+          <a href="https://zaruku.ru/" target="_blank" rel="noopener">zaruku.ru</a>
+          <a href="https://raise.agency/" target="_blank" rel="noopener">raise.agency</a>
+          <a href="https://spiceit.ru/" target="_blank" rel="noopener">spiceit.ru</a>
+          <a href="https://wbrm.ru/" target="_blank" rel="noopener">wbrm.ru</a>
+          <a href="https://basis-furnitura.ru/" target="_blank" rel="noopener">basis-furnitura.ru</a>
+          <a href="https://artefactumgallery.com/" target="_blank" rel="noopener">artefactumgallery.com</a>
+        </div>
       </div>
     </section>
-
-    <div class="marquee" aria-label="Сайты в проде">
-      <div class="marquee-track">
-        <a href="https://zaruku.ru/" target="_blank" rel="noopener">zaruku.ru</a>
-        <a href="https://raise.agency/" target="_blank" rel="noopener">raise.agency</a>
-        <a href="https://spiceit.ru/" target="_blank" rel="noopener">spiceit.ru</a>
-        <a href="https://wbrm.ru/" target="_blank" rel="noopener">wbrm.ru</a>
-        <a href="https://basis-furnitura.ru/" target="_blank" rel="noopener">basis-furnitura.ru</a>
-        <a href="https://artefactumgallery.com/" target="_blank" rel="noopener">artefactumgallery.com</a>
-        <a href="https://zaruku.ru/" target="_blank" rel="noopener">zaruku.ru</a>
-        <a href="https://raise.agency/" target="_blank" rel="noopener">raise.agency</a>
-        <a href="https://spiceit.ru/" target="_blank" rel="noopener">spiceit.ru</a>
-        <a href="https://wbrm.ru/" target="_blank" rel="noopener">wbrm.ru</a>
-        <a href="https://basis-furnitura.ru/" target="_blank" rel="noopener">basis-furnitura.ru</a>
-        <a href="https://artefactumgallery.com/" target="_blank" rel="noopener">artefactumgallery.com</a>
-      </div>
-    </div>
 
     <section class="reel" id="work">
       <article class="case">
         <div class="case-copy">
-          <a class="morph" href="projects/nudi/index.html">
-            <span class="a">Nudi</span><span class="b" aria-hidden="true">Nudi</span>
-          </a>
+          <a class="case-name" href="projects/nudi/index.html">Nudi</a>
           <p>Магазин с GSAP и Lottie. Каталог, фильтры, ночная тема.</p>
           <span class="case-meta">демо</span>
         </div>
         <a class="shot" href="projects/nudi/index.html" tabindex="-1">
-          <img src="thumbs/nudi.jpg" alt="" width="1280" height="800">
+          <img src="thumbs/mock-nudi.jpg" alt="" width="1280" height="720">
         </a>
       </article>
 
       <article class="case">
         <div class="case-copy">
-          <a class="morph" href="https://zaruku.ru/" target="_blank" rel="noopener">
-            <span class="a">За Руку</span><span class="b" aria-hidden="true">За Руку</span>
-          </a>
+          <a class="case-name" href="https://zaruku.ru/" target="_blank" rel="noopener">За Руку</a>
           <p>Статьи, авторы, события, карта.</p>
           <span class="case-meta">zaruku.ru</span>
         </div>
         <a class="shot" href="https://zaruku.ru/" target="_blank" rel="noopener" tabindex="-1">
-          <img src="thumbs/zaruku.jpg" alt="" width="1280" height="800">
+          <img src="thumbs/mock-zaruku.jpg" alt="" width="1280" height="720">
         </a>
       </article>
 
       <article class="case">
         <div class="case-copy">
-          <a class="morph" href="projects/ceram/index.html">
-            <span class="a">Ceram</span><span class="b" aria-hidden="true">Ceram</span>
-          </a>
+          <a class="case-name" href="projects/ceram/index.html">Ceram</a>
           <p>Каталог, корзина, оформление, кабинет.</p>
           <span class="case-meta">демо</span>
         </div>
         <a class="shot" href="projects/ceram/index.html" tabindex="-1">
-          <img src="thumbs/ceram.jpg" alt="" width="1280" height="800">
+          <img src="thumbs/mock-ceram.jpg" alt="" width="1280" height="720">
         </a>
       </article>
 
       <article class="case">
         <div class="case-copy">
-          <a class="morph" href="https://basis-furnitura.ru/" target="_blank" rel="noopener">
-            <span class="a">Базис</span><span class="b" aria-hidden="true">Базис</span>
-          </a>
+          <a class="case-name" href="https://basis-furnitura.ru/" target="_blank" rel="noopener">Базис</a>
           <p>Списки, конфигуратор, магазин.</p>
           <span class="case-meta">basis-furnitura.ru</span>
         </div>
         <a class="shot" href="https://basis-furnitura.ru/" target="_blank" rel="noopener" tabindex="-1">
-          <img src="thumbs/bazis.jpg" alt="" width="1280" height="800">
+          <img src="thumbs/mock-bazis.jpg" alt="" width="1280" height="720">
         </a>
       </article>
     </section>
@@ -631,42 +573,42 @@
       <div class="index-head"><span>Ещё</span><span>прод / демо</span></div>
 
       <a class="row" href="https://raise.agency/" target="_blank" rel="noopener" data-shot="thumbs/raise.jpg">
-        <h3 class="morph"><span class="a">Raise</span><span class="b" aria-hidden="true">Raise</span></h3>
+        <h3>Raise</h3>
         <span>Сайт агентства</span>
         <b>прод</b>
       </a>
       <a class="row" href="https://spiceit.ru/" target="_blank" rel="noopener" data-shot="thumbs/spiceit.jpg">
-        <h3 class="morph"><span class="a">SpiceIT</span><span class="b" aria-hidden="true">SpiceIT</span></h3>
+        <h3>SpiceIT</h3>
         <span>Корпоративный сайт</span>
         <b>прод</b>
       </a>
       <a class="row" href="https://wbrm.ru/" target="_blank" rel="noopener" data-shot="thumbs/weborama.jpg">
-        <h3 class="morph"><span class="a">Weborama</span><span class="b" aria-hidden="true">Weborama</span></h3>
+        <h3>Weborama</h3>
         <span>Продуктовые страницы</span>
         <b>прод</b>
       </a>
       <a class="row" href="project.html?project=nm">
-        <h3 class="morph"><span class="a">NM</span><span class="b" aria-hidden="true">NM</span></h3>
+        <h3>NM</h3>
         <span>Арт-каталог и кабинет</span>
         <b>демо</b>
       </a>
       <a class="row" href="project.html?project=otel">
-        <h3 class="morph"><span class="a">Otel</span><span class="b" aria-hidden="true">Otel</span></h3>
+        <h3>Otel</h3>
         <span>Гостиничный сайт</span>
         <b>демо</b>
       </a>
       <a class="row" href="project.html?project=blsh">
-        <h3 class="morph"><span class="a">BLSH</span><span class="b" aria-hidden="true">BLSH</span></h3>
+        <h3>BLSH</h3>
         <span>Магазин и профиль</span>
         <b>демо</b>
       </a>
       <a class="row" href="project.html?project=teller">
-        <h3 class="morph"><span class="a">Teller</span><span class="b" aria-hidden="true">Teller</span></h3>
+        <h3>Teller</h3>
         <span>Медиа и кейсы</span>
         <b>демо</b>
       </a>
       <a class="row" href="https://ritm0dsgnr.github.io/automation-portfolio/">
-        <h3 class="morph"><span class="a">Node.js</span><span class="b" aria-hidden="true">Node.js</span></h3>
+        <h3>Node.js</h3>
         <span>Боты, парсеры, API</span>
         <b>кейсы</b>
       </a>
@@ -674,9 +616,7 @@
 
     <section class="close" id="contact">
       <p>Есть задача</p>
-      <a class="big morph" href="https://t.me/ritm0dsgnr">
-        <span class="a">Написать</span><span class="b" aria-hidden="true">Написать</span>
-      </a>
+      <a class="big" href="https://t.me/ritm0dsgnr">Написать</a>
     </section>
 
     <footer class="foot">
