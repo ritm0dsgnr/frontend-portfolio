@@ -12,6 +12,7 @@
     <link rel="canonical" href="https://ritm0dsgnr.ru/">
     <meta property="og:url" content="https://ritm0dsgnr.ru/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
@@ -32,7 +33,8 @@
         --void: #0c0b0a;
         --chalk: #efe8dc;
         --dust: #8f877c;
-        --ember: #c45c2a;
+        --pink: #e2187a;
+        --heart: #5eefe8;
         --line: rgba(239, 232, 220, 0.14);
         --ease: cubic-bezier(0.16, 1, 0.3, 1);
         --display: "Syne", "Segoe UI", sans-serif;
@@ -75,10 +77,25 @@
         font-weight: 700;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        mix-blend-mode: difference;
       }
 
-      .nav a { min-height: 44px; display: inline-flex; align-items: center; }
+      .nav a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .brand {
+        gap: 10px;
+        font-size: 12px;
+      }
+
+      .brand img {
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+      }
+
       .nav-links { display: flex; gap: 28px; }
 
       .hero {
@@ -88,7 +105,7 @@
         grid-template-rows: 1fr auto;
         overflow: hidden;
         background:
-          radial-gradient(ellipse at 50% 40%, #24150f 0%, var(--void) 62%);
+          radial-gradient(ellipse at 50% 40%, #3a1024 0%, var(--void) 62%);
         perspective: 1400px;
       }
 
@@ -109,7 +126,7 @@
         left: var(--lx, 50%);
         top: var(--ly, 42%);
         transform: translate(-50%, -50%);
-        background: radial-gradient(circle, rgba(196, 92, 42, 0.28), transparent 68%);
+        background: radial-gradient(circle, rgba(226, 24, 122, 0.34), transparent 68%);
         mix-blend-mode: screen;
         pointer-events: none;
         transition: left 80ms linear, top 80ms linear;
@@ -197,7 +214,7 @@
         text-shadow:
           0 0 16px #0c0b0a,
           0 0 34px #0c0b0a,
-          0 0 48px rgba(196, 92, 42, 0.28),
+          0 0 48px rgba(226, 24, 122, 0.35),
           1px 2px 0 #1a1512,
           2px 4px 0 #120f0d;
       }
@@ -250,7 +267,7 @@
         display: grid;
         grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.1fr);
         gap: 28px 48px;
-        align-items: end;
+        align-items: center;
         padding: 56px 40px;
         border-top: 1px solid var(--line);
       }
@@ -292,30 +309,64 @@
       .shot {
         display: block;
         position: relative;
-        max-width: 560px;
+        width: min(420px, 100%);
         margin-left: auto;
-        transform: rotateY(-10deg) rotateX(4deg);
-        transform-origin: 70% 80%;
-        filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.55));
-        transition: transform 700ms var(--ease);
+        transform: rotate(-11deg);
+        transform-origin: 60% 60%;
+        transition: transform 640ms var(--ease);
       }
 
       .case:nth-child(even) .shot {
         margin-left: 0;
         margin-right: auto;
-        transform: rotateY(10deg) rotateX(4deg);
-        transform-origin: 30% 80%;
+        transform: rotate(11deg);
+        transform-origin: 40% 60%;
       }
 
-      .shot img {
-        aspect-ratio: 16 / 9;
+      .blob {
+        position: relative;
+        aspect-ratio: 1;
+        background: var(--pink);
+        -webkit-mask: url("blob-mask.svg") center / contain no-repeat;
+        mask: url("blob-mask.svg") center / contain no-repeat;
+        filter: drop-shadow(0 18px 28px rgba(226, 24, 122, 0.28));
+      }
+
+      .blob img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        transform: scale(1.04);
+        transition: transform 800ms var(--ease);
+      }
+
+      .blob-face {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .blob-heart {
+        position: absolute;
+        top: 10%;
+        right: 3%;
+        width: 20%;
         height: auto;
-        object-fit: contain;
-        background: transparent;
+        fill: var(--heart);
+        filter: blur(0.35px);
+        pointer-events: none;
+        opacity: 0;
+        transform: scale(0.5) rotate(-14deg);
+        transition: opacity 320ms var(--ease), transform 320ms var(--ease);
       }
 
-      .shot:hover { transform: rotateY(-3deg) rotateX(1deg) translateY(-12px); }
-      .case:nth-child(even) .shot:hover { transform: rotateY(3deg) rotateX(1deg) translateY(-12px); }
+      .shot:hover { transform: rotate(4deg) translateY(-10px) scale(1.03); }
+      .case:nth-child(even) .shot:hover { transform: rotate(-4deg) translateY(-10px) scale(1.03); }
+      .shot:hover .blob img { transform: scale(1.12); }
+      .shot:hover .blob-heart { opacity: 1; transform: scale(1) rotate(8deg); }
 
       .index { padding: 72px 28px 24px; }
 
@@ -359,37 +410,20 @@
       .float-shot {
         position: fixed;
         z-index: 30;
-        width: min(36vw, 400px);
+        width: min(28vw, 260px);
         pointer-events: none;
         opacity: 0;
-        transform: translate(-14%, -58%) scale(0.96);
+        transform: translate(-18%, -58%) rotate(-8deg) scale(0.92);
         transition: opacity 280ms var(--ease), transform 280ms var(--ease);
       }
 
       .float-shot.is-on {
         opacity: 1;
-        transform: translate(-14%, -64%) scale(1);
+        transform: translate(-18%, -62%) rotate(6deg) scale(1);
       }
 
-      .float-lid {
-        padding: 9px 9px 7px;
-        border-radius: 10px 10px 3px 3px;
-        background: linear-gradient(180deg, #2c2925, #141210);
-        box-shadow: 0 22px 40px rgba(0, 0, 0, 0.45);
-      }
-
-      .float-lid img {
-        height: auto;
-        aspect-ratio: 16 / 10;
-        border-radius: 2px;
-        object-position: top center;
-      }
-
-      .float-base {
-        height: 9px;
-        margin: 0 7%;
-        clip-path: polygon(1.5% 0, 98.5% 0, 93% 100%, 7% 100%);
-        background: linear-gradient(180deg, #3a3631, #161412);
+      .float-shot .blob {
+        filter: drop-shadow(0 16px 24px rgba(226, 24, 122, 0.35));
       }
 
       .close {
@@ -457,7 +491,7 @@
       }
 
       @media (max-width: 800px) {
-        .nav { padding: 16px 18px; mix-blend-mode: normal; }
+        .nav { padding: 16px 18px; }
         .nav-links { gap: 18px; }
         .hero-stage, .index, .close, .foot { padding-left: 18px; padding-right: 18px; }
         .role, .alias { padding-left: 0; }
@@ -473,8 +507,7 @@
         .case:nth-child(even) .shot,
         .shot:hover,
         .case:nth-child(even) .shot:hover {
-          margin: 0;
-          max-width: none;
+          margin: 0 auto;
           transform: none;
         }
         .row, .foot { grid-template-columns: 1fr; display: grid; }
@@ -485,13 +518,30 @@
     </style>
   </head>
   <body>
+    <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+      <symbol id="blob-face" viewBox="0 0 200 200">
+        <ellipse cx="84" cy="90" rx="14" ry="16" fill="none" stroke="#d4d4d4" stroke-width="5"/>
+        <ellipse cx="84" cy="90" rx="9" ry="11" fill="#1c1c1c"/>
+        <circle cx="80" cy="86" r="2.6" fill="#fff" opacity=".55"/>
+        <ellipse cx="116" cy="90" rx="14" ry="16" fill="none" stroke="#d4d4d4" stroke-width="5"/>
+        <ellipse cx="116" cy="90" rx="9" ry="11" fill="#1c1c1c"/>
+        <circle cx="112" cy="86" r="2.6" fill="#fff" opacity=".55"/>
+        <ellipse cx="100" cy="118" rx="13" ry="11" fill="#2a2a2a"/>
+      </symbol>
+      <symbol id="blob-heart" viewBox="0 0 24 24">
+        <path d="M12 21S3 14.2 3 8.8C3 5.5 5.6 3 8.8 3c1.7 0 3.2 1 3.2 1s1.5-1 3.2-1C18.4 3 21 5.5 21 8.8 21 14.2 12 21 12 21z"/>
+      </symbol>
+    </svg>
+
     <div class="float-shot" aria-hidden="true">
-      <div class="float-lid"><img alt=""></div>
-      <div class="float-base"></div>
+      <span class="blob"><img alt=""></span>
     </div>
 
     <header class="nav">
-      <a href="index.html">Дарья Перминова</a>
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="" width="34" height="34">
+        Дарья Перминова
+      </a>
       <nav class="nav-links" aria-label="Навигация">
         <a href="#work">Работы</a>
         <a href="https://t.me/ritm0dsgnr">Telegram</a>
@@ -536,7 +586,11 @@
           <span class="case-meta">демо</span>
         </div>
         <a class="shot" href="projects/nudi/index.html" tabindex="-1">
-          <img src="thumbs/mock-nudi.jpg" alt="" width="1280" height="720">
+          <span class="blob">
+            <img src="thumbs/nudi.jpg" alt="" width="800" height="800">
+            <svg class="blob-face" viewBox="0 0 200 200"><use href="#blob-face"/></svg>
+          </span>
+          <svg class="blob-heart" viewBox="0 0 24 24"><use href="#blob-heart"/></svg>
         </a>
       </article>
 
@@ -547,7 +601,11 @@
           <span class="case-meta">zaruku.ru</span>
         </div>
         <a class="shot" href="https://zaruku.ru/" target="_blank" rel="noopener" tabindex="-1">
-          <img src="thumbs/mock-zaruku.jpg" alt="" width="1280" height="720">
+          <span class="blob">
+            <img src="thumbs/zaruku.jpg" alt="" width="800" height="800">
+            <svg class="blob-face" viewBox="0 0 200 200"><use href="#blob-face"/></svg>
+          </span>
+          <svg class="blob-heart" viewBox="0 0 24 24"><use href="#blob-heart"/></svg>
         </a>
       </article>
 
@@ -558,7 +616,11 @@
           <span class="case-meta">демо</span>
         </div>
         <a class="shot" href="projects/ceram/index.html" tabindex="-1">
-          <img src="thumbs/mock-ceram.jpg" alt="" width="1280" height="720">
+          <span class="blob">
+            <img src="thumbs/ceram.jpg" alt="" width="800" height="800">
+            <svg class="blob-face" viewBox="0 0 200 200"><use href="#blob-face"/></svg>
+          </span>
+          <svg class="blob-heart" viewBox="0 0 24 24"><use href="#blob-heart"/></svg>
         </a>
       </article>
 
@@ -569,7 +631,11 @@
           <span class="case-meta">basis-furnitura.ru</span>
         </div>
         <a class="shot" href="https://basis-furnitura.ru/" target="_blank" rel="noopener" tabindex="-1">
-          <img src="thumbs/mock-bazis.jpg" alt="" width="1280" height="720">
+          <span class="blob">
+            <img src="thumbs/bazis.jpg" alt="" width="800" height="800">
+            <svg class="blob-face" viewBox="0 0 200 200"><use href="#blob-face"/></svg>
+          </span>
+          <svg class="blob-heart" viewBox="0 0 24 24"><use href="#blob-heart"/></svg>
         </a>
       </article>
     </section>
@@ -760,8 +826,8 @@
           "band=smoothstep(.48,.6,band)*smoothstep(.78,.6,band);",
           "float beat=.55+.45*sin(t*6.2831*.7);",
           "vec3 voidc=vec3(.047,.043,.039);",
-          "vec3 ember=vec3(.77,.36,.16);",
-          "vec3 gold=vec3(.78,.62,.32);",
+          "vec3 ember=vec3(.89,.09,.48);",
+          "vec3 gold=vec3(.37,.94,.91);",
           "vec3 col=voidc;",
           "col+=ember*rings*(.28+.5*beat)*(1.0-d*.65);",
           "col+=gold*fog*.16;",
