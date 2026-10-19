@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ritm · алфавит</title>
+  <style>
+    :root { --void:#0c0b0a; --chalk:#efe8dc; --dust:#8f877c; --pink:#e2187a; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--void); color: var(--chalk); }
+    @font-face {
+      font-family: Ritm;
+      src: url("fonts/Ritm-Regular.woff2?v=ritm46") format("woff2");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: Ritm;
+      src: url("fonts/Ritm-ExtraBold.woff2?v=ritm46") format("woff2");
+      font-weight: 700 800;
+    }
+    body { font-family: Ritm, sans-serif; }
+    .note {
+      margin: 0;
+      padding: 20px 28px;
+      border-bottom: 1px solid #2a2724;
+      color: var(--dust);
+      font: 400 15px/1.45 Ritm, sans-serif;
+      max-width: 48rem;
+    }
+    section { padding: 32px 28px 40px; border-bottom: 1px solid #2a2724; }
+    .tag {
+      margin: 0 0 14px;
+      font: 400 11px/1 Ritm, sans-serif;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--dust);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+      gap: 10px 8px;
+    }
+    .cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 4px 10px;
+      border: 1px solid #2a2724;
+    }
+    .cell .ch {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .cell .name {
+      font-size: 11px;
+      color: var(--dust);
+      letter-spacing: .06em;
+    }
+    .cell.hot { border-color: var(--pink); }
+    .cell.hot .name { color: var(--pink); }
+    .line {
+      margin: 0;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -.02em;
+      word-break: break-all;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 800;
+      line-height: .92;
+      letter-spacing: -.03em;
+    }
+    h1 em { font-style: italic; color: var(--pink); }
+  </style>
+</head>
+<body>
+  <p class="note">
+    Только капс. Розовым — Ц, хвостик сверху справа скруглён.
+  </p>
+
+  <section>
+    <p class="tag">проверка · ExtraBold</p>
+    <h1>Соберу <em>живьём</em></h1>
+    <p class="line">Дарья · Базис · Дом</p>
+  </section>
+
+  <section>
+    <p class="tag">заглавные · по одной</p>
+    <div class="grid" id="caps"></div>
+  </section>
+
+  <section>
+    <p class="tag">строка</p>
+    <p class="line">АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ</p>
+  </section>
+
+  <script>
+    const caps = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+    const hot = new Set("Ц".split(""));
+    const root = document.getElementById("caps");
+    for (const ch of caps) {
+      const cell = document.createElement("div");
+      cell.className = "cell" + (hot.has(ch) ? " hot" : "");
+      cell.innerHTML = `<span class="ch">${ch}</span><span class="name">${ch}</span>`;
+      root.appendChild(cell);
+    }
+  </script>
+</body>
+</html>

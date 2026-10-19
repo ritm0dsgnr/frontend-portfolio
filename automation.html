@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Автоматизация · Дарья Перминова</title>
+    <meta name="description" content="Боты, парсеры, отчёты и мониторинг на Node.js. Кратко: что делает каждый сервис.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="inner.css">
+    <style>
+      .side strong {
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        text-transform: lowercase;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="back" href="index.html#auto">← Автоматизация</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-main">
+          <p class="eyebrow">Node.js · TypeScript · Playwright · LLM</p>
+          <h1>Автоматизация</h1>
+          <p class="summary">Пишу ботов, парсеры и фоновые сервисы под рабочие задачи: контент, метрики, звонки, встречи. Репозитории не выкладываю. Ниже что делает каждый сервис и на чём он стоит.</p>
+        </div>
+        <div class="side">
+          <strong>боты</strong>
+          <small>парсеры · агенты</small>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Стек</h2>
+        </div>
+        <ul class="chips">
+          <li class="chip">Node.js</li>
+          <li class="chip">TypeScript</li>
+          <li class="chip">Playwright</li>
+          <li class="chip">BullMQ и Redis</li>
+          <li class="chip">PostgreSQL</li>
+          <li class="chip">DuckDB</li>
+          <li class="chip">Fastify</li>
+          <li class="chip">S3</li>
+          <li class="chip">NocoDB</li>
+          <li class="chip">LLM</li>
+          <li class="chip">Lark API</li>
+          <li class="chip">Telegram API</li>
+          <li class="chip">Vue</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Сервисы</h2>
+        </div>
+        <ul class="cells">
+          <li class="cell">
+            <span class="meta">TypeScript · BullMQ · Planka · LLM</span>
+            <h3>ContentOps Agent</h3>
+            <p>Берёт задачу из карточки Planka, строит план правок на сайте, показывает dry-run, пишет в базу и умеет откатить. Цены может считать с фото прайса.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">Node.js · Метрика · Lark · PDF</span>
+            <h3>Analytics Agent</h3>
+            <p>В Lark кидаешь ссылку на объект. Бот тянет Яндекс Метрику и отвечает PDF с графиком.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">TypeScript · Fastify · LLM · Kan</span>
+            <h3>SovaMeeting</h3>
+            <p>Из транскрипта встречи достаёт факты в wiki и черновики задач. В Kan уходит только после ручной проверки.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">Go · DuckDB · S3 · PostgreSQL</span>
+            <h3>Контур аналитики</h3>
+            <p>События с сайтов уходят в S3, потом в DuckDB и витрины. Рядом реестр объектов и снимки для SEO и CRM.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">Node.js · Playwright · S3 · NocoDB</span>
+            <h3>Map Parser</h3>
+            <p>По расписанию снимает организации и отзывы с карт. Если прогон упал, пишет в Telegram.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">Node.js · Playwright · LLM · S3</span>
+            <h3>HH Parser</h3>
+            <p>Качает резюме, разбирает через LLM, складывает PDF/Markdown/JSON и шлёт в Telegram и Google Sheets.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">Node.js · LLM</span>
+            <h3>Code Review Agent</h3>
+            <p>На вход diff и правила репозитория. На выход markdown с замечаниями по приоритету.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">Node.js · Novofon · каталоги</span>
+            <h3>Аудит номеров</h3>
+            <p>Сводит виртуальные номера Novofon с телефонами на сайтах: куда уходит звонок и какие номера ни к чему не привязаны.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">Node.js · PostgreSQL · Telegram · Lark</span>
+            <h3>Аудит размещений</h3>
+            <p>Кидаешь ссылку на объект в чат. Бот отвечает, что поменялось в статусах и услугах.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">Node.js · Wiki.js · Lark · LLM</span>
+            <h3>Wiki-бот</h3>
+            <p>В Lark отвечает по Wiki.js и кидает ссылки на статьи. Скриншоты из чата тоже читает.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">Node.js · Метрика · EspoCRM · NocoDB</span>
+            <h3>Синк метрик в CRM</h3>
+            <p>Раз в сутки забирает цифры из Яндекс Метрики и пишет их в карточки объектов в EspoCRM.</p>
+          </li>
+          <li class="cell">
+            <span class="meta">TypeScript · Playwright</span>
+            <h3>Мониторинг сайтов</h3>
+            <p>Смотрит доступность, SSL и скорость. В Telegram пишет, только если что-то отвалилось.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="contacts">
+      <span>Дарья Перминова</span>
+      <div>
+        <a href="https://t.me/ritm0dsgnr" target="_blank" rel="noopener">Telegram</a>
+        <a href="tel:+79049833733">+7 904 983-37-33</a>
+        <a href="https://github.com/ritm0dsgnr?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>

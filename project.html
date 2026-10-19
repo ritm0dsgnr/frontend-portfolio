@@ -3,1130 +3,149 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Frontend project - Дарья Перминова</title>
-    <meta name="description" content="Детальная карта frontend-проекта: реализованные экраны, технологии, библиотеки и интерактивные сценарии.">
-    <link rel="icon" type="image/png" href="logo-avatar.png">
+    <title>Проект · Дарья Перминова</title>
+    <meta name="description" content="Кейс Дарьи Перминовой: описание, стек и экраны.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Roboto+Condensed:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --bg: #fafafa;
-        --card: #ffffff;
-        --ink: #171717;
-        --muted: #4d4d4d;
-        --line: #ebebeb;
-        --soft: #fafafa;
-        --hover: #fafafa;
-        --accent: #297a3a;
-        --accent-dark: #171717;
-        --shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgb(250, 250, 250) 0px 0px 0px 1px;
-        --container: 1280px;
-        --focus: 0 0 0 2px #fafafa, 0 0 0 4px #171717;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        color: var(--ink);
-        background: var(--bg);
-        font-family: "Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        font-weight: 400;
-        -webkit-font-smoothing: antialiased;
-        animation: page-in 420ms ease-out both;
-      }
-
-      a {
-        color: inherit;
-      }
-
-      .shell {
-        width: min(var(--container), calc(100% - 32px));
-        margin: 0 auto;
-        padding: 28px 0 56px;
-      }
-
-      .topbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-        margin-bottom: 46px;
-      }
-
-      .back {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--accent-dark);
-        font-size: 14px;
-        font-weight: 500;
-        text-decoration: none;
-      }
-
-      .back img {
-        width: 34px;
-        height: 34px;
-        border: 1px solid var(--line);
-        border-radius: 6px;
-        object-fit: cover;
-        box-shadow: var(--shadow);
-      }
-
-      .back:hover {
-        text-decoration: underline;
-      }
-
-      .project-menu {
-        position: relative;
-        min-width: 210px;
-      }
-
-      .project-menu__button {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-        width: 100%;
-        min-height: 44px;
-        padding: 0 12px;
-        border: 1px solid var(--line);
-        border-radius: 6px;
-        background: rgba(255, 255, 255, 0.86);
-        color: var(--ink);
-        font: inherit;
-        cursor: pointer;
-        box-shadow: rgb(235, 235, 235) 0px 0px 0px 1px;
-        transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
-      }
-
-      .project-menu__button:hover,
-      .project-menu__button[aria-expanded="true"] {
-        border-color: #171717;
-        background: var(--hover);
-        box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgb(250, 250, 250) 0px 0px 0px 1px;
-      }
-
-      .project-menu__button span {
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 500;
-        text-transform: uppercase;
-      }
-
-      .project-menu__button strong {
-        font-size: 14px;
-        font-weight: 500;
-      }
-
-      .project-menu__button::after {
-        content: "";
-        width: 8px;
-        height: 8px;
-        border-right: 2px solid var(--accent-dark);
-        border-bottom: 2px solid var(--accent-dark);
-        transform: rotate(45deg) translateY(-2px);
-        transition: transform 180ms ease;
-      }
-
-      .project-menu__button[aria-expanded="true"]::after {
-        transform: rotate(225deg) translateY(-2px);
-      }
-
-      .project-menu__list {
-        position: absolute;
-        z-index: 10;
-        top: calc(100% + 8px);
-        right: 0;
-        display: grid;
-        gap: 4px;
-        width: 100%;
-        min-width: 230px;
-        padding: 6px;
-        border: 1px solid var(--line);
-        border-radius: 6px;
-        background: rgba(255, 255, 255, 0.96);
-        box-shadow: var(--shadow);
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-4px);
-        transition: opacity 160ms ease, transform 160ms ease;
-      }
-
-      .project-menu_open .project-menu__list {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-      }
-
-      .project-menu__item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        min-height: 38px;
-        padding: 0 10px;
-        border: 0;
-        border-radius: 7px;
-        background: transparent;
-        color: var(--ink);
-        font: inherit;
-        font-size: 14px;
-        text-align: left;
-        cursor: pointer;
-      }
-
-      .project-menu__item:hover,
-      .project-menu__item_active {
-        background: var(--hover);
-        color: var(--accent-dark);
-      }
-
-      .project-menu__item_active::after {
-        content: "Выбран";
-        color: var(--muted);
-        font-size: 11px;
-        font-weight: 500;
-      }
-
-      .hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 24px;
-        align-items: end;
-        padding-bottom: 28px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .eyebrow {
-        margin: 0 0 12px;
-        color: var(--accent);
-        font-size: 13px;
-        font-weight: 500;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        margin: 0;
-        font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
-        font-size: 50px;
-        line-height: 1.02;
-        letter-spacing: 0;
-        font-weight: 500;
-      }
-
-      .summary {
-        max-width: 720px;
-        margin: 16px 0 0;
-        color: var(--muted);
-        font-size: 17px;
-        line-height: 1.55;
-      }
-
-      .count {
-        color: var(--muted);
-        font-size: 14px;
-        text-align: right;
-        white-space: nowrap;
-      }
-
-      .count strong {
-        display: block;
-        color: var(--ink);
-        font-size: 36px;
-        line-height: 1;
-      }
-
-      .section {
-        margin-top: 34px;
-      }
-
-      .contacts {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px 18px;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 42px;
-        padding-top: 24px;
-        border-top: 1px solid var(--line);
-        color: var(--muted);
-        font-size: 14px;
-      }
-
-      .contacts div {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px 16px;
-      }
-
-      .contacts a {
-        color: var(--accent-dark);
-        font-weight: 500;
-        text-decoration: none;
-      }
-
-      .contacts a:hover {
-        text-decoration: underline;
-      }
-
-      .section-head {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 16px;
-        margin-bottom: 14px;
-      }
-
-      .section h2 {
-        margin: 0;
-        font-size: 24px;
-        letter-spacing: 0;
-      }
-
-      .hint {
-        color: var(--muted);
-        font-size: 14px;
-      }
-
-      .stack-overview {
-        display: grid;
-        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
-        gap: 0;
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.34);
-      }
-
-      .stack-card,
-      .stack-group {
-        border: 0;
-        border-radius: 0;
-        background: transparent;
-        box-shadow: none;
-      }
-
-      .stack-card {
-        padding: 24px 0;
-      }
-
-      .stack-card + .stack-card {
-        margin-left: 30px;
-        padding-left: 30px;
-        border-left: 1px solid var(--line);
-      }
-
-      .stack-card h3,
-      .stack-group h3 {
-        margin: 0 0 12px;
-        color: var(--accent-dark);
-        font-size: 15px;
-      }
-
-      .stack-card p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 15px;
-        line-height: 1.6;
-      }
-
-      .stack-list {
-        display: grid;
-        gap: 8px;
-        margin: 14px 0 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .stack-list li {
-        position: relative;
-        padding-left: 16px;
-        color: var(--ink);
-        font-size: 14px;
-        line-height: 1.45;
-      }
-
-      .stack-list li::before {
-        content: "";
-        position: absolute;
-        top: 0.7em;
-        left: 0;
-        width: 7px;
-        height: 2px;
-        background: var(--accent);
-      }
-
-      .skill-cloud {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
-      }
-
-      .skill-chip {
-        display: inline-flex;
-        align-items: center;
-        min-height: 30px;
-        padding: 5px 9px;
-        border: 1px solid var(--line);
-        border-radius: 4px;
-        background: rgba(255, 255, 255, 0.72);
-        color: var(--ink);
-        font-size: 12px;
-        font-weight: 500;
-      }
-
-      .stack-groups {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 26px;
-        margin-top: 28px;
-      }
-
-      .stack-group {
-        padding: 16px 0 0;
-        border-top: 2px solid var(--accent);
-      }
-
-      .stack-group ul {
-        display: grid;
-        gap: 7px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .stack-group li {
-        position: relative;
-        padding-left: 13px;
-        color: var(--muted);
-        font-size: 14px;
-        line-height: 1.45;
-      }
-
-      .stack-group li::before {
-        content: "·";
-        position: absolute;
-        left: 0;
-        color: var(--accent);
-        font-weight: 900;
-      }
-
-      .featured {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .featured-link {
-        display: grid;
-        align-content: space-between;
-        min-height: 132px;
-        padding: 18px;
-        border: 1px solid var(--line);
-        border-radius: 6px;
-        background: var(--card);
-        box-shadow: var(--shadow);
-        text-decoration: none;
-        transition: border-color 180ms ease, transform 180ms ease;
-      }
-
-      .featured-link:hover {
-        transform: translateY(-2px);
-        border-color: #171717;
-        background: var(--hover);
-      }
-
-      .featured-link strong {
-        font-size: 20px;
-        line-height: 1.2;
-      }
-
-      .featured-link span {
-        color: var(--muted);
-        font-size: 13px;
-        overflow-wrap: anywhere;
-      }
-
-      .all-pages {
-        display: grid;
-        border-top: 1px solid var(--line);
-      }
-
-      .page-row {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 18px;
-        align-items: center;
-        min-height: 60px;
-        padding: 14px 0;
-        border-bottom: 1px solid var(--line);
-        text-decoration: none;
-        transition: color 180ms ease, padding 180ms ease, background 180ms ease;
-      }
-
-      .page-row:hover {
-        color: var(--accent-dark);
-        padding-right: 12px;
-        padding-left: 12px;
-        background: var(--hover);
-      }
-
-      .page-row strong {
-        display: block;
-        font-size: 15px;
-      }
-
-      .page-row small {
-        display: block;
-        margin-top: 4px;
-        color: var(--muted);
-        font-size: 13px;
-        font-weight: 500;
-      }
-
-      .page-row em {
-        color: var(--muted);
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 500;
-      }
-
-      @keyframes page-in {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @media (max-width: 860px) {
-        .topbar,
-        .hero,
-        .section-head {
-          display: grid;
-          grid-template-columns: 1fr;
-        }
-
-        .count {
-          text-align: left;
-        }
-
-        .featured {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .stack-overview,
-        .stack-groups {
-          grid-template-columns: 1fr;
-        }
-
-        .stack-card + .stack-card {
-          margin-left: 0;
-          padding-left: 0;
-          border-top: 1px solid var(--line);
-          border-left: 0;
-        }
-
-        .stack-groups {
-          gap: 18px;
-        }
-
-        .project-menu {
-          width: 100%;
-        }
-
-        .project-menu__list {
-          left: 0;
-          right: auto;
-        }
-
-        .page-row {
-          grid-template-columns: 1fr;
-          gap: 5px;
-        }
-
-        h1 {
-          font-size: 38px;
-        }
-      }
-
-      @media (max-width: 560px) {
-        .shell {
-          width: min(100% - 24px, var(--container));
-          padding-top: 20px;
-        }
-
-        .featured {
-          grid-template-columns: 1fr;
-        }
-
-        h1 {
-          font-size: 33px;
-        }
-      }
-
-      /* mono X7 — editorial gallery grid */
-      :root {
-        --bg: #ffffff;
-        --card: #ffffff;
-        --ink: #292929;
-        --muted: #292929;
-        --line: #292929;
-        --soft: #ffffff;
-        --hover: #292929;
-        --accent: #292929;
-        --accent-dark: #292929;
-        --shadow: none;
-        --container: none;
-        --focus: 0 0 0 2px #ffffff, 0 0 0 4px #292929;
-        --font-nh: "Inter", "Helvetica Neue", Arial, sans-serif;
-        --font-s-condensed: "Roboto Condensed", "Arial Narrow", sans-serif;
-        --grid-border: 2px solid #292929;
-      }
-
-      body {
-        color: var(--ink);
-        background: var(--bg);
-        font-family: var(--font-nh);
-        font-weight: 300;
-        letter-spacing: -0.02em;
-        animation: none;
-      }
-
-      .shell {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      .topbar {
-        min-height: 64px;
-        margin: 0;
-        padding: 0 20px;
-        border-bottom: var(--grid-border);
-      }
-
-      .back,
-      .project-menu__button,
-      .project-menu__item,
-      .eyebrow,
-      .hint,
-      .count,
-      .skill-chip,
-      .page-row em,
-      .page-row small,
-      .contacts {
-        font-family: var(--font-s-condensed);
-        font-weight: 400;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .back {
-        color: var(--ink);
-        font-size: 12px;
-        font-weight: 400;
-      }
-
-      .back img { display: none; }
-
-      .project-menu__button {
-        min-height: 40px;
-        border: 2px solid var(--ink);
-        border-radius: 0;
-        background: transparent;
-        color: var(--ink);
-        box-shadow: none;
-        font-size: 12px;
-      }
-
-      .project-menu__button:hover,
-      .project-menu__button[aria-expanded="true"] {
-        border-color: var(--ink);
-        background: var(--ink);
-        color: var(--bg);
-        box-shadow: none;
-      }
-
-      .project-menu__list {
-        border: 2px solid var(--ink);
-        border-radius: 0;
-        background: var(--bg);
-        box-shadow: none;
-      }
-
-      .project-menu__item {
-        border-bottom: 2px solid var(--ink);
-        background: var(--bg);
-        color: var(--ink);
-        font-size: 12px;
-      }
-
-      .project-menu__item:hover,
-      .project-menu__item_active {
-        background: var(--ink);
-        color: var(--bg);
-      }
-
-      .hero {
-        grid-template-columns: minmax(0, 1fr) 240px;
-        gap: 0;
-        padding: 0;
-        border: 0;
-        border-bottom: var(--grid-border);
-        border-radius: 0;
-        background: var(--bg);
-        box-shadow: none;
-      }
-
-      .hero > div:first-child {
-        padding: 43px 45px;
-      }
-
-      .hero .count {
-        display: grid;
-        align-content: end;
-        padding: 43px 45px;
-        border-left: var(--grid-border);
-        color: var(--ink);
-        font-size: 12px;
-      }
-
-      .hero h1,
-      .section-head h2,
-      .stack-card h3,
-      .stack-group h3 {
-        color: var(--ink);
-        font-family: var(--font-nh);
-        font-weight: 300;
-        line-height: 1.2;
-        letter-spacing: -0.02em;
-      }
-
-      .hero h1 {
-        font-size: clamp(40px, 5vw, 64px);
-      }
-
-      .eyebrow,
-      .hint {
-        color: var(--ink);
-        font-size: 12px;
-      }
-
-      .summary,
-      .stack-card p,
-      .stack-list,
-      .stack-group p {
-        color: var(--ink);
-      }
-
-      .section {
-        margin: 0;
-        padding: 0;
-      }
-
-      .section-head {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 20px;
-        align-items: end;
-        margin: 0;
-        padding: 43px 45px;
-        border-bottom: var(--grid-border);
-      }
-
-      .section-head h2 {
-        font-size: 40px;
-      }
-
-      .stack-overview {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0;
-        margin: 0;
-        border-bottom: var(--grid-border);
-      }
-
-      .stack-card {
-        padding: 25px 45px;
-        border: 0;
-        border-right: var(--grid-border);
-        border-radius: 0;
-        background: var(--bg);
-        box-shadow: none;
-      }
-
-      .stack-card:last-child { border-right: 0; }
-      .stack-card h3,
-      .stack-group h3 { font-size: 25px; }
-
-      .skill-chip {
-        border: 1px solid var(--ink);
-        border-radius: 0;
-        background: transparent;
-        color: var(--ink);
-        box-shadow: none;
-        font-size: 11px;
-      }
-
-      .stack-groups {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0;
-        margin: 0;
-        border-bottom: var(--grid-border);
-      }
-
-      .stack-group {
-        padding: 25px 45px;
-        border: 0;
-        border-right: var(--grid-border);
-        border-radius: 0;
-        background: var(--bg);
-        box-shadow: none;
-      }
-
-      .stack-group:nth-child(3n) { border-right: 0; }
-
-      .all-pages {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0;
-        margin: 0;
-        border-bottom: var(--grid-border);
-      }
-
-      .page-row {
-        min-height: 84px;
-        padding: 20px 45px;
-        border: 0;
-        border-right: var(--grid-border);
-        border-bottom: var(--grid-border);
-        border-radius: 0;
-        background: var(--bg);
-        box-shadow: none;
-      }
-
-      .page-row:nth-child(2n) { border-right: 0; }
-      .page-row:hover {
-        background: var(--ink);
-        color: var(--bg);
-        transform: none;
-      }
-
-      .page-row:hover strong,
-      .page-row:hover small,
-      .page-row:hover em { color: var(--bg); }
-
-      .page-row strong {
-        color: var(--ink);
-        font-weight: 300;
-      }
-
-      .page-row small,
-      .page-row em {
-        color: var(--ink);
-        font-size: 11px;
-      }
-
-      .contacts {
-        margin: 0;
-        padding: 25px 45px;
-        border-top: 0;
-        color: var(--ink);
-        font-size: 12px;
-      }
-
-      .contacts a { color: var(--ink); }
-      .contacts a:hover { text-decoration: underline; }
-
-      * { border-radius: 0 !important; }
-
-      @media (max-width: 860px) {
-        .hero,
-        .stack-overview,
-        .stack-groups,
-        .all-pages {
-          grid-template-columns: 1fr;
-        }
-        .hero .count {
-          border-top: var(--grid-border);
-          border-left: 0;
-        }
-        .stack-card,
-        .stack-group,
-        .page-row {
-          border-right: 0;
-          border-bottom: var(--grid-border);
-        }
-      }
-
-      @media (max-width: 560px) {
-        .topbar { padding: 12px 20px; }
-        .hero > div:first-child,
-        .hero .count,
-        .section-head,
-        .stack-card,
-        .stack-group,
-        .page-row,
-        .contacts { padding: 25px 20px; }
-        .section-head { grid-template-columns: 1fr; }
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="inner.css">
   </head>
   <body>
-    <main class="shell">
-      <header class="topbar">
-        <a class="back" href="index.html"><img src="logo-avatar.png" alt=""><span>← Все проекты</span></a>
-        <div class="project-menu" id="projectSwitch">
-          <button class="project-menu__button" id="projectSwitchButton" type="button" aria-expanded="false" aria-controls="projectSwitchList">
-            <span>Проект</span>
-            <strong id="projectSwitchLabel">Project</strong>
-          </button>
-          <div class="project-menu__list" id="projectSwitchList" role="menu"></div>
-        </div>
-      </header>
+    <header class="topbar">
+      <a class="back" href="index.html#work">← Все проекты</a>
+      <div class="switch" id="switch">
+        <button type="button" id="switchButton" aria-expanded="false" aria-controls="switchList">
+          <span>Проект: <span id="switchLabel"></span></span>
+        </button>
+        <nav class="switch-list" id="switchList" aria-label="Другие проекты"></nav>
+      </div>
+    </header>
 
+    <main>
       <section class="hero">
-        <div>
-          <p class="eyebrow" id="kind">Project</p>
-          <h1 id="title">Project</h1>
+        <div class="hero-main">
+          <p class="eyebrow" id="kind"></p>
+          <h1 id="title"></h1>
           <p class="summary" id="summary"></p>
+          <a class="btn" id="openSite" href="#" target="_blank" rel="noopener">
+            Открыть сайт
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+          </a>
         </div>
-        <div class="count"><strong id="stackCount">0</strong> навыков в стеке</div>
+        <div class="side">
+          <strong id="screenCount"></strong>
+          <small id="screenWord"></small>
+        </div>
       </section>
 
-      <section class="section" id="projectSkills">
+      <section>
         <div class="section-head">
-          <h2>Роль, стек и реализация</h2>
-          <span class="hint">Фактически использовано в проекте</span>
+          <h2>Стек</h2>
         </div>
-        <div class="stack-overview">
-          <article class="stack-card">
-            <h3>Объем работы</h3>
-            <p id="stackSummary"></p>
-            <ul class="stack-list" id="stackHighlights"></ul>
-          </article>
-          <article class="stack-card">
-            <h3>Технологии</h3>
-            <div class="skill-cloud" id="skillCloud"></div>
-          </article>
-        </div>
-        <div class="stack-groups" id="stackGroups"></div>
+        <ul class="chips" id="stack"></ul>
       </section>
 
-      <section class="section">
+      <section>
         <div class="section-head">
-          <h2>Демо проекта</h2>
-          <span class="hint" id="allCount"></span>
+          <h2>Экраны</h2>
+          <span class="hint">Откроются в новой вкладке</span>
         </div>
-        <div class="all-pages" id="allPages"></div>
+        <div class="cells" id="screens"></div>
       </section>
-
-      <footer class="contacts">
-        <span>Дарья Перминова · Frontend / JavaScript developer</span>
-        <div>
-          <a href="tel:+79049833733">+7 904 983-37-33</a>
-          <a href="https://t.me/ritm0dsgnr">Telegram</a>
-          <a href="https://github.com/ritm0dsgnr/ritm0dsgnr">GitHub</a>
-          <a href="https://ritm0dsgnr.github.io/automation-portfolio/">Automation</a>
-        </div>
-      </footer>
     </main>
+
+    <footer class="contacts">
+      <span>Дарья Перминова</span>
+      <div>
+        <a href="https://t.me/ritm0dsgnr" target="_blank" rel="noopener">Telegram</a>
+        <a href="tel:+79049833733">+7 904 983-37-33</a>
+        <a href="https://github.com/ritm0dsgnr?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </footer>
 
     <script>
       const PROJECTS = {
         nudi: {
           title: 'Nudi',
-          kind: 'Product / e-commerce',
-          summary: 'Адаптивный e-commerce интерфейс с каталогом, фильтрами, карточками товаров, продуктовыми линейками, ночной темой и насыщенной Lottie/GSAP-анимацией.',
-          pages: ['index.html', 'catalog.html', 'universe.html', 'product-trix.html', 'product-bunny.html', 'product-collie.html', 'product-disastro.html', 'product-fantasmo.html', 'product-holly.html', 'product-lilo.html', 'product-njama.html', 'product-pikki.html', 'product-def.html', 'trix.html', 'bunny.html', 'colli.html', 'disastro.html', 'fantasmo.html', 'holly.html', 'lillo.html', 'ndzhama.html', 'pikki.html', 'policy.html', '404.html'],
-          skills: {
-            summary: 'Полная адаптивная верстка продуктового e-commerce сайта с каталогом, карточками товаров, интерактивной вселенной бренда, линейками персонажей, модальными окнами, фильтрами, ночной темой и анимированным интерфейсом.',
-            highlights: [
-              'HTML-экраны: главная, каталог, продуктовые карточки, брендовые линейки, universe, policy и 404.',
-              '62 Lottie JSON-анимации, SVG-спрайты, кастомные иконки, персонажи и декоративная графика.',
-              'Интерактивные сценарии: меню, фильтры, пагинация, попапы, табы, слайдеры, плавный скролл и night mode.'
-            ],
-            tools: [
-              'HTML5',
-              'CSS3',
-              'JavaScript ES6+',
-              'Flexbox',
-              'CSS Grid',
-              'Media queries',
-              'Responsive layout',
-              'Adaptive layout',
-              'BEM naming',
-              'Swiper 11',
-              'GSAP 3.12.5',
-              'ScrollTrigger',
-              'Bodymovin',
-              'Lottie',
-              'Lottie JSON',
-              'DynamicAdapt',
-              'DOM API',
-              'classList',
-              'addEventListener',
-              'matchMedia',
-              'localStorage',
-              'Date API',
-              'scrollTo',
-              'Image preload',
-              'SVG sprites',
-              'Inline SVG',
-              'Custom fonts',
-              'WOFF / WOFF2',
-              'PNG / JPG',
-              'WebP / AVIF',
-              'CSS transitions',
-              'CSS transforms',
-              'CSS animation',
-              'Hover animation',
-              'Mousemove interaction',
-              'Wheel interaction',
-              'Touch sliders',
-              'Burger menu',
-              'Catalog filters',
-              'Product tabs',
-              'Modal popups',
-              'QR popup',
-              'Cookie banner',
-              'Mobile navigation',
-              'Cross-device UI',
-              'File URL static deploy'
-            ],
-            groups: [
-              {
-                title: 'Верстка',
-                items: [
-                  'HTML5-структура многостраничного сайта',
-                  'Адаптивная сетка под desktop, tablet и mobile',
-                  'Flexbox, CSS Grid, media queries',
-                  'Компонентные классы и BEM-подход',
-                  'Подключение кастомных шрифтов WOFF/WOFF2'
-                ]
-              },
-              {
-                title: 'JavaScript',
-                items: [
-                  'Кастомная DOM-логика без фреймворка',
-                  'Обработчики click, mouseenter, mouseleave, mousemove, wheel',
-                  'Плавный скролл к блокам через data-scroll',
-                  'localStorage для ночной темы и выбора пользователя',
-                  'Автоматическое переключение темы по времени суток'
-                ]
-              },
-              {
-                title: 'Библиотеки',
-                items: [
-                  'Swiper 11 для продуктовых, universe и character-слайдеров',
-                  'GSAP и ScrollTrigger для скролл-анимаций hero-блоков',
-                  'Bodymovin / Lottie для SVG-анимаций из JSON',
-                  'DynamicAdapt для переноса элементов на брейкпоинтах',
-                  'jquery.ripples.js сохранен в проекте как подключаемый эффект'
-                ]
-              },
-              {
-                title: 'UI-сценарии',
-                items: [
-                  'Burger menu и мобильная навигация',
-                  'Каталог с фильтрами и пагинацией',
-                  'Карточки товаров с табами описания',
-                  'Попап «Где купить», QR-попап и cookie banner',
-                  'Горизонтальная прокрутка фильтров колесом мыши'
-                ]
-              },
-              {
-                title: 'Анимация и графика',
-                items: [
-                  '62 Lottie-анимации персонажей, товаров и меню',
-                  'Hover-анимации меню и loop-анимации персонажей',
-                  'SVG sprite, inline SVG, PNG/JPG/WebP/AVIF assets',
-                  'CSS transitions, transforms и state-классы',
-                  'Предзагрузка и смена иконок персонажей'
-                ]
-              },
-              {
-                title: 'Адаптив и устройства',
-                items: [
-                  'Отдельное поведение для desktop, tablet и mobile',
-                  'matchMedia и брейкпоинты для интерфейсных сценариев',
-                  'Touch-friendly слайдеры и mobile pagination',
-                  'Определение Android/iPhone для показа store-кнопок',
-                  'Поддержка статического запуска через file://'
-                ]
-              }
-            ]
-          }
+          kind: 'Сайт бренда',
+          summary: 'Каталог, фильтры, карточки товаров и линейки персонажей. Ночная тема и 62 Lottie на GSAP.',
+          stack: ['JavaScript', 'GSAP', 'ScrollTrigger', 'Lottie', 'Swiper', 'DynamicAdapt']
         },
         nm: {
           title: 'NM',
-          kind: 'E-commerce / art catalog',
-          summary: 'Многостраничная арт-платформа: каталог и подборки, художники, события, карточки работ, поиск, корзина, оформление заказа и разветвленный личный кабинет.',
-          pages: ['index.html', 'catalog.html', 'catalog-pro.html', 'obj.html', 'obj2.html', 'obj3.html', 'works.html', 'works-1.html', 'works-2.html', 'artists.html', 'artist.html', 'events.html', 'event.html', 'previous-events.html', 'studio.html', 'studio-project.html', 'mood.html', 'bag.html', 'bag-2.html', 'bag-empty.html', 'payment.html', 'payment-2.html', 'details.html', 'details-points.html', 'account.html', 'account-orders.html', 'account-orders-all.html', 'account-order.html', 'account-offers.html', 'account-project.html', 'account-projects-all.html', 'account-settings.html', 'login.html', 'login-pro.html', 'reg.html', 'reg-pro.html', 'search.html', 'contacts.html', 'about.html', 'press.html', 'text.html', 'thankyou.html', 'catalog-empty.html', 'index-2.html', 'index-3.html', '404.html', '404-2.html']
+          kind: 'Арт-каталог и кабинет',
+          summary: 'Каталог работ, художники, события, поиск, корзина и оплата. Кабинет обычный и PRO: заказы, предложения, проекты.',
+          stack: ['jQuery', 'Swiper', 'Fancybox', 'IMask', 'intl-tel-input', 'SmoothScroll', 'jQuery Marquee']
         },
         otel: {
-          title: 'Otel',
-          kind: 'Hospitality / content',
-          summary: 'Адаптивный hospitality-сайт с номерами, услугами, спецпредложениями, событиями, магазином, контактными разделами и интерактивной подачей контента.',
-          pages: ['index.html', 'rooms.html', 'services.html', 'specials.html', 'events.html', 'shop.html', 'contacts.html', 'text.html', '404.html']
+          title: 'Юсуповъ',
+          kind: 'Сайт отеля',
+          summary: 'Номера, услуги, спецпредложения, события, лавка. Видео в hero и бронирование через Bnovo.',
+          stack: ['jQuery', 'Swiper', 'Fancybox', 'Lenis', 'Bnovo', 'HTML5 video', 'jQuery Marquee']
         },
         ceram: {
           title: 'Ceram',
-          kind: 'E-commerce / ceramic',
-          summary: 'Большой e-commerce интерфейс: каталоги и коллекции, карточки товаров, корзина, checkout, избранное, партнерский раздел и несколько сценариев личного кабинета.',
-          pages: ['index.html', 'catalog.html', 'catalogs.html', 'collection.html', 'item.html', 'item2.html', 'cart.html', 'cart-empty.html', 'making-order.html', 'making-order-log.html', 'making-order-reg.html', 'order-done.html', 'account-orders.html', 'account-order.html', 'account-orders-empty.html', 'account-settings.html', 'account-wishlist.html', 'favourites.html', 'favourites-empty.html', 'catalog-partners.html', 'partners.html', 'par.html', 'plk.html', 'plk-catalog.html', 'plk-orders.html', 'plk-balance.html', 'plk-news.html', 'plk-settings.html', 'plk-wishlist.html', 'factories.html', 'factories1.html', 'article.html', 'contacts.html', 'about.html', 'form.html', 'log.html', 'reg.html', 'res.html', 'search.html', 'vacancy.html', 'error.html']
+          kind: 'Магазин',
+          summary: 'Каталоги, коллекции, корзина и заказ. Избранное плюс кабинеты покупателя и партнёра.',
+          stack: ['jQuery', 'Swiper', 'Fancybox', 'Яндекс Карты', 'jQuery Marquee']
         },
         blsh: {
           title: 'BLSH',
-          kind: 'Shop / account',
-          summary: 'Интернет-магазин с каталогом и коллекциями, карточкой товара, оформлением заказа, авторизацией, профилем, историей покупок и избранным.',
-          pages: ['index.html', 'catalog.html', 'collection.html', 'card.html', 'order.html', 'order-done.html', 'account.html', 'account-info.html', 'account-data.html', 'account-history.html', 'account-history-list.html', 'account-wishlist.html', 'account-wishlist-list.html', 'login.html', 'login-code.html', 'search.html', 'contacts.html', 'delivery.html', 'refund.html', 'about.html', 'lk.html', 'policy.html', '404.html']
+          kind: 'Магазин',
+          summary: 'Каталог, коллекции, карточка, заказ. Вход по коду, профиль, история и избранное.',
+          stack: ['jQuery', 'Swiper', 'Fancybox', 'SmoothScroll', 'jQuery Marquee', 'DynamicAdapt']
         },
         teller: {
           title: 'Teller',
-          kind: 'Corporate / media',
-          summary: 'Корпоративный media-сайт с проектами и кейсами, авторами, блогом и статьями, формами обратной связи, контактами и вакансиями.',
-          pages: ['index.html', 'projects.html', 'project.html', 'cases.html', 'blog.html', 'article.html', 'about.html', 'authors.html', 'author.html', 'form.html', 'form-2.html', 'contacts.html', 'vacancy.html', 'policy.html']
+          kind: 'Корпоративный сайт',
+          summary: 'Проекты, решения, блог, авторы и формы. Контакты, вакансии и служебные страницы.',
+          stack: ['jQuery', 'Swiper', 'Fancybox', 'SmoothScroll', 'jQuery Marquee', 'DynamicAdapt']
         },
         spiceit: {
           title: 'SpiceIT',
-          kind: 'Corporate / content',
-          summary: 'Сайт рекрутингового агентства: услуги, кейсы, блог, статьи, события, отзывы, тендеры, вакансии и набор модальных форм для разных сценариев.',
-          pages: ['index.html', 'index-2.html', 'services.html', 'service.html', 'cases.html', 'case.html', 'blog.html', 'article.html', 'events.html', 'event.html', 'event-1.html', 'event-popup.html', 'reviews.html', 'reviews-popup.html', 'about.html', 'ambassodors.html', 'ambassodor.html', 'tender.html', 'vacancy.html', 'contacts.html', 'popup-1.html', 'popup-2.html', 'popup-3.html', 'policy.html', 'error.html']
+          kind: 'Корпоративный сайт',
+          summary: 'IT-рекрутинг: услуги, кейсы, блог, события, отзывы, тендеры, вакансии и разные popup-формы.',
+          stack: ['GSAP', 'ScrollTrigger', 'ScrollToPlugin', 'Swiper', 'AAT', 'DynamicAdapt']
         },
         bazis: {
-          title: 'Bazis',
-          kind: 'Catalog / checkout',
-          summary: 'Каталог фурнитуры с несколькими представлениями списка, конфигуратором, карточками товаров, корзиной, checkout, оплатой, доставкой, кабинетом и избранным.',
-          pages: ['index.html', 'catalog.html', 'catalog-list.html', 'catalog-list2.html', 'catalog-list3.html', 'obj.html', 'obj2.html', 'config.html', 'config2.html', 'basket.html', 'basket-empty.html', 'order.html', 'buy.html', 'payment.html', 'delivery.html', 'lk.html', 'lk-orders.html', 'lk-settings.html', 'lk-settings2.html', 'lk-wishlist.html', 'wishlist.html', 'search.html', 'new.html', 'news.html', 'sale.html', 'sales.html', 'specialists.html', 'offices.html', 'contacts.html', 'text-1.html', 'text-2.html', 'policy.html', 'error.html']
+          title: 'Базис',
+          kind: 'Магазин',
+          summary: 'Несколько видов каталога, конфигуратор, корзина, оплата, доставка, кабинет и избранное.',
+          stack: ['jQuery', 'Swiper', 'Fancybox 3 и 5', 'Inputmask', 'Яндекс Карты', 'jQuery Marquee', 'DynamicAdapt']
         },
         weborama: {
           title: 'Weborama',
-          kind: 'Corporate / products',
-          summary: 'Корпоративный продуктовый сайт с несколькими вариантами продуктовых страниц, кейсами, внутренними материалами, вакансиями и формами.',
-          pages: ['index.html', 'products.html', 'product.html', 'product2.html', 'products2.html', 'cases.html', 'case.html', 'insides.html', 'inside.html', 'jobs.html', 'job.html', 'vacancy.html', 'form.html', 'policy.html', '404.html']
+          kind: 'Продуктовый сайт',
+          summary: 'Несколько шаблонов страниц решений со scroll-анимацией. Кейсы, блог, вакансии, формы.',
+          stack: ['jQuery', 'GSAP', 'ScrollTrigger', 'Lenis', 'Swiper', 'Fancybox', 'jQuery Marquee']
         },
         'za-ruku-site': {
-          title: 'Za Ruku',
-          kind: 'Content / media',
-          summary: 'Контентная media-платформа со статьями и авторами, событиями, интерактивной картой, медиа, подкастами, историей проекта и тематическими разделами.',
-          pages: ['index.html', 'nozologia.html', 'article.html', 'authors.html', 'author-page.html', 'events.html', 'event-page.html', 'map.html', 'media.html', 'history.html', 'podcast.html', 'about.html', 'privacy-policy.html', '404.html']
+          title: 'За Руку',
+          kind: 'Медиа',
+          summary: 'Статьи, авторы, события, медиатека, подкасты и карта онкоцентров. Картинки в WebP и AVIF.',
+          stack: ['Swiper', 'Яндекс Карты', 'DynamicAdapt', 'WebP и AVIF']
         },
         raise: {
           title: 'Raise',
-          kind: 'Portfolio / agency',
-          summary: 'Портфолио агентства с главной страницей, лентой проектов, несколькими вариантами кейсов, информационными разделами, рекламной страницей и контактами.',
-          pages: ['index.html', 'project.html', 'project-item.html', 'project-item-2.html', 'minimal-project-item.html', 'about.html', 'ad.html', 'contacts.html', '404.html']
+          kind: 'Сайт агентства',
+          summary: 'Лента проектов и несколько шаблонов кейса. Vimeo, GSAP, обычные инфостраницы.',
+          stack: ['jQuery', 'GSAP', 'ScrollTrigger', 'Vimeo Player', 'Swiper', 'Fancybox', 'Marquee3k', 'SmoothScroll']
         }
+      }
+
+      const PAGES = {
+        nudi: ['index.html', 'catalog.html', 'universe.html', 'product-trix.html', 'product-bunny.html', 'product-collie.html', 'product-disastro.html', 'product-fantasmo.html', 'product-holly.html', 'product-lilo.html', 'product-njama.html', 'product-pikki.html', 'product-def.html', 'trix.html', 'bunny.html', 'colli.html', 'disastro.html', 'fantasmo.html', 'holly.html', 'lillo.html', 'ndzhama.html', 'pikki.html', 'policy.html', '404.html'],
+        nm: ['index.html', 'catalog.html', 'catalog-pro.html', 'obj.html', 'obj2.html', 'obj3.html', 'works.html', 'works-1.html', 'works-2.html', 'artists.html', 'artist.html', 'events.html', 'event.html', 'previous-events.html', 'studio.html', 'studio-project.html', 'mood.html', 'bag.html', 'bag-2.html', 'bag-empty.html', 'payment.html', 'payment-2.html', 'details.html', 'details-points.html', 'account.html', 'account-orders.html', 'account-orders-all.html', 'account-order.html', 'account-offers.html', 'account-project.html', 'account-projects-all.html', 'account-settings.html', 'login.html', 'login-pro.html', 'reg.html', 'reg-pro.html', 'search.html', 'contacts.html', 'about.html', 'press.html', 'text.html', 'thankyou.html', 'catalog-empty.html', 'index-2.html', 'index-3.html', '404.html', '404-2.html'],
+        otel: ['index.html', 'rooms.html', 'services.html', 'specials.html', 'events.html', 'shop.html', 'contacts.html', 'text.html', '404.html'],
+        ceram: ['index.html', 'catalog.html', 'catalogs.html', 'collection.html', 'item.html', 'item2.html', 'cart.html', 'cart-empty.html', 'making-order.html', 'making-order-log.html', 'making-order-reg.html', 'order-done.html', 'account-orders.html', 'account-order.html', 'account-orders-empty.html', 'account-settings.html', 'account-wishlist.html', 'favourites.html', 'favourites-empty.html', 'catalog-partners.html', 'partners.html', 'par.html', 'plk.html', 'plk-catalog.html', 'plk-orders.html', 'plk-balance.html', 'plk-news.html', 'plk-settings.html', 'plk-wishlist.html', 'factories.html', 'factories1.html', 'article.html', 'contacts.html', 'about.html', 'form.html', 'log.html', 'reg.html', 'res.html', 'search.html', 'vacancy.html', 'error.html'],
+        blsh: ['index.html', 'catalog.html', 'collection.html', 'card.html', 'order.html', 'order-done.html', 'account.html', 'account-info.html', 'account-data.html', 'account-history.html', 'account-history-list.html', 'account-wishlist.html', 'account-wishlist-list.html', 'login.html', 'login-code.html', 'search.html', 'contacts.html', 'delivery.html', 'refund.html', 'about.html', 'lk.html', 'policy.html', '404.html'],
+        teller: ['index.html', 'projects.html', 'project.html', 'cases.html', 'blog.html', 'article.html', 'about.html', 'authors.html', 'author.html', 'form.html', 'form-2.html', 'contacts.html', 'vacancy.html', 'policy.html'],
+        spiceit: ['index.html', 'index-2.html', 'services.html', 'service.html', 'cases.html', 'case.html', 'blog.html', 'article.html', 'events.html', 'event.html', 'event-1.html', 'event-popup.html', 'reviews.html', 'reviews-popup.html', 'about.html', 'ambassodors.html', 'ambassodor.html', 'tender.html', 'vacancy.html', 'contacts.html', 'popup-1.html', 'popup-2.html', 'popup-3.html', 'policy.html', 'error.html'],
+        bazis: ['index.html', 'catalog.html', 'catalog-list.html', 'catalog-list2.html', 'catalog-list3.html', 'obj.html', 'obj2.html', 'config.html', 'config2.html', 'basket.html', 'basket-empty.html', 'order.html', 'buy.html', 'payment.html', 'delivery.html', 'lk.html', 'lk-orders.html', 'lk-settings.html', 'lk-settings2.html', 'lk-wishlist.html', 'wishlist.html', 'search.html', 'new.html', 'news.html', 'sale.html', 'sales.html', 'specialists.html', 'offices.html', 'contacts.html', 'text-1.html', 'text-2.html', 'policy.html', 'error.html'],
+        weborama: ['index.html', 'products.html', 'product.html', 'product2.html', 'products2.html', 'cases.html', 'case.html', 'insides.html', 'inside.html', 'jobs.html', 'job.html', 'vacancy.html', 'form.html', 'policy.html', '404.html'],
+        'za-ruku-site': ['index.html', 'nozologia.html', 'article.html', 'authors.html', 'author-page.html', 'events.html', 'event-page.html', 'map.html', 'media.html', 'history.html', 'podcast.html', 'about.html', 'privacy-policy.html', '404.html'],
+        raise: ['index.html', 'project.html', 'project-item.html', 'project-item-2.html', 'minimal-project-item.html', 'about.html', 'ad.html', 'contacts.html', '404.html']
       }
 
       const PROJECT_LABELS = {
@@ -1363,230 +382,55 @@
         'wishlist.html': 'Избранное'
       }
 
-      const PROJECT_ORDER = ['nudi', 'nm', 'otel', 'ceram', 'blsh', 'weborama', 'za-ruku-site', 'raise', 'bazis', 'teller', 'spiceit']
-      const PROJECT_DETAILS = {
-        nm: {
-          summary: 'Многостраничная адаптивная верстка арт-платформы с каталогом, фильтрами, карточками работ, событиями, корзиной, checkout и разветвленным личным кабинетом.',
-          highlights: [
-            'Реализованы пользовательские и профессиональные сценарии каталога, авторизации и личного кабинета.',
-            'Подключены слайдеры, галереи, маски ввода, международное поле телефона и плавная прокрутка.',
-            'Проработаны пустые состояния, варианты карточек, оформление заказа, поиск и служебные страницы.'
-          ],
-          tools: ['jQuery 3.7', 'Swiper 11', 'Fancybox 3', 'IMask', 'intl-tel-input', 'SmoothScroll'],
-          libraries: ['Swiper для витрин, подборок и карточек', 'Fancybox для медиа и галерей', 'IMask и intl-tel-input для форм', 'SmoothScroll для плавной прокрутки'],
-          scenarios: ['Каталог и фильтры', 'Карточки работ и художников', 'События и студийные проекты', 'Корзина и checkout', 'Авторизация и личный кабинет']
-        },
-        otel: {
-          summary: 'Адаптивная верстка hospitality-сайта с насыщенным медиаконтентом, сценариями выбора номера, услугами, событиями, магазином и интеграцией бронирования.',
-          highlights: [
-            'Реализованы интерактивные hero-сценарии, видеопереходы и адаптация медиаконтента под устройства.',
-            'Подключены слайдеры, галереи, плавный скролл и внешний booking-виджет.',
-            'Собраны страницы номеров, услуг, спецпредложений, событий, магазина и контактов.'
-          ],
-          tools: ['jQuery 3.7', 'Swiper 11', 'Fancybox 3', 'Lenis', 'Bnovo / ReservationSteps widget', 'HTML5 video'],
-          libraries: ['Swiper для контентных слайдеров', 'Fancybox для галерей', 'Lenis для плавной прокрутки', 'Bnovo / ReservationSteps для бронирования'],
-          scenarios: ['Видео и интерактивный hero', 'Номера и услуги', 'Спецпредложения и события', 'Магазин', 'Форма и виджет бронирования']
-        },
-        ceram: {
-          summary: 'Большой адаптивный e-commerce интерфейс с каталогами и коллекциями, карточками товаров, checkout, избранным, партнерским разделом и личными кабинетами.',
-          highlights: [
-            'Собраны покупательские и партнерские сценарии, включая корзину, оформление заказа и состояния кабинета.',
-            'Реализованы формы с валидацией, каталоги, поиск, избранное и служебные состояния.',
-            'Подключены слайдеры, галереи, бегущие строки и Яндекс.Карты.'
-          ],
-          tools: ['jQuery 3.7', 'Swiper 11', 'Fancybox 3', 'Yandex Maps API', 'jquery.marquee'],
-          libraries: ['Swiper для каталогов и карточек', 'Fancybox для изображений', 'Яндекс.Карты API для контактов', 'jquery.marquee для бегущих строк'],
-          scenarios: ['Каталоги и коллекции', 'Карточки товаров', 'Корзина и checkout', 'Избранное', 'Партнерский и пользовательский кабинеты']
-        },
-        blsh: {
-          summary: 'Адаптивная верстка интернет-магазина с каталогом, коллекциями, карточкой товара, заказом, авторизацией и полным набором страниц аккаунта.',
-          highlights: [
-            'Реализованы история заказов, персональные данные, избранное и варианты пустых состояний.',
-            'Подключены слайдеры, галереи, плавная прокрутка и адаптивное перемещение элементов.',
-            'Проработаны формы входа, подтверждение кода, доставка, возврат и поиск.'
-          ],
-          tools: ['jQuery 3.7', 'Swiper 11', 'Fancybox 3', 'SmoothScroll', 'jquery.marquee', 'DynamicAdapt'],
-          libraries: ['Swiper для витрин и карточек', 'Fancybox для галерей', 'SmoothScroll для прокрутки', 'DynamicAdapt для адаптивной перестройки DOM'],
-          scenarios: ['Каталог и коллекции', 'Карточка товара', 'Оформление заказа', 'Вход и подтверждение кода', 'Профиль, история и избранное']
-        },
-        weborama: {
-          summary: 'Адаптивная верстка корпоративного продуктового сайта с анимированными страницами решений, кейсами, внутренними материалами, вакансиями и формами.',
-          highlights: [
-            'Реализованы несколько вариантов продуктовых страниц и сложные scroll-сценарии.',
-            'Подключены GSAP/ScrollTrigger, Lenis, Swiper, Fancybox и бегущие строки.',
-            'Собраны кейсы, внутренние страницы, вакансии, формы и служебные состояния.'
-          ],
-          tools: ['jQuery 3.7', 'Swiper 11', 'GSAP 3.12.5', 'ScrollTrigger', 'Lenis', 'Fancybox 3', 'jquery.marquee'],
-          libraries: ['GSAP и ScrollTrigger для scroll-анимаций', 'Lenis для плавной прокрутки', 'Swiper для слайдеров', 'Fancybox для медиа', 'jquery.marquee для бегущих строк'],
-          scenarios: ['Продуктовые страницы', 'Scroll-анимации', 'Кейсы и внутренние материалы', 'Вакансии', 'Формы обратной связи']
-        },
-        'za-ruku-site': {
-          summary: 'Адаптивная верстка контентной media-платформы со статьями, авторами, событиями, интерактивной картой, медиа, подкастами и тематическими разделами.',
-          highlights: [
-            'Подготовлены responsive-изображения в JPG, WebP и AVIF для разных плотностей экрана.',
-            'Реализованы слайдеры, мобильная навигация и интерактивная карта.',
-            'Собраны сложные контентные страницы, карточки авторов, события и медиаформаты.'
-          ],
-          tools: ['Swiper', 'Yandex Maps API', 'DynamicAdapt', 'Responsive images', 'WebP', 'AVIF'],
-          libraries: ['Swiper для контентных слайдеров', 'Яндекс.Карты API для интерактивной карты', 'DynamicAdapt для адаптивного перемещения блоков'],
-          scenarios: ['Статьи и авторы', 'События', 'Интерактивная карта', 'Медиа и подкасты', 'Responsive-изображения']
-        },
-        raise: {
-          summary: 'Адаптивная верстка портфолио агентства с проектами, несколькими форматами кейсов, анимациями, видео, информационными страницами и контактами.',
-          highlights: [
-            'Реализованы разные шаблоны проектных кейсов и интерактивная лента работ.',
-            'Подключены GSAP/ScrollTrigger, Vimeo Player API, Swiper, Fancybox и Marquee3k.',
-            'Проработаны адаптивные версии, формы, видео и служебная 404-страница.'
-          ],
-          tools: ['jQuery 3.7', 'Swiper 11', 'GSAP 3.12.5', 'ScrollTrigger', 'Fancybox 3', 'Vimeo Player API', 'Marquee3k', 'SmoothScroll', 'DynamicAdapt'],
-          libraries: ['GSAP и ScrollTrigger для анимаций', 'Vimeo Player API для видео', 'Swiper и Fancybox для медиа', 'Marquee3k для бегущих строк', 'DynamicAdapt для адаптива'],
-          scenarios: ['Лента проектов', 'Несколько форматов кейсов', 'Видео и анимации', 'Информационные страницы', 'Контакты и формы']
-        },
-        bazis: {
-          summary: 'Адаптивная верстка каталога фурнитуры с несколькими представлениями списка, конфигуратором, карточками товаров и полным сценарием покупки.',
-          highlights: [
-            'Реализованы каталог, конфигуратор, корзина, checkout, оплата, доставка, кабинет и избранное.',
-            'Подключены две версии Fancybox, Swiper, Inputmask, Яндекс.Карты и бегущие строки.',
-            'Проработаны формы, карточки, мобильные сценарии заказа и служебные состояния.'
-          ],
-          tools: ['jQuery 3.7', 'Swiper 11', 'Fancybox 3 / 5', 'Inputmask', 'Yandex Maps API', 'jquery.marquee', 'DynamicAdapt'],
-          libraries: ['Swiper для каталогов и карточек', 'Fancybox 3/5 для галерей', 'Inputmask для форм', 'Яндекс.Карты API для офисов', 'DynamicAdapt для адаптива'],
-          scenarios: ['Каталог и конфигуратор', 'Карточки товаров', 'Корзина и checkout', 'Оплата и доставка', 'Кабинет и избранное']
-        },
-        teller: {
-          summary: 'Адаптивная верстка корпоративного media-сайта с проектами, кейсами, авторами, блогом, статьями, формами, контактами и вакансиями.',
-          highlights: [
-            'Собраны разные форматы контентных карточек, проектных страниц и авторских материалов.',
-            'Подключены Swiper, Fancybox, SmoothScroll, бегущие строки и адаптивное перемещение блоков.',
-            'Реализованы формы обратной связи, вакансии и служебные страницы.'
-          ],
-          tools: ['jQuery 3.7', 'Swiper 11', 'Fancybox 3', 'SmoothScroll', 'jquery.marquee', 'DynamicAdapt'],
-          libraries: ['Swiper для проектных и контентных слайдеров', 'Fancybox для медиа', 'SmoothScroll для прокрутки', 'DynamicAdapt для адаптива'],
-          scenarios: ['Проекты и кейсы', 'Блог и статьи', 'Авторы', 'Формы и контакты', 'Вакансии']
-        },
-        spiceit: {
-          summary: 'Адаптивная верстка сайта рекрутингового агентства с услугами, кейсами, блогом, событиями, отзывами, тендерами, вакансиями и модальными сценариями.',
-          highlights: [
-            'Реализованы контентные разделы, лендинги услуг и разные варианты popup-форм.',
-            'Подключены GSAP, ScrollTrigger, ScrollToPlugin, Swiper и AAT.',
-            'Проработаны события, отзывы, вакансии, тендеры и адаптивная навигация.'
-          ],
-          tools: ['Swiper 11', 'GSAP 3.12.2', 'ScrollTrigger', 'ScrollToPlugin', 'AAT', 'DynamicAdapt'],
-          libraries: ['GSAP, ScrollTrigger и ScrollToPlugin для анимаций и навигации', 'Swiper для слайдеров', 'AAT для анимаций появления', 'DynamicAdapt для адаптива'],
-          scenarios: ['Услуги и кейсы', 'Блог и статьи', 'События и отзывы', 'Тендеры и вакансии', 'Попапы и формы']
-        }
-      }
+      const PROJECT_ORDER = ['nudi', 'ceram', 'nm', 'otel', 'blsh', 'teller', 'bazis', 'za-ruku-site', 'raise', 'spiceit', 'weborama']
+
       const params = new URLSearchParams(window.location.search)
       const requested = params.get('project') || params.get('id')
       const projectKey = PROJECTS[requested] ? requested : PROJECT_ORDER[0]
       const project = PROJECTS[projectKey]
+      const pages = PAGES[projectKey]
 
-      document.title = `${project.title} - project pages`
+      document.title = `${project.title} · Дарья Перминова`
       document.querySelector('#kind').textContent = project.kind
       document.querySelector('#title').textContent = project.title
       document.querySelector('#summary').textContent = project.summary
-      document.querySelector('#allCount').textContent = 'Открыть любой экран'
+      document.querySelector('#openSite').href = href('index.html')
+      document.querySelector('#screenCount').textContent = pages.length
+      document.querySelector('#screenWord').textContent = plural(pages.length, 'экран', 'экрана', 'экранов')
+      document.querySelector('#stack').innerHTML = project.stack.map(item => `<li class="chip">${escapeHtml(item)}</li>`).join('')
 
-      const switchRoot = document.querySelector('#projectSwitch')
-      const switchButton = document.querySelector('#projectSwitchButton')
-      const switchList = document.querySelector('#projectSwitchList')
+      const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>'
 
-      renderSwitcher()
-      renderSkills()
-      renderAllPages()
+      const isService = page => screenType(page) === 'Служебная'
+      document.querySelector('#screens').innerHTML = [...pages.filter(page => !isService(page)), ...pages.filter(isService)]
+        .map(page => `<a class="cell" href="${href(page)}" target="_blank" rel="noopener"><span>${escapeHtml(label(page))}</span>${arrow}</a>`)
+        .join('')
 
-      switchButton.addEventListener('click', () => {
-        setMenuOpen(!switchRoot.classList.contains('project-menu_open'))
-      })
+      const switchRoot = document.querySelector('#switch')
+      const switchButton = document.querySelector('#switchButton')
+      document.querySelector('#switchLabel').textContent = project.title
+      document.querySelector('#switchList').innerHTML = PROJECT_ORDER
+        .map(key => `<a href="project.html?project=${key}"${key === projectKey ? ' aria-current="page"' : ''}>${escapeHtml(PROJECTS[key].title)}</a>`)
+        .join('')
 
+      const setOpen = open => {
+        switchRoot.classList.toggle('is-open', open)
+        switchButton.setAttribute('aria-expanded', String(open))
+      }
+      switchButton.addEventListener('click', () => setOpen(!switchRoot.classList.contains('is-open')))
       document.addEventListener('click', event => {
-        if (!switchRoot.contains(event.target)) setMenuOpen(false)
+        if (!switchRoot.contains(event.target)) setOpen(false)
       })
-
       document.addEventListener('keydown', event => {
-        if (event.key === 'Escape') setMenuOpen(false)
+        if (event.key === 'Escape') setOpen(false)
       })
 
-      function renderSwitcher() {
-        document.querySelector('#projectSwitchLabel').textContent = project.title
-        switchList.innerHTML = PROJECT_ORDER
-          .map(key => {
-            const item = PROJECTS[key]
-            return `<button class="project-menu__item ${key === projectKey ? 'project-menu__item_active' : ''}" type="button" role="menuitem" data-project="${key}">${item.title}</button>`
-          })
-          .join('')
-
-        switchList.querySelectorAll('button').forEach(button => {
-          button.addEventListener('click', () => {
-            const nextProject = button.dataset.project
-            if (nextProject && nextProject !== projectKey) {
-              window.location.href = `project.html?project=${nextProject}`
-            } else {
-              setMenuOpen(false)
-            }
-          })
-        })
-      }
-
-      function setMenuOpen(isOpen) {
-        switchRoot.classList.toggle('project-menu_open', isOpen)
-        switchButton.setAttribute('aria-expanded', String(isOpen))
-      }
-
-      function renderAllPages() {
-        document.querySelector('#allPages').innerHTML = project.pages
-          .map(page => `<a class="page-row" href="${href(page)}"><span><strong>${escapeHtml(label(page))}</strong><small>${screenType(page)}</small></span><em>Открыть</em></a>`)
-          .join('')
-      }
-
-      function renderSkills() {
-        const skills = project.skills || defaultSkills(project)
-        const toolCount = skills.tools.length
-
-        document.querySelector('#stackCount').textContent = toolCount
-        document.querySelector('#stackSummary').textContent = skills.summary
-        document.querySelector('#stackHighlights').innerHTML = skills.highlights
-          .map(item => `<li>${escapeHtml(item)}</li>`)
-          .join('')
-        document.querySelector('#skillCloud').innerHTML = skills.tools
-          .map(item => `<span class="skill-chip">${escapeHtml(item)}</span>`)
-          .join('')
-        document.querySelector('#stackGroups').innerHTML = skills.groups
-          .map(group => `
-            <article class="stack-group">
-              <h3>${escapeHtml(group.title)}</h3>
-              <ul>${group.items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-            </article>
-          `)
-          .join('')
-      }
-
-      function defaultSkills(item) {
-        const detail = PROJECT_DETAILS[projectKey] || {}
-        const baseTools = ['HTML5', 'CSS3', 'SCSS / Sass', 'JavaScript', 'БЭМ', 'Responsive layout', 'Adaptive layout', 'Flexbox', 'CSS Grid', 'Media queries', 'DOM API', 'CSS animations', 'SVG sprites', 'Custom fonts', 'WebP / AVIF']
-        return {
-          summary: detail.summary || `${item.title}: многостраничная адаптивная верстка с готовыми HTML-экранами, общей стилизацией, интерактивными элементами и статическим запуском.`,
-          highlights: detail.highlights || [
-            'HTML/CSS/JavaScript-верстка по готовому дизайну.',
-            'Адаптивные страницы, меню, карточки, формы, списки и служебные состояния.',
-            'Организация ассетов, локальных CSS/JS-файлов и ссылок между страницами.'
-          ],
-          tools: [...new Set([...baseTools, ...(detail.tools || [])])],
-          groups: [
-            {
-              title: 'Frontend',
-              items: ['Многостраничная HTML-структура', 'Адаптивная верстка под desktop, tablet и mobile', 'Компонентные UI-блоки и БЭМ', 'Работа с локальными ассетами, SVG и шрифтами']
-            },
-            {
-              title: 'Библиотеки и интеграции',
-              items: detail.libraries || ['Нативный DOM API', 'Интерактивные состояния на JavaScript', 'CSS transitions и animations', 'Статический запуск без backend']
-            },
-            {
-              title: 'Интерфейсные сценарии',
-              items: detail.scenarios || ['Навигация между экранами', 'Карточки и списки', 'Формы и служебные страницы', 'Интерактивные состояния на JavaScript']
-            }
-          ]
-        }
+      function plural(n, one, few, many) {
+        const mod10 = n % 10
+        const mod100 = n % 100
+        if (mod10 === 1 && mod100 !== 11) return one
+        if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return few
+        return many
       }
 
       function href(page) {

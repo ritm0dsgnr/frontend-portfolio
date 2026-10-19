@@ -3,5 +3,8 @@ Thumbs.db
 .idea/
 .vscode/
 node_modules/
+__pycache__/
+*.pyc
 *.log
 resume-hh-stack.md
+stills/marks/_fonts/
