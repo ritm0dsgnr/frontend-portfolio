@@ -13,7 +13,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700;800;900&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
     <style>
       :root {
         --paper: #f5f8fb;
@@ -31,29 +31,13 @@
         --sky: #8eb6d4;
         --pool: #5f9ec4;
         --mist: #b9cfe0;
-        --display: "Ritm", sans-serif;
+        --display: "Onest", sans-serif;
         --text: "Onest", sans-serif;
         --hand: "Caveat", cursive;
         --ease: cubic-bezier(0.16, 1, 0.3, 1);
         --spring: cubic-bezier(0.34, 1.45, 0.64, 1);
         --hover: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
         --pad: clamp(1.6rem, 3vw, 4rem);
-      }
-
-      @font-face {
-        font-family: Ritm;
-        src: url("fonts/Ritm-Regular.woff2?v=ritm46") format("woff2");
-        font-weight: 400 500;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: Ritm;
-        src: url("fonts/Ritm-ExtraBold.woff2?v=ritm46") format("woff2");
-        font-weight: 600 800;
-        font-style: normal;
-        font-display: swap;
       }
 
       * { box-sizing: border-box; }
@@ -105,11 +89,12 @@
       /* hero */
 
       .hero {
+        --frame: clamp(2.4rem, 2.6vw, 3.2rem);
         position: relative;
         display: flex;
         flex-direction: column;
         min-height: 100svh;
-        padding: clamp(0.8rem, 1.2vw, 1.6rem) var(--pad);
+        padding: var(--frame);
       }
 
       .painting {
@@ -117,39 +102,43 @@
         flex: 1 1 auto;
         margin: 0;
         width: 100%;
-        min-height: calc(100svh - clamp(0.8rem, 1.2vw, 1.6rem) * 2);
-        height: calc(100svh - clamp(0.8rem, 1.2vw, 1.6rem) * 2);
+        min-height: calc(100svh - var(--frame) * 2);
+        height: calc(100svh - var(--frame) * 2);
         overflow: hidden;
-        -webkit-mask-image: url("stills/warm/edge.svg?v=back");
-        mask-image: url("stills/warm/edge.svg?v=back");
-        -webkit-mask-size: 100% 100%;
-        mask-size: 100% 100%;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: center;
-        mask-position: center;
+        border-radius: 1.8rem;
+        background: #c5d4e2;
         animation: painting-in 1.4s var(--ease) both;
       }
 
-      /* tab from right edge */
+      .painting picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .painting img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 40%;
+      }
+
+      /* paper tongue: the sheet slides out from the right edge */
 
       .nav-tab {
         position: fixed;
         z-index: 200;
-        top: 2rem;
+        top: 22vh;
         right: 0;
-        left: auto;
-        pointer-events: auto;
+        animation: tongue-peek 7.5s ease-in-out infinite;
       }
 
-      .nav-tab-slide {
-        display: block;
-        will-change: transform;
-        animation: nav-peek 6.5s ease-in-out infinite;
-      }
+      .nav-tab.is-open { animation: none; transform: none; }
 
-      .nav-tab-slide.is-held {
-        animation: none;
+      @keyframes tongue-peek {
+        0%, 64% { transform: translateX(1.6rem); }
+        78%, 90% { transform: translateX(0); }
+        100% { transform: translateX(1.6rem); }
       }
 
       .nav-tab-hit {
@@ -157,91 +146,67 @@
         z-index: 2;
         display: grid;
         place-items: center;
-        width: 4.2rem;
-        height: 3.3rem;
-        padding: 0 1rem 0 0.8rem;
+        width: 4.8rem;
+        min-height: 12rem;
+        margin: 0;
+        padding: 2.2rem 0;
         border: 0;
-        border-radius: 1rem 0 0 1rem;
-        background: var(--paper);
-        color: var(--ink);
+        border-radius: 1.6rem 0 0 1.6rem;
+        background: var(--ink);
+        color: var(--paper);
         cursor: pointer;
-        box-shadow:
-          0 0 0 0.1rem rgba(29, 42, 58, 0.1),
-          -0.6rem 0.8rem 1.6rem rgba(29, 42, 58, 0.1);
+        writing-mode: vertical-rl;
+        font-family: var(--text);
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        box-shadow: inset 0.1rem 0 0 rgba(29, 42, 58, 0.08);
         transition: background var(--hover), color var(--hover);
       }
 
-      .nav-tab-hit span {
-        display: block;
-        width: 1.6rem;
-        height: 0.2rem;
-        border-radius: 0.2rem;
-        background: currentColor;
-        box-shadow: 0 -0.5rem 0 currentColor, 0 0.5rem 0 currentColor;
-      }
-
-      .nav-tab.is-open .nav-tab-hit,
-      .nav-tab:focus-within .nav-tab-hit {
+      .nav-tab.is-open .nav-tab-hit {
         background: var(--ink);
         color: var(--paper);
       }
 
-      @keyframes nav-peek {
-        0%, 18% { transform: translateX(0.8rem); }
-        38%, 58% { transform: translateX(0); }
-        78%, 100% { transform: translateX(0.8rem); }
-      }
-
       .nav-tab-menu {
         position: absolute;
-        top: 0;
-        right: 100%;
-        left: auto;
-        z-index: 3;
+        top: 50%;
+        right: 4.8rem;
+        z-index: 1;
         display: grid;
+        align-content: center;
         gap: 0.2rem;
-        width: max-content;
-        min-width: 22rem;
-        padding: 1.2rem;
-        border: 0.1rem solid rgba(29, 42, 58, 0.1);
-        border-radius: 1.2rem;
-        background: rgba(245, 248, 251, 0.97);
-        backdrop-filter: blur(1rem);
-        opacity: 0;
+        width: min(26rem, calc(100vw - 6.2rem));
+        padding: 1.6rem 1.4rem 1.4rem 1.8rem;
+        border-radius: 1.6rem 0 0 1.6rem;
+        background: var(--paper);
+        box-shadow: -1rem 1.4rem 2.4rem rgba(29, 42, 58, 0.12);
         visibility: hidden;
         pointer-events: none;
-        transform: translateX(1rem);
-        transform-origin: top right;
-        transition: opacity var(--hover), transform var(--hover), visibility var(--hover);
+        opacity: 0;
+        transform: translate(1.2rem, -50%);
+        transition: opacity 0.45s var(--ease), transform 0.45s var(--ease), visibility 0.45s;
       }
 
-      .nav-tab-menu::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 100%;
-        width: 2rem;
-      }
-
-      .nav-tab.is-open .nav-tab-menu,
-      .nav-tab:focus-within .nav-tab-menu {
-        opacity: 1;
+      .nav-tab.is-open .nav-tab-menu {
         visibility: visible;
         pointer-events: auto;
-        transform: none;
+        opacity: 1;
+        transform: translate(0, -50%);
       }
 
       .nav-tab-menu a {
-        padding: 1.1rem 1.4rem;
-        font-family: var(--display);
-        font-size: 1.3rem;
+        padding: 1.1rem 1.2rem;
+        font-family: var(--text);
+        font-size: 1.5rem;
         font-weight: 700;
-        letter-spacing: 0.06em;
+        letter-spacing: -0.02em;
         text-align: left;
-        text-transform: uppercase;
+        text-transform: none;
         white-space: nowrap;
-        border-radius: 0.6rem;
+        border-radius: 0.8rem;
         transition: background var(--hover), color var(--hover);
       }
 
@@ -284,27 +249,10 @@
         outline: none;
       }
 
-      .painting picture {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-
-      .painting img {
-        width: 100%;
-        height: 112%;
-        object-fit: cover;
-        object-position: center 40%;
-        transform: translate(var(--mx, 0), calc(var(--py, 0) + var(--my, 0)));
-        transition: transform 900ms var(--ease);
-        animation: clouds 38s ease-in-out infinite alternate;
-        will-change: transform;
-      }
-
       .hero-copy {
         position: absolute;
         z-index: 2;
-        inset: clamp(0.8rem, 1.2vw, 1.6rem) var(--pad);
+        inset: var(--frame);
         pointer-events: none;
       }
 
@@ -336,108 +284,73 @@
         animation: sub-in 1s var(--ease) 1.6s both;
       }
 
-      .hero-sub::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        left: 50%;
-        top: 48%;
-        width: 150%;
-        height: 170%;
-        border-radius: 50%;
-        background:
-          radial-gradient(ellipse 64% 52% at 50% 50%, rgba(245, 248, 251, 0.92), rgba(245, 248, 251, 0.5) 52%, transparent 74%);
-        filter: blur(0.7rem);
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-      }
-
-      /* hero cta — handwritten */
+      /* hero cta — circular text, drag to spin */
 
       .hero-write {
+        --spin-size: clamp(8.4rem, 10.4vw, 10.2rem);
         position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 1.4rem;
-        padding: 0.8rem 1.4rem 1.4rem;
-        isolation: isolate;
-        pointer-events: auto;
-        color: var(--ink);
-        font-family: var(--hand);
-        font-size: clamp(2rem, 1.8vw, 2.8rem);
-        font-weight: 700;
-        line-height: 1;
-        letter-spacing: 0.02em;
-        transition: color var(--hover), letter-spacing var(--hover);
-      }
-
-      .hero-write-ink {
-        position: absolute;
-        z-index: -1;
-        left: 50%;
-        top: 52%;
-        width: 150%;
-        height: 170%;
+        display: block;
+        width: var(--spin-size);
+        height: var(--spin-size);
+        margin-top: 0.6rem;
         border-radius: 50%;
-        background:
-          radial-gradient(ellipse 58% 42% at 42% 54%, rgba(245, 248, 251, 0.78), transparent 70%),
-          radial-gradient(ellipse 38% 32% at 70% 46%, rgba(158, 192, 227, 0.45), transparent 68%);
-        opacity: 0;
-        filter: blur(0.8rem);
-        transform: translate(-50%, -50%) scale(0.3);
-        transition: opacity var(--hover), transform var(--hover), filter var(--hover);
-        pointer-events: none;
+        pointer-events: auto;
+        touch-action: none;
+        user-select: none;
+        -webkit-user-drag: none;
+        color: var(--ink);
+        font-family: var(--text);
+        font-size: clamp(1.2rem, 1.35vw, 1.45rem);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: grab;
+        transition: transform 0.5s var(--ease), color var(--hover);
       }
 
-      .hero-write-label { position: relative; z-index: 1; }
-
-      .hero-write-line {
-        position: absolute;
-        left: 10%;
-        bottom: 0.4rem;
-        width: 80%;
-        height: 1.2rem;
-        overflow: visible;
-        pointer-events: none;
-      }
-
-      .hero-write-line path {
-        fill: none;
-        stroke: var(--accent-deep);
-        stroke-width: 1.7;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-dasharray: 140;
-        stroke-dashoffset: 140;
-        animation: ink-doodle 5.2s ease-in-out 2.6s infinite;
-        transition: stroke-dashoffset var(--hover);
-      }
+      .hero-write.is-dragging { cursor: grabbing; transform: scale(0.96); }
 
       .hero-write:hover,
       .hero-write:focus-visible {
         color: var(--accent-deep);
-        letter-spacing: 0.04em;
+        transform: scale(1.06);
       }
 
-      .hero-write:hover .hero-write-ink,
-      .hero-write:focus-visible .hero-write-ink {
-        opacity: 1;
-        filter: blur(0.6rem);
-        transform: translate(-50%, -50%) scale(1);
+      .hero-write.is-dragging:hover { transform: scale(0.96); }
+
+      .circular-text__ring {
+        position: absolute;
+        inset: 0;
       }
 
-      .hero-write:hover .hero-write-line path,
-      .hero-write:focus-visible .hero-write-line path {
-        animation: ink-fill 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      .circular-text__letter {
+        position: absolute;
+        inset: 0;
+        display: block;
+        white-space: pre;
       }
 
-      @keyframes ink-fill {
-        to { stroke-dashoffset: 0; }
+      .circular-text__letter > span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
-      @media (prefers-reduced-motion: reduce) {
-        .hero-write-line path { animation: none; stroke-dashoffset: 0; }
+      .circular-text__center {
+        position: absolute;
+        inset: 18%;
+        display: grid;
+        place-items: center;
+        color: inherit;
+        pointer-events: none;
+      }
+
+      .circular-text__center svg {
+        width: 46%;
+        height: 46%;
       }
 
       .sr-only {
@@ -469,12 +382,6 @@
         to { opacity: 1; transform: translate(-50%, 0); }
       }
 
-      @keyframes ink-doodle {
-        0%, 8% { stroke-dashoffset: 140; }
-        42%, 58% { stroke-dashoffset: 0; }
-        92%, 100% { stroke-dashoffset: 140; }
-      }
-
       .hero h1 {
         margin: 0;
         font-family: var(--display);
@@ -483,6 +390,7 @@
         line-height: 1;
         letter-spacing: -0.02em;
         text-transform: uppercase;
+        color: var(--ink);
       }
 
       .hero h1 span { color: var(--accent); }
@@ -589,8 +497,8 @@
       .hover-img-project h2 {
         margin: 0;
         font-family: var(--display);
-        font-size: clamp(2.4rem, 3.2vw, 3.8rem);
-        font-weight: 700;
+        font-size: clamp(3.2rem, 4.6vw, 5.6rem);
+        font-weight: 900;
         letter-spacing: 0.04em;
         line-height: 1.1;
         text-transform: uppercase;
@@ -603,29 +511,31 @@
         text-align: right;
         font-family: var(--text);
         font-size: clamp(1.4rem, 1.2vw, 1.7rem);
-        font-weight: 500;
+        font-weight: 700;
         color: var(--hi-text-muted);
         white-space: nowrap;
         transition: color var(--hover);
       }
 
-      .hover-img-projects:hover .hover-img-project {
-        opacity: 0.45;
-      }
+      @media (hover: hover) and (pointer: fine) {
+        .hover-img-projects:hover .hover-img-project {
+          opacity: 0.45;
+        }
 
-      .hover-img-projects:hover .hover-img-project:hover,
-      .hover-img-project:focus-visible {
-        opacity: 1;
-      }
+        .hover-img-projects:hover .hover-img-project:hover,
+        .hover-img-project:focus-visible {
+          opacity: 1;
+        }
 
-      .hover-img-project:hover h2,
-      .hover-img-project:focus-visible h2 {
-        color: var(--accent);
-      }
+        .hover-img-project:hover h2,
+        .hover-img-project:focus-visible h2 {
+          color: var(--accent);
+        }
 
-      .hover-img-project:hover p,
-      .hover-img-project:focus-visible p {
-        color: var(--ink);
+        .hover-img-project:hover p,
+        .hover-img-project:focus-visible p {
+          color: var(--ink);
+        }
       }
 
       .hover-img-thumbnail-wrapper {
@@ -674,16 +584,151 @@
       /* automation */
 
       .auto {
-        padding: clamp(4rem, 6vw, 9rem) var(--pad) clamp(5.6rem, 8vw, 11rem);
+        padding: clamp(4rem, 6vw, 9rem) 0 clamp(5.6rem, 8vw, 11rem);
       }
 
-      .auto-lead {
-        max-width: min(56rem, 100%);
-        margin: 0 0 clamp(2.4rem, 3vw, 3.6rem);
+      .auto-intro,
+      .auto-groups,
+      .auto-stack,
+      .auto-foot {
+        margin-left: var(--pad);
+        margin-right: var(--pad);
+      }
+
+      .auto-intro {
+        display: grid;
+        gap: 1.4rem;
+        max-width: min(68rem, 100%);
+        margin-bottom: clamp(2.4rem, 3.2vw, 4rem);
+      }
+
+      .auto-intro h2 {
+        margin: 0;
+        font-family: var(--display);
+        font-size: clamp(3.2rem, 4.6vw, 5.6rem);
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+
+      .auto-intro p {
+        margin: 0;
+        max-width: 52rem;
         font-family: var(--text);
-        font-size: clamp(1.6rem, 1.5vw, 1.9rem);
+        font-size: clamp(1.7rem, 1.6vw, 2rem);
         font-weight: 500;
         line-height: 1.45;
+        color: var(--ink-soft);
+      }
+
+      .auto-curve {
+        width: 100%;
+        margin: 0 0 clamp(3.2rem, 4.4vw, 5.6rem);
+        color: var(--ink);
+      }
+
+      .curved-loop-jacket {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .curved-loop-svg {
+        width: 100%;
+        overflow: visible;
+        display: block;
+        fill: currentColor;
+        user-select: none;
+        text-transform: uppercase;
+        line-height: 1;
+        font-family: var(--display);
+      }
+
+      .auto-groups {
+        display: grid;
+        gap: clamp(2.8rem, 4vw, 4.4rem);
+        margin-bottom: clamp(3.2rem, 4.4vw, 5.6rem);
+      }
+
+      .auto-group {
+        display: grid;
+        gap: 1.4rem;
+        padding-top: clamp(2rem, 2.6vw, 2.8rem);
+        border-top: 0.1rem solid var(--line);
+      }
+
+      .auto-group-head {
+        display: grid;
+        gap: 0.6rem;
+        max-width: 48rem;
+      }
+
+      .auto-group-head h3 {
+        margin: 0;
+        font-family: var(--display);
+        font-size: clamp(2rem, 2.4vw, 2.8rem);
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        line-height: 1.15;
+      }
+
+      .auto-group-head p {
+        margin: 0;
+        font-family: var(--text);
+        font-size: clamp(1.5rem, 1.3vw, 1.7rem);
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--ink-soft);
+      }
+
+      .auto-group ul {
+        display: grid;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .auto-group li {
+        display: grid;
+        grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr);
+        gap: 1rem 2.4rem;
+        align-items: baseline;
+        padding: 1.4rem 0;
+        border-top: 0.1rem solid rgba(29, 42, 58, 0.08);
+      }
+
+      .auto-group li:first-child { border-top: 0; }
+
+      .auto-group b {
+        font-family: var(--text);
+        font-size: clamp(1.5rem, 1.3vw, 1.7rem);
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      .auto-group li p {
+        margin: 0;
+        font-family: var(--text);
+        font-size: clamp(1.5rem, 1.3vw, 1.7rem);
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--ink-soft);
+      }
+
+      .auto-stack {
+        display: grid;
+        gap: 1.2rem;
+        margin-bottom: clamp(2.8rem, 3.6vw, 4rem);
+      }
+
+      .auto-stack > span {
+        font-family: var(--text);
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
         color: var(--ink-soft);
       }
 
@@ -691,7 +736,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 0.8rem;
-        margin: 0 0 clamp(2.4rem, 3.2vw, 4rem);
+        margin: 0;
         padding: 0;
         list-style: none;
       }
@@ -705,72 +750,50 @@
         color: var(--ink-soft);
       }
 
-      .auto-card {
-        display: grid;
+      .auto-foot {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
         gap: 1.2rem 2.4rem;
-        align-items: end;
-        grid-template-columns: minmax(0, 1fr) auto;
-        padding: clamp(2rem, 2.8vw, 3.2rem) 0;
-        border-top: 0.1rem solid rgba(29, 42, 58, 0.14);
-        border-bottom: 0.1rem solid rgba(29, 42, 58, 0.14);
+        padding-top: clamp(2rem, 2.6vw, 2.8rem);
+        border-top: 0.1rem solid var(--line);
+      }
+
+      .auto-foot p {
+        margin: 0;
+        max-width: 36rem;
         font-family: var(--text);
+        font-size: clamp(1.4rem, 1.2vw, 1.6rem);
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--ink-soft);
       }
 
-      .auto-card-copy {
-        display: grid;
+      .auto-more {
+        display: inline-flex;
+        align-items: center;
         gap: 0.8rem;
-        min-width: 0;
-      }
-
-      .auto-card b {
         font-family: var(--display);
-        font-size: clamp(2.4rem, 3.2vw, 3.6rem);
-        font-weight: 700;
+        font-size: clamp(1.8rem, 2vw, 2.4rem);
+        font-weight: 800;
         letter-spacing: -0.01em;
-        line-height: 1.1;
         transition: color var(--hover);
       }
 
-      .auto-card p {
-        margin: 0;
-        max-width: 44rem;
-        color: var(--ink-soft);
-        font-size: clamp(1.5rem, 1.2vw, 1.7rem);
-        font-weight: 500;
-        line-height: 1.45;
-      }
-
-      .auto-card em {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.6rem;
-        font-family: var(--text);
-        font-size: 1.4rem;
-        font-style: normal;
-        font-weight: 500;
-        color: var(--ink-soft);
-        white-space: nowrap;
-        transition: color var(--hover), transform var(--hover);
-      }
-
-      .auto-card em svg {
-        width: 1.6rem;
-        height: 1.6rem;
+      .auto-more svg {
+        width: 1.8rem;
+        height: 1.8rem;
         transition: transform var(--hover);
       }
 
-      .auto-card:hover b,
-      .auto-card:focus-visible b {
+      .auto-more:hover,
+      .auto-more:focus-visible {
         color: var(--accent);
       }
 
-      .auto-card:hover em,
-      .auto-card:focus-visible em {
-        color: var(--accent);
-      }
-
-      .auto-card:hover em svg,
-      .auto-card:focus-visible em svg {
+      .auto-more:hover svg,
+      .auto-more:focus-visible svg {
         transform: translate(0.2rem, -0.2rem);
       }
 
@@ -864,44 +887,30 @@
           scroll-behavior: auto !important;
         }
         .rise { opacity: 1; transform: none; }
-        .painting img { transform: none !important; }
-        .nav-tab-slide {
-          transform: translateX(0) !important;
-          animation: none !important;
-        }
+        .nav-tab { animation: none !important; transform: none; }
       }
 
       @media (max-width: 820px) {
         body { font-size: 1.7rem; }
         .hero {
+          --frame: 1.6rem;
           min-height: 100svh;
-          padding: 1.2rem 1.4rem;
+          padding: var(--frame);
         }
         .painting {
-          height: calc(100svh - 2.4rem);
-          min-height: calc(100svh - 2.4rem);
+          border-radius: 1.4rem;
         }
         .painting img {
           height: 100%;
-          transform: none;
           object-position: center 28%;
         }
         .hero-copy {
-          inset: 1.2rem 1.4rem;
+          inset: var(--frame);
           padding: 1.2rem;
         }
         .mark {
           width: min(78vw, 36rem);
           transform: translate(-50%, -52%);
-          filter:
-            drop-shadow(0 0 0.4rem rgba(245, 248, 251, 0.95))
-            drop-shadow(0 0 1.8rem rgba(245, 248, 251, 0.85));
-        }
-        .hero-sub::before {
-          width: 170%;
-          height: 190%;
-          background:
-            radial-gradient(ellipse 70% 58% at 50% 50%, rgba(245, 248, 251, 0.95), rgba(245, 248, 251, 0.55) 50%, transparent 72%);
         }
         .hero-sub {
           bottom: clamp(2.4rem, 6%, 4rem);
@@ -914,8 +923,21 @@
           padding: 0;
           font-size: clamp(1.4rem, 3.8vw, 1.7rem);
         }
-        .nav-tab { top: 3.6rem; }
-        .nav-tab-hit { width: 3.8rem; height: 3rem; }
+        .nav-tab { top: 18vh; }
+        .nav-tab-hit {
+          width: 4rem;
+          padding: 1.6rem 0;
+          font-size: 1.2rem;
+        }
+        .hover-img-projects:hover .hover-img-project,
+        .hover-img-project:hover {
+          opacity: 1;
+        }
+        .hover-img-project:hover h2,
+        .hover-img-project:hover p {
+          color: inherit;
+          transform: none;
+        }
         .ping {
           right: 1.4rem;
           bottom: 1.4rem;
@@ -934,21 +956,19 @@
         .hover-img-project:hover p,
         .hover-img-project:focus-visible p { transform: none; }
         .hover-img-thumbnail-wrapper { display: none; }
-        .auto-card {
+        .auto-group li {
           grid-template-columns: 1fr;
-          gap: 1.6rem;
+          gap: 0.4rem;
         }
-        .auto-card em { justify-self: start; }
+        .auto-foot {
+          flex-direction: column;
+          align-items: flex-start;
+        }
       }
     </style>
   </head>
   <body>
     <div class="nav-tab" data-nav>
-      <div class="nav-tab-slide">
-        <button type="button" class="nav-tab-hit" aria-expanded="false" aria-controls="site-nav" aria-label="Меню">
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
       <nav id="site-nav" class="nav-tab-menu" aria-label="Разделы">
         <a href="#work">Сайты</a>
         <a href="#auto">Автоматизация</a>
@@ -965,6 +985,7 @@
           </a>
         </div>
       </nav>
+      <button type="button" class="nav-tab-hit" aria-expanded="false" aria-controls="site-nav" aria-label="Меню">меню</button>
     </div>
 
     <section class="hero">
@@ -973,18 +994,19 @@
         <div class="hero-sub">
           <h1>Frontend и <span>Node.js</span></h1>
           <span class="note">сайты, боты, автоматизация</span>
-          <a class="hero-write" href="https://t.me/ritm0dsgnr" target="_blank" rel="noopener" aria-label="Написать в Telegram">
-            <span class="hero-write-ink" aria-hidden="true"></span>
-            <span class="hero-write-label">написать</span>
-            <svg class="hero-write-line" viewBox="0 0 120 12" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M2 8 C 18 2, 34 11, 50 7 S 82 2, 98 8 S 112 10, 118 6"/>
-            </svg>
+          <a class="hero-write" href="https://t.me/ritm0dsgnr" target="_blank" rel="noopener" aria-label="Написать в Telegram" data-text="написать*" data-repeat="3">
+            <span class="circular-text__ring" aria-hidden="true"></span>
+            <span class="circular-text__center" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 6.65s6.938-.543 7.915.435C17.892 8.062 17.35 15 17.35 15M16.5 7.5 6.5 17.5"/>
+              </svg>
+            </span>
           </a>
         </div>
       </div>
       <figure class="painting">
         <picture>
-          <source media="(max-width: 820px)" srcset="stills/warm/hero-mobile.jpg?v=2" width="720" height="1280">
+          <source media="(max-width: 820px)" srcset="stills/warm/hero-mobile.jpg?v=3" width="720" height="1280">
           <img src="stills/warm/hero.jpg?v=orig1" alt="" width="1280" height="720" fetchpriority="high">
         </picture>
       </figure>
@@ -1051,28 +1073,105 @@
     </section>
 
     <section class="auto" id="auto">
-      <div class="head">
+      <div class="auto-intro">
         <h2>Автоматизация</h2>
+        <p>Пишу ботов и фоновые сервисы, которые снимают рутину: правят контент, собирают отчёты, парсят данные и следят, чтобы ничего не отвалилось. Репозитории закрыты — ниже по задачам, что уже работает.</p>
       </div>
-      <p class="auto-lead">Боты, парсеры, отчёты и мониторинг под рабочие задачи. Репозитории не выкладываю — ниже стек и список сервисов.</p>
-      <ul class="auto-chips" aria-label="Стек">
-        <li>Node.js</li>
-        <li>TypeScript</li>
-        <li>Playwright</li>
-        <li>BullMQ</li>
-        <li>PostgreSQL</li>
-        <li>DuckDB</li>
-        <li>LLM</li>
-        <li>Lark</li>
-        <li>Telegram</li>
-      </ul>
-      <a class="auto-card" href="automation.html">
-        <span class="auto-card-copy">
-          <b>Что внутри</b>
-          <p>ContentOps, SovaMeeting, аналитика, парсеры и мониторинг</p>
-        </span>
-        <em>смотреть<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></em>
-      </a>
+
+      <div class="auto-curve" id="auto-curve" aria-hidden="true"></div>
+
+      <div class="auto-groups">
+        <article class="auto-group">
+          <div class="auto-group-head">
+            <h3>Контент на сайте</h3>
+            <p>Когда правки идут из карточек, а не руками по всем страницам.</p>
+          </div>
+          <ul>
+            <li>
+              <b>ContentOps</b>
+              <p>Берёт задачу из доски, показывает dry-run правок, пишет в базу и умеет откатить.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="auto-group">
+          <div class="auto-group-head">
+            <h3>Встречи и знания</h3>
+            <p>Чтобы после созвона не терялись договорённости и ответы из wiki.</p>
+          </div>
+          <ul>
+            <li>
+              <b>SovaMeeting</b>
+              <p>Из транскрипта достаёт факты и черновики задач — в работу только после проверки.</p>
+            </li>
+            <li>
+              <b>Wiki-бот</b>
+              <p>В Lark отвечает по базе знаний и кидает ссылки на нужные статьи.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="auto-group">
+          <div class="auto-group-head">
+            <h3>Данные и отчёты</h3>
+            <p>Собрать цифры, резюме или карточки с карт — и отдать готовым файлом.</p>
+          </div>
+          <ul>
+            <li>
+              <b>Analytics</b>
+              <p>Кидаешь ссылку в Lark — бот тянет Яндекс Метрику и отвечает PDF с графиком.</p>
+            </li>
+            <li>
+              <b>Map Parser</b>
+              <p>По расписанию снимает организации и отзывы с карт, при сбое пишет в Telegram.</p>
+            </li>
+            <li>
+              <b>HH Parser</b>
+              <p>Качает резюме, разбирает через LLM и складывает PDF, Markdown и JSON.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="auto-group">
+          <div class="auto-group-head">
+            <h3>Контроль</h3>
+            <p>Чтобы падения сайта или «битые» номера не всплывали случайно.</p>
+          </div>
+          <ul>
+            <li>
+              <b>Мониторинг</b>
+              <p>Смотрит доступность, SSL и скорость. В Telegram пишет, только если что-то отвалилось.</p>
+            </li>
+            <li>
+              <b>Аудит номеров</b>
+              <p>Сверяет виртуальные номера Novofon с телефонами на сайтах.</p>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="auto-stack">
+        <span>На чём собрано</span>
+        <ul class="auto-chips" aria-label="Стек">
+          <li>Node.js</li>
+          <li>TypeScript</li>
+          <li>Playwright</li>
+          <li>BullMQ</li>
+          <li>PostgreSQL</li>
+          <li>DuckDB</li>
+          <li>LLM</li>
+          <li>Lark</li>
+          <li>Telegram</li>
+        </ul>
+      </div>
+
+      <div class="auto-foot">
+        <p>Ещё есть синк метрик в CRM, аудит размещений, code review и контур аналитики.</p>
+        <a class="auto-more" href="automation.html">
+          Все 12 сервисов
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+        </a>
+      </div>
     </section>
 
     <section class="contact" id="contact">
@@ -1095,6 +1194,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="curved-loop.js"></script>
     <script>
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -1111,76 +1211,155 @@
         requestAnimationFrame(raf);
       }
 
-      const heroImg = document.querySelector(".hero .painting img");
-      if (!reduce && heroImg) {
-        const drift = () => {
-          const y = Math.min(window.scrollY, innerHeight);
-          heroImg.style.setProperty("--py", (-y * 0.08).toFixed(1) + "px");
-          requestAnimationFrame(drift);
-        };
-        requestAnimationFrame(drift);
+      const write = document.querySelector(".hero-write");
+      if (write) {
+        const ring = write.querySelector(".circular-text__ring");
+        const phrase = write.dataset.text || "написать · ";
+        const copies = Math.max(1, Number(write.dataset.repeat) || 3);
+        const letters = Array.from(phrase.repeat(copies));
+        letters.forEach((letter, i) => {
+          const item = document.createElement("span");
+          item.className = "circular-text__letter";
+          item.style.transform = `rotate(${(360 / letters.length) * i}deg)`;
+          const glyph = document.createElement("span");
+          glyph.textContent = letter;
+          item.append(glyph);
+          ring.append(item);
+        });
+        if (!reduce) {
+          const duration = 18;
+          const maxFling = 1440;
+          const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+          let speed = 1;
+          let target = 1;
+          let angle = 0;
+          let fling = 0;
+          let last = 0;
+          let spinning = true;
+          let dragging = false;
+          let moved = false;
+          let pointerAngle = null;
+          let travel = 0;
+          let samples = [];
+
+          const angleAt = (event) => {
+            const rect = write.getBoundingClientRect();
+            const dx = event.clientX - (rect.left + rect.width / 2);
+            const dy = event.clientY - (rect.top + rect.height / 2);
+            if (Math.hypot(dx, dy) < rect.width * 0.06) return null;
+            return (Math.atan2(dy, dx) * 180) / Math.PI;
+          };
+
+          const tick = (now) => {
+            if (!spinning || document.hidden) {
+              last = 0;
+              requestAnimationFrame(tick);
+              return;
+            }
+            const dt = last ? Math.min(0.05, (now - last) / 1000) : 0;
+            last = now;
+            if (!dragging) {
+              fling *= Math.exp(-dt / 0.7);
+              if (Math.abs(fling) < 1) fling = 0;
+              speed += (target - speed) * (1 - Math.exp(-dt * 3.2));
+              angle = (angle + ((360 / duration) * speed + fling) * dt) % 360;
+            }
+            ring.style.transform = `rotate(${angle}deg)`;
+            requestAnimationFrame(tick);
+          };
+
+          write.addEventListener("pointerenter", () => { target = 4; });
+          write.addEventListener("pointerleave", () => { target = 1; });
+          write.addEventListener("focus", () => { target = 4; });
+          write.addEventListener("blur", () => { target = 1; });
+          write.addEventListener("pointerdown", (event) => {
+            if (event.pointerType === "mouse" && event.button !== 0) return;
+            dragging = true;
+            moved = false;
+            fling = 0;
+            pointerAngle = angleAt(event);
+            travel = 0;
+            samples = [[event.timeStamp, 0]];
+            write.classList.add("is-dragging");
+            write.setPointerCapture?.(event.pointerId);
+          });
+          write.addEventListener("pointermove", (event) => {
+            if (!dragging) return;
+            const next = angleAt(event);
+            if (next !== null && pointerAngle !== null) {
+              let delta = next - pointerAngle;
+              if (delta > 180) delta -= 360;
+              if (delta < -180) delta += 360;
+              if (Math.abs(delta) > 0.6) moved = true;
+              travel += delta;
+              angle = (angle + delta) % 360;
+              samples.push([event.timeStamp, travel]);
+              while (samples.length > 2 && event.timeStamp - samples[0][0] > 100) samples.shift();
+            }
+            pointerAngle = next;
+          });
+          const endDrag = (event) => {
+            if (!dragging) return;
+            dragging = false;
+            write.classList.remove("is-dragging");
+            const [startTime, startTravel] = samples[0] || [event.timeStamp, 0];
+            const lastTime = samples.length ? samples[samples.length - 1][0] : event.timeStamp;
+            const elapsed = event.timeStamp - startTime;
+            const velocity = elapsed > 0 && event.timeStamp - lastTime < 80
+              ? ((travel - startTravel) / elapsed) * 1000
+              : 0;
+            fling = clamp(velocity, -maxFling, maxFling) - (360 / duration) * speed;
+          };
+          write.addEventListener("pointerup", endDrag);
+          write.addEventListener("pointercancel", endDrag);
+          write.addEventListener("click", (event) => {
+            if (!moved) return;
+            event.preventDefault();
+            moved = false;
+          });
+          const watch = new IntersectionObserver((entries) => {
+            spinning = entries.some((entry) => entry.isIntersecting);
+          });
+          watch.observe(write);
+          requestAnimationFrame(tick);
+        }
       }
 
-      const hero = document.querySelector(".hero");
-      if (!reduce && hero && heroImg && window.matchMedia("(pointer: fine)").matches) {
-        hero.addEventListener("pointermove", (e) => {
-          const r = hero.getBoundingClientRect();
-          const x = (e.clientX - r.left) / r.width - 0.5;
-          const y = (e.clientY - r.top) / r.height - 0.5;
-          heroImg.style.setProperty("--mx", (-x * 22).toFixed(1) + "px");
-          heroImg.style.setProperty("--my", (-y * 14).toFixed(1) + "px");
-        });
-        hero.addEventListener("pointerleave", () => {
-          ["--mx", "--my"].forEach((p) => heroImg.style.setProperty(p, "0px"));
+      const curveHost = document.getElementById("auto-curve");
+      if (curveHost && typeof mountCurvedLoop === "function") {
+        mountCurvedLoop(curveHost, {
+          marqueeText: "правки сайта ✦ отчёты из Метрики ✦ задачи из встреч ✦ парсинг карт ✦ разбор резюме ✦ мониторинг ✦ сверка номеров ✦ ответы из wiki",
+          separator: "✦",
+          speed: reduce ? 0 : 1.8,
+          curveAmount: 140,
+          direction: "left",
+          interactive: !reduce,
+          fontSize: Math.min(56, Math.max(30, Math.round(window.innerWidth * 0.034))),
+          fontWeight: 800,
+          color: "currentColor"
         });
       }
 
       const navTab = document.querySelector("[data-nav]");
       if (navTab) {
         const hit = navTab.querySelector(".nav-tab-hit");
-        const slide = navTab.querySelector(".nav-tab-slide");
+        const canHover = window.matchMedia("(hover: hover) and (pointer: fine) and (min-width: 821px)").matches;
         let closeTimer = 0;
-        const holdSlide = (open) => {
-          if (!slide || reduce) return;
-          if (open) {
-            const cur = getComputedStyle(slide).transform;
-            slide.classList.add("is-held");
-            slide.style.transition = "none";
-            slide.style.transform = cur === "none" ? "translateX(0)" : cur;
-            void slide.offsetWidth;
-            slide.style.transition = "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1)";
-            slide.style.transform = "translateX(0)";
-          } else {
-            slide.style.transition = "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1)";
-            slide.style.transform = "translateX(0.8rem)";
-            const release = (e) => {
-              if (e.propertyName !== "transform") return;
-              slide.removeEventListener("transitionend", release);
-              if (navTab.classList.contains("is-open")) return;
-              slide.style.transition = "";
-              slide.style.transform = "";
-              slide.classList.remove("is-held");
-            };
-            slide.addEventListener("transitionend", release);
-          }
-        };
         const setOpen = (open) => {
           clearTimeout(closeTimer);
-          const wasOpen = navTab.classList.contains("is-open");
-          if (open === wasOpen) return;
           navTab.classList.toggle("is-open", open);
           document.documentElement.classList.toggle("nav-open", open);
           hit.setAttribute("aria-expanded", String(open));
-          holdSlide(open);
         };
-        const scheduleClose = () => {
-          clearTimeout(closeTimer);
-          closeTimer = setTimeout(() => setOpen(false), 360);
-        };
-        navTab.addEventListener("pointerenter", () => setOpen(true));
-        navTab.addEventListener("pointerleave", scheduleClose);
+        if (canHover) {
+          navTab.addEventListener("pointerenter", () => setOpen(true));
+          navTab.addEventListener("pointerleave", () => {
+            closeTimer = setTimeout(() => setOpen(false), 280);
+          });
+        }
         hit.addEventListener("click", (e) => {
           e.stopPropagation();
+          if (canHover && e.detail !== 0) return;
           setOpen(!navTab.classList.contains("is-open"));
         });
         document.addEventListener("click", (e) => {
